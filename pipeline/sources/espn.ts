@@ -105,13 +105,20 @@ export async function loadEspnInjuries(): Promise<EspnInjury[]> {
 
 export interface DepthRow { teamId: number; group: string; pos_abb: string; pos_rank: number; athlete_id: string; name: string; }
 
-/** ESPN depth charts for a set of teams (concurrency-limited, gives up after repeated failures). */
+/**
+ * ESPN depth charts for a set of teams (concurrency-limited). ESPN does not
+ * currently publish these for college teams (the endpoint 404s), so a single
+ * probe decides whether the rest are worth requesting at all.
+ */
 export async function loadDepthCharts(teamIds: number[]): Promise<{ byTeam: Map<number, DepthRow[]>; ok: number }> {
   const byTeam = new Map<number, DepthRow[]>();
   let failures = 0;
   let ok = 0;
+  if (!teamIds.length) return { byTeam, ok };
+  const probe = await fetchJson<any>(`${WEB}/teams/${teamIds[0]}/depthcharts`, 'ESPN depth charts (probe, best-effort)', 12_000);
+  if (!probe) return { byTeam, ok };
   await mapLimit(teamIds, 4, async (id) => {
-    if (failures >= 6 && ok === 0) return; // endpoint is down / changed shape — stop hammering it
+    if (failures >= 6 && ok === 0) return; // endpoint changed shape — stop hammering it
     const data = await fetchJson<any>(`${WEB}/teams/${id}/depthcharts`, `ESPN depth chart ${id}`, 12_000);
     try {
       const groups: any[] = Array.isArray(data?.depthchart) ? data.depthchart : Array.isArray(data?.items) ? data.items : [];
