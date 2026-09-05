@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "ES2022"
+    ],
+    "types": [
+      "node"
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "baseUrl": "..",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./**/*.ts",
+    "../scripts/*.ts",
+    "../src/engine/**/*.ts",
+    "../src/data/teams.ts",
+    "../src/data/fbs.ts",
+    "../src/data/curated.ts",
+    "../src/data/liveTypes.ts"
+  ]
+}

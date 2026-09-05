@@ -1,0 +1,102 @@
+name: Refresh live data & deploy
+
+# Pulls the latest college football data (sportsdataverse ESPN play-by-play
+# parquet, CollegeFootballData schedules / results / Elo / rosters via
+# cfbfastR-data; ESPN odds, rankings, injuries, depth charts and Open-Meteo
+# forecasts best-effort), rebuilds data/live/*.json, commits it if anything
+# changed, then rebuilds and publishes the web app so the deployed site always
+# carries the fresh data.
+#
+# One-time setup: Settings → Pages → Build and deployment → Source: GitHub Actions
+# (configure-pages below also tries to enable it automatically).
+
+on:
+  schedule:
+    # Every 3 hours during the season (late Aug – mid Jan), every 12 hours otherwise. UTC.
+    - cron: '23 */3 * 8-12,1 *'
+    - cron: '23 */12 * 2-7 *'
+  workflow_dispatch:
+    inputs:
+      skip_weather:
+        description: 'Skip Open-Meteo forecasts'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build live dataset
+        run: |
+          if [ "${{ inputs.skip_weather }}" = "true" ]; then npm run data:build:offline; else npm run data:build; fi
+
+      - name: Engine sanity checks against the fresh data
+        run: npm run test:engine
+
+      - name: Commit refreshed data
+        id: commit
+        run: |
+          git config user.name "cfb-gridiron-data-bot"
+          git config user.email "cfb-gridiron-data-bot@users.noreply.github.com"
+          git add data/live
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No data changes."
+          else
+            WEEK=$(node -e "console.log(require('./data/live/meta.json').currentWeek)")
+            SEASON=$(node -e "console.log(require('./data/live/meta.json').season)")
+            git commit -m "data: refresh live dataset (season $SEASON, week $WEEK)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Export web app
+        env:
+          EXPO_BASE_URL: /${{ github.event.repository.name }}
+        run: npx expo export --platform web
+
+      - name: Prepare Pages artifact
+        run: |
+          cp dist/index.html dist/404.html
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: refresh
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
