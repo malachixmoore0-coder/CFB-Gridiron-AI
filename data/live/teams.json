@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-05T10:49:34.840Z",
+ "generatedAt": "2026-09-05T10:54:01.479Z",
  "season": 2026,
  "week": 1,
  "phase": "regular",
@@ -2513,6 +2513,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
    "elo": 1749,
    "talent": 6.9,
+   "rank": 24,
    "record": "0-0"
   },
   {
@@ -2868,6 +2869,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
    "elo": 2014,
    "talent": 8.4,
+   "rank": 7,
    "record": "1-0"
   },
   {
@@ -4320,6 +4322,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
    "elo": 1852,
    "talent": 7.5,
+   "rank": 19,
    "record": "0-0"
   },
   {
@@ -12791,6 +12794,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
    "elo": 1750,
    "talent": 6.9,
+   "rank": 14,
    "record": "0-0"
   },
   {
@@ -13870,6 +13874,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
    "elo": 1512,
    "talent": 5.5,
+   "rank": 23,
    "record": "0-0"
   },
   {
@@ -16075,6 +16080,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
    "elo": 2056,
    "talent": 8.7,
+   "rank": 12,
    "record": "0-0"
   },
   {
@@ -16803,6 +16809,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
    "elo": 1976,
    "talent": 8.2,
+   "rank": 21,
    "record": "1-0"
   },
   {
@@ -17886,6 +17893,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
    "elo": 2346,
    "talent": 10,
+   "rank": 6,
    "record": "0-0"
   },
   {
@@ -18239,6 +18247,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
    "elo": 1937,
    "talent": 8,
+   "rank": 22,
    "record": "0-0"
   },
   {
@@ -18966,6 +18975,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
    "elo": 1786,
    "talent": 7.1,
+   "rank": 16,
    "record": "0-0"
   },
   {
@@ -20796,6 +20806,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
    "elo": 2138,
    "talent": 9.1,
+   "rank": 1,
    "record": "0-0"
   },
   {
@@ -21148,6 +21159,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
    "elo": 2071,
    "talent": 8.7,
+   "rank": 2,
    "record": "0-0"
   },
   {
@@ -21521,6 +21533,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
    "elo": 1954,
    "talent": 8.1,
+   "rank": 18,
    "record": "0-0"
   },
   {
@@ -22955,6 +22968,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
    "elo": 1763,
    "talent": 7,
+   "rank": 14,
    "record": "2-0"
   },
   {
@@ -23329,6 +23343,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
    "elo": 1866,
    "talent": 7.6,
+   "rank": 17,
    "record": "0-0"
   },
   {
@@ -27727,6 +27742,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
    "elo": 2243,
    "talent": 9.7,
+   "rank": 4,
    "record": "0-0"
   },
   {
@@ -39641,6 +39657,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
    "elo": 1857,
    "talent": 7.5,
+   "rank": 13,
    "record": "0-0"
   },
   {
@@ -41121,6 +41138,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
    "elo": 2057,
    "talent": 8.7,
+   "rank": 3,
    "record": "0-0"
   },
   {
@@ -41863,6 +41881,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
    "elo": 1675,
    "talent": 6.5,
+   "rank": 11,
    "record": "0-0"
   },
   {
@@ -42610,6 +42629,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
    "elo": 1750,
    "talent": 6.9,
+   "rank": 25,
    "record": "1-0"
   },
   {
@@ -42962,6 +42982,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
    "elo": 1810,
    "talent": 7.2,
+   "rank": 10,
    "record": "1-0"
   },
   {
@@ -43341,6 +43362,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
    "elo": 2009,
    "talent": 8.4,
+   "rank": 9,
    "record": "0-0"
   },
   {
@@ -44049,6 +44071,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
    "elo": 1787,
    "talent": 7.1,
+   "rank": 20,
    "record": "0-0"
   },
   {
@@ -44404,6 +44427,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
    "elo": 1926,
    "talent": 7.9,
+   "rank": 5,
    "record": "0-0"
   },
   {
@@ -44781,6 +44805,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
    "elo": 1872,
    "talent": 7.6,
+   "rank": 8,
    "record": "0-0"
   },
   {
