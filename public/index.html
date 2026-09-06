@@ -23,6 +23,10 @@
       body {
         height: 100%;
         overscroll-behavior: none;
+        /* Paint the page the app's navy so nothing white shows through — iOS
+           home-screen mode otherwise reveals a white strip in the bottom
+           safe area (home indicator) below the tab bar. */
+        background-color: #0B1220;
       }
       /* These styles disable body scrolling if you are using <ScrollView> */
       body {
@@ -39,6 +43,7 @@
         height: 100%;
         flex: 1;
         overscroll-behavior: none;
+        background-color: #0B1220;
       }
     </style>
   </head>
