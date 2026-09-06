@@ -20,9 +20,19 @@ export const POSITION_NAME: Record<RosterPositionLabel, string> = {
 
 export const UNIT_NAME: Record<RosterPlayer['unit'], string> = { offense: 'Offense', defense: 'Defense', special: 'Special teams' };
 
-/** One-line season stat summary for a roster row, by position group. */
+/**
+ * One-line stat summary for a roster row. Falls back to last season when this
+ * one has not started (or the player has not played), so a roster row is never
+ * blank for an established player.
+ */
 export function seasonLine(p: RosterPlayer): string | null {
-  const s = p.season;
+  const cur = lineFor(p, p.season);
+  if (cur) return cur;
+  const prior = p.prior ? lineFor(p, p.prior) : null;
+  return prior ? `${prior} · last yr` : null;
+}
+
+function lineFor(p: RosterPlayer, s: StatLine & { games: number }): string | null {
   if (!s.games) return null;
   const g = s.games;
   const v = (k: keyof StatLine) => stat(s, k);
