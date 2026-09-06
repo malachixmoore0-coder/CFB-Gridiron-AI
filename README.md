@@ -118,6 +118,11 @@ always reproduce the same games; "Re-roll" draws a fresh seed.
   tendencies, the season schedule with results, the depth chart split into
   1st / 2nd / 3rd string, the full roster by position group, and the ratings
   feeding the engine.
+- **Box scores** — tap a played game on a team's schedule for its box score:
+  the final, the model's verdict on that game, team totals for both sides, and
+  passing / rushing / receiving / defense / kicking tables you can switch
+  between the two teams. Tap any line for that player's profile. Tapping a game
+  that has not kicked off yet opens the matchup preview instead.
 - **Player profiles** — tap any player for his headshot (initials when the
   feed has no photo), jersey, class, height and weight, hometown, depth and
   starting status, availability you can override, a grade with its basis,

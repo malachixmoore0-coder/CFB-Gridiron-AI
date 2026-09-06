@@ -15,13 +15,13 @@ import { RosterRow } from '@/components/RosterRow';
 import { ScreenHeader } from '@/components/ScreenHeader';
 import { Chip } from '@/components/Chip';
 
-interface Props { teamId: string; onBack: () => void; onOpenPlayer: (teamId: string, playerId: string) => void; onOpenTeam?: (id: string) => void; }
+interface Props { teamId: string; onBack: () => void; onOpenPlayer: (teamId: string, playerId: string) => void; onOpenTeam?: (id: string) => void; onOpenGame?: (teamId: string, gameId: string) => void; }
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 type Tab = 'depth' | 'roster' | 'profile';
 
 /** One scrolling page per team: identity, season schedule, depth chart, full roster and the ratings feeding the engine. */
-export function TeamDetailScreen({ teamId, onBack, onOpenPlayer, onOpenTeam }: Props) {
+export function TeamDetailScreen({ teamId, onBack, onOpenPlayer, onOpenTeam, onOpenGame }: Props) {
   const { getTeam, hasTeam } = useTeams();
   const t = getTeam(teamId);
   const { statusOf, hasOverride } = useSettings();
@@ -76,18 +76,23 @@ export function TeamDetailScreen({ teamId, onBack, onOpenPlayer, onOpenTeam }: P
             {file.schedule.map((g) => {
               const won = g.result === 'W';
               const isNext = g.id === file.nextGameId;
+              const played = g.status === 'final';
               return (
                 <TouchableOpacity
                   key={g.id}
                   style={[styles.game, isNext && styles.gameNext, g.result ? (won ? styles.gameWin : styles.gameLoss) : null]}
-                  activeOpacity={g.oppId && hasTeam(g.oppId) && onOpenTeam ? 0.7 : 1}
-                  onPress={() => g.oppId && hasTeam(g.oppId) && onOpenTeam?.(g.oppId)}
+                  activeOpacity={0.7}
+                  onPress={() => (onOpenGame ? onOpenGame(teamId, g.id) : g.oppId && hasTeam(g.oppId) && onOpenTeam?.(g.oppId))}
                 >
                   <Text style={styles.gameWeek}>Wk {g.week}{isNext ? ' · next' : ''}</Text>
                   <Text style={styles.gameOpp} numberOfLines={1}>{g.neutral ? 'vs' : g.home ? 'vs' : 'at'} {g.oppName}</Text>
                   <Text style={[styles.gameResult, { color: g.result ? (won ? colors.positive : colors.negative) : colors.inkFaint }]}>
                     {g.result ? `${g.result} ${g.teamScore}–${g.oppScore}` : new Date(g.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}
                   </Text>
+                  <View style={styles.gameHint}>
+                    <Ionicons name={played ? 'stats-chart' : 'analytics'} size={10} color={colors.inkFaint} />
+                    <Text style={styles.gameHintText}>{played ? 'Box score' : 'Preview'}</Text>
+                  </View>
                 </TouchableOpacity>
               );
             })}
@@ -230,13 +235,15 @@ const styles = StyleSheet.create({
   pillText: { color: colors.inkDim, fontSize: 10, fontWeight: '800' },
   schedBar: { flexGrow: 0, flexShrink: 0, marginBottom: spacing.md },
   sched: { gap: spacing.sm },
-  game: { width: 110, backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, padding: spacing.sm },
+  game: { width: 116, backgroundColor: colors.card, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, padding: spacing.sm },
   gameNext: { borderColor: colors.gold },
   gameWin: { borderLeftWidth: 3, borderLeftColor: colors.positive },
   gameLoss: { borderLeftWidth: 3, borderLeftColor: colors.negative },
   gameWeek: { color: colors.inkFaint, fontSize: 9, fontWeight: '900', letterSpacing: 0.5, textTransform: 'uppercase' },
   gameOpp: { color: colors.ink, fontSize: 12, fontWeight: '800', marginTop: 2 },
   gameResult: { fontSize: 11, fontWeight: '800', marginTop: 2 },
+  gameHint: { flexDirection: 'row', alignItems: 'center', gap: 3, marginTop: 4 },
+  gameHintText: { color: colors.inkFaint, fontSize: 9, fontWeight: '700' },
   tabs: { flexDirection: 'row', gap: spacing.sm, marginBottom: spacing.md, flexWrap: 'wrap' },
   loading: { alignItems: 'center', gap: 8, paddingVertical: spacing.xl },
   blurb: { color: colors.inkFaint, fontSize: 11, lineHeight: 16, marginBottom: spacing.md },

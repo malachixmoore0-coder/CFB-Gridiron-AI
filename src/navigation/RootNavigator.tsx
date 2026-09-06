@@ -11,11 +11,16 @@ import { RecordScreen } from '@/screens/RecordScreen';
 import { TeamsScreen } from '@/screens/TeamsScreen';
 import { TeamDetailScreen } from '@/screens/TeamDetailScreen';
 import { PlayerProfileScreen } from '@/screens/PlayerProfileScreen';
+import { GameStatsScreen } from '@/screens/GameStatsScreen';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { SettingsScreen } from '@/screens/SettingsScreen';
 import { OnboardingScreen } from '@/screens/OnboardingScreen';
 
-type Overlay = { kind: 'result'; request: RunRequest } | { kind: 'team'; teamId: string } | { kind: 'player'; teamId: string; playerId: string };
+type Overlay =
+  | { kind: 'result'; request: RunRequest }
+  | { kind: 'team'; teamId: string }
+  | { kind: 'player'; teamId: string; playerId: string }
+  | { kind: 'game'; teamId: string; gameId: string };
 
 /** Hand-rolled navigation: four tabs plus a small overlay stack (result / team detail). */
 export function RootNavigator() {
@@ -30,6 +35,7 @@ export function RootNavigator() {
   const pop = () => setStack((s) => s.slice(0, -1));
   const openTeam = (teamId: string) => push({ kind: 'team', teamId });
   const openPlayer = (teamId: string, playerId: string) => push({ kind: 'player', teamId, playerId });
+  const openGame = (teamId: string, gameId: string) => push({ kind: 'game', teamId, gameId });
   const run = (request: RunRequest) => push({ kind: 'result', request });
 
   return (
@@ -49,7 +55,9 @@ export function RootNavigator() {
             {o.kind === 'result' ? (
               <ResultScreen request={o.request} onBack={pop} onOpenTeam={openTeam} />
             ) : o.kind === 'team' ? (
-              <TeamDetailScreen teamId={o.teamId} onBack={pop} onOpenPlayer={openPlayer} onOpenTeam={openTeam} />
+              <TeamDetailScreen teamId={o.teamId} onBack={pop} onOpenPlayer={openPlayer} onOpenTeam={openTeam} onOpenGame={openGame} />
+            ) : o.kind === 'game' ? (
+              <GameStatsScreen teamId={o.teamId} gameId={o.gameId} onBack={pop} onOpenPlayer={openPlayer} onOpenTeam={openTeam} onRun={run} />
             ) : (
               <PlayerProfileScreen teamId={o.teamId} playerId={o.playerId} onBack={pop} onOpenTeam={openTeam} />
             )}

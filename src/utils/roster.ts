@@ -115,3 +115,74 @@ export function groupByString(roster: RosterPlayer[]): { string: number; players
   const order = (p: RosterPlayer) => Object.keys(POSITION_NAME).indexOf(p.pos);
   return strings.map((s) => ({ string: s, players: roster.filter((p) => p.string === s).sort((a, b) => order(a) - order(b) || a.rank - b.rank) }));
 }
+
+/* ------------------------------------------------------------------ */
+/* Box scores                                                           */
+/* ------------------------------------------------------------------ */
+
+export interface BoxLine { player: RosterPlayer; stats: StatLine; line: string; sort: number; }
+export interface BoxCategory { key: 'passing' | 'rushing' | 'receiving' | 'defense' | 'kicking'; title: string; columns: LogColumn[]; lines: BoxLine[]; }
+
+/** Team totals for one game, summed from the players who recorded something. */
+export interface BoxTotals { passYds: number; rushYds: number; recYds: number; passTd: number; rushTd: number; turnovers: number; sacks: number; takeaways: number; plays: number; }
+
+const num = (l: StatLine, k: keyof StatLine) => l[k] ?? 0;
+
+/**
+ * One team's box score for a single game, assembled from the per-game lines in
+ * its roster file. Only players who actually recorded something appear.
+ */
+export function boxScore(roster: RosterPlayer[], gameId: string): { categories: BoxCategory[]; totals: BoxTotals } {
+  const entries = roster
+    .map((player) => ({ player, log: player.games.find((g) => g.gameId === gameId) }))
+    .filter((e): e is { player: RosterPlayer; log: NonNullable<typeof e.log> } => !!e.log);
+
+  const cat = (
+    key: BoxCategory['key'],
+    title: string,
+    columns: LogColumn[],
+    include: (s: StatLine) => boolean,
+    line: (s: StatLine) => string,
+    sort: (s: StatLine) => number,
+  ): BoxCategory => ({
+    key, title, columns,
+    lines: entries
+      .filter((e) => include(e.log.stats))
+      .map((e) => ({ player: e.player, stats: e.log.stats, line: line(e.log.stats), sort: sort(e.log.stats) }))
+      .sort((a, b) => b.sort - a.sort),
+  });
+
+  const categories = [
+    cat('passing', 'Passing', [{ key: 'passCmp', label: 'CMP' }, { key: 'passAtt', label: 'ATT' }, { key: 'passYds', label: 'YDS' }, { key: 'passTd', label: 'TD' }, { key: 'passInt', label: 'INT' }],
+      (s) => num(s, 'passAtt') > 0,
+      (s) => `${num(s, 'passCmp')}/${num(s, 'passAtt')} · ${num(s, 'passYds')} yds`,
+      (s) => num(s, 'passYds')),
+    cat('rushing', 'Rushing', [{ key: 'rushAtt', label: 'CAR' }, { key: 'rushYds', label: 'YDS' }, { key: 'rushTd', label: 'TD' }],
+      (s) => num(s, 'rushAtt') > 0,
+      (s) => `${num(s, 'rushAtt')} car · ${num(s, 'rushYds')} yds`,
+      (s) => num(s, 'rushYds')),
+    cat('receiving', 'Receiving', [{ key: 'rec', label: 'REC' }, { key: 'tgt', label: 'TGT' }, { key: 'recYds', label: 'YDS' }, { key: 'recTd', label: 'TD' }],
+      (s) => num(s, 'tgt') > 0,
+      (s) => `${num(s, 'rec')}/${num(s, 'tgt')} · ${num(s, 'recYds')} yds`,
+      (s) => num(s, 'recYds')),
+    cat('defense', 'Defense', [{ key: 'sacks', label: 'SK' }, { key: 'int', label: 'INT' }, { key: 'pbu', label: 'PBU' }, { key: 'ff', label: 'FF' }],
+      (s) => num(s, 'sacks') + num(s, 'int') + num(s, 'pbu') + num(s, 'ff') > 0,
+      (s) => `${num(s, 'sacks')} sk · ${num(s, 'int')} INT`,
+      (s) => num(s, 'sacks') * 3 + num(s, 'int') * 4 + num(s, 'pbu') + num(s, 'ff') * 2),
+    cat('kicking', 'Kicking', [{ key: 'fgm', label: 'FGM' }, { key: 'fga', label: 'FGA' }],
+      (s) => num(s, 'fga') > 0,
+      (s) => `${num(s, 'fgm')}/${num(s, 'fga')} FG`,
+      (s) => num(s, 'fgm')),
+  ].filter((c) => c.lines.length > 0);
+
+  const sum = (k: keyof StatLine) => entries.reduce((n, e) => n + num(e.log.stats, k), 0);
+  return {
+    categories,
+    totals: {
+      passYds: sum('passYds'), rushYds: sum('rushYds'), recYds: sum('recYds'),
+      passTd: sum('passTd'), rushTd: sum('rushTd'),
+      turnovers: sum('passInt'), sacks: sum('sacks'), takeaways: sum('int') + sum('ff'),
+      plays: sum('passAtt') + sum('rushAtt'),
+    },
+  };
+}
