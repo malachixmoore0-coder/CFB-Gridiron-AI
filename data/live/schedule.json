@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T04:49:21.443Z",
+ "generatedAt": "2026-09-06T07:12:10.503Z",
  "season": 2026,
  "week": 1,
  "phase": "regular",
@@ -1198,9 +1198,9 @@
    "notes": null,
    "weather": null,
    "weatherHint": null,
-   "awayScore": null,
-   "homeScore": null,
-   "status": "scheduled",
+   "awayScore": 10,
+   "homeScore": 51,
+   "status": "final",
    "awayRank": null,
    "homeRank": 11
   },
@@ -1325,9 +1325,9 @@
     "source": "forecast"
    },
    "weatherHint": "clear",
-   "awayScore": null,
-   "homeScore": null,
-   "status": "scheduled",
+   "awayScore": 21,
+   "homeScore": 6,
+   "status": "final",
    "awayRank": null,
    "homeRank": null
   },
@@ -1362,9 +1362,9 @@
     "source": "forecast"
    },
    "weatherHint": "clear",
-   "awayScore": null,
-   "homeScore": null,
-   "status": "scheduled",
+   "awayScore": 7,
+   "homeScore": 38,
+   "status": "final",
    "awayRank": null,
    "homeRank": null
   },
@@ -1399,9 +1399,9 @@
     "source": "forecast"
    },
    "weatherHint": "clear",
-   "awayScore": null,
-   "homeScore": null,
-   "status": "scheduled",
+   "awayScore": 45,
+   "homeScore": 24,
+   "status": "final",
    "awayRank": null,
    "homeRank": null
   },
@@ -1436,9 +1436,9 @@
     "source": "forecast"
    },
    "weatherHint": "wind",
-   "awayScore": null,
-   "homeScore": null,
-   "status": "scheduled",
+   "awayScore": 14,
+   "homeScore": 49,
+   "status": "final",
    "awayRank": null,
    "homeRank": null
   },

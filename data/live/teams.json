@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-06T04:49:21.443Z",
+ "generatedAt": "2026-09-06T07:12:10.503Z",
  "season": 2026,
  "week": 1,
  "phase": "regular",
@@ -712,7 +712,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
    "elo": 1360,
    "talent": 4.6,
-   "record": "0-0"
+   "record": "0-1"
   },
   {
    "id": "clemson",
@@ -1113,7 +1113,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
    "elo": 1755,
    "talent": 7,
-   "record": "0-0"
+   "record": "0-1"
   },
   {
    "id": "duke",
@@ -12445,7 +12445,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
    "elo": 1688,
    "talent": 6.6,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "arizona-state",
@@ -12845,7 +12845,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
    "elo": 1609,
    "talent": 6.1,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "baylor",
@@ -24087,7 +24087,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
    "elo": 1322,
    "talent": 4.4,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "usc",
@@ -27613,7 +27613,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
    "elo": 1164,
    "talent": 3.5,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "missouri-state",
@@ -29178,7 +29178,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
    "elo": 1408,
    "talent": 4.9,
-   "record": "0-0"
+   "record": "0-1"
   },
   {
    "id": "notre-dame",
@@ -31897,7 +31897,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
    "elo": 1232,
    "talent": 3.9,
-   "record": "0-0"
+   "record": "0-1"
   },
   {
    "id": "eastern-michigan",
@@ -34219,7 +34219,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
    "elo": 1476,
    "talent": 5.3,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "toledo",
@@ -35762,7 +35762,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
    "elo": 1454,
    "talent": 5.2,
-   "record": "0-1"
+   "record": "0-2"
   },
   {
    "id": "nevada",
@@ -36137,7 +36137,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
    "elo": 1277,
    "talent": 4.1,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "new-mexico",
@@ -36534,7 +36534,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1494,
    "talent": 5.4,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "north-dakota-state",
@@ -38120,7 +38120,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
    "elo": 1566,
    "talent": 5.9,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "utep",
@@ -40772,7 +40772,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
    "elo": 1528,
    "talent": 5.6,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "texas-state",
@@ -44652,7 +44652,7 @@
    "elo": 1675,
    "talent": 6.5,
    "rank": 11,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "mississippi-state",
