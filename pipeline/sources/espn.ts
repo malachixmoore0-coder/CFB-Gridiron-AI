@@ -16,6 +16,10 @@ export interface EspnGame {
   id: string; kickoff: string; neutralSite: boolean; venue: string; broadcast: string | null; status: string;
   /** Scores when the game has started; `final` once ESPN marks it complete. */
   homeScore: number | null; awayScore: number | null; final: boolean;
+  /** Under way right now (kicked off, not yet final). */
+  live: boolean;
+  /** Live clock, e.g. "Q3 8:24" or "Halftime". */
+  detail: string | null;
   homeId: number; awayId: number; homeRank: number | null; awayRank: number | null;
   homeSpread: number | null; total: number | null; homeMoneyline: number | null; awayMoneyline: number | null; provider: string | null;
 }
@@ -53,6 +57,8 @@ export async function loadScoreboard(season: number, week: number, seasonType = 
         id: String(ev.id), kickoff: String(comp.date ?? ev.date ?? ''), neutralSite: !!comp.neutralSite, venue: String(comp.venue?.fullName ?? ''),
         broadcast: comp.broadcasts?.[0]?.names?.[0] ?? comp.geoBroadcasts?.[0]?.media?.shortName ?? null, status: st,
         homeScore: sc(home), awayScore: sc(away), final: st === 'STATUS_FINAL' || !!comp.status?.type?.completed,
+        live: started && !(st === 'STATUS_FINAL' || !!comp.status?.type?.completed) && st !== 'STATUS_POSTPONED' && st !== 'STATUS_CANCELED',
+        detail: (comp.status?.type?.shortDetail ?? comp.status?.type?.detail ?? null) || null,
         homeId: Number(home.team.id), awayId: Number(away.team.id), homeRank: rank(home), awayRank: rank(away),
         homeSpread, total: typeof odds?.overUnder === 'number' ? odds.overUnder : null,
         homeMoneyline: typeof odds?.homeTeamOdds?.moneyLine === 'number' ? odds.homeTeamOdds.moneyLine : null,

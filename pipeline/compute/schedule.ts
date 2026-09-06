@@ -9,7 +9,7 @@ import type { GameLine, GameResult } from '../sources/sdvpbp';
 import type { EspnGame } from '../sources/espn';
 import { forecastAt } from '../sources/weather';
 import { mapLimit } from '../lib/util';
-import type { LiveGame, Phase } from '../../src/data/liveTypes';
+import type { LiveGame, LiveScheduleFile, Phase } from '../../src/data/liveTypes';
 export type { LiveGame } from '../../src/data/liveTypes';
 
 const n = (v: number | null | undefined) => (v !== null && v !== undefined && Number.isFinite(v) ? v : null);
@@ -85,10 +85,40 @@ export interface ScheduleInputs {
   espn: Map<string, EspnGame>; pbpLines: Map<string, GameLine>; ranks: Map<number, number>; today: Date;
 }
 
+/** Open-Meteo only forecasts about two weeks out, so only ask for games inside that window. */
+const FORECAST_DAYS = 12;
+
+/**
+ * Index of every week the published slate covers, so the app can offer a tab
+ * per week without scanning the whole game list.
+ */
+export function weekIndex(games: LiveGame[]): NonNullable<LiveScheduleFile['weeks']> {
+  const byKey = new Map<string, LiveGame[]>();
+  for (const g of games) {
+    const key = `${g.gameType}|${g.week}`;
+    (byKey.get(key) ?? byKey.set(key, []).get(key)!).push(g);
+  }
+  return [...byKey.entries()]
+    .map(([key, list]) => {
+      const [gameType, week] = [key.split('|')[0], Number(key.split('|')[1])];
+      const start = list.map((g) => g.kickoff).sort()[0] ?? '';
+      return {
+        week, gameType,
+        label: gameType === 'regular' ? `Week ${week}` : gameType === 'postseason' ? 'Bowls' : gameType,
+        games: list.length,
+        final: list.filter((g) => g.status === 'final').length,
+        live: list.filter((g) => g.status === 'in_progress').length,
+        start,
+      };
+    })
+    .sort((a, b) => a.start.localeCompare(b.start) || a.week - b.week);
+}
+
 export async function buildSchedule(inp: ScheduleInputs): Promise<{ games: LiveGame[]; skippedNonFbs: number }> {
   const byEspn = new Map(inp.teams.map((t) => [t.espnId, t]));
-  const inWindow = (g: GameRow) => (inp.phase === 'postseason' ? g.season_type !== 'regular' && g.week === inp.week : g.season_type === 'regular' && (g.week === inp.week || g.week === inp.week + 1));
-  const rows = inp.games.filter((g) => g.season === inp.season && inWindow(g)).sort((a, b) => a.start_date.localeCompare(b.start_date));
+  // The whole season ships, so the app can offer a tab per week; the slate
+  // still opens on the current one.
+  const rows = inp.games.filter((g) => g.season === inp.season).sort((a, b) => a.start_date.localeCompare(b.start_date));
   let skippedNonFbs = 0;
   const out: LiveGame[] = [];
   const prepared = rows.filter((g) => {
@@ -104,14 +134,16 @@ export async function buildSchedule(inp: ScheduleInputs): Promise<{ games: LiveG
     const e = inp.espn.get(g.game_id);
     const kickoff = e?.kickoff || g.start_date;
     // ESPN posts the final within minutes; the schedule mirror can lag hours.
+    const espnScored = e && e.homeScore !== null && e.awayScore !== null && (e.final || e.live);
+    const homePts = espnScored ? e!.homeScore! : g.home_points;
+    const awayPts = espnScored ? e!.awayScore! : g.away_points;
     const espnFinal = e?.final && e.homeScore !== null && e.awayScore !== null;
-    const homePts = espnFinal ? e!.homeScore! : g.home_points;
-    const awayPts = espnFinal ? e!.awayScore! : g.away_points;
-    const final = Number.isFinite(homePts) && Number.isFinite(awayPts);
+    const final = espnFinal || (!e?.live && Number.isFinite(homePts) && Number.isFinite(awayPts));
     const neutral = e?.neutralSite ?? g.neutral_site;
     const outdoor = !home.stadium.dome || neutral;
+    const daysOut = (Date.parse(kickoff) - inp.today.getTime()) / 86_400_000;
     let weather: LiveGame['weather'] = null;
-    if (!final && outdoor && inp.withWeather && !neutral) {
+    if (!final && outdoor && inp.withWeather && !neutral && daysOut > -1 && daysOut < FORECAST_DAYS) {
       const f = await forecastAt(home.stadium.lat, home.stadium.lng, kickoff);
       if (f) weather = { ...f, source: 'forecast' };
     }
@@ -128,7 +160,9 @@ export async function buildSchedule(inp: ScheduleInputs): Promise<{ games: LiveG
       primetime: localHour >= 18.75 || (weekday !== 'Saturday' && localHour >= 18),
       broadcast: e?.broadcast ?? null, notes: g.notes || null,
       weather, weatherHint: !outdoor ? 'dome' : weather?.summary ?? null,
-      awayScore: n(awayPts), homeScore: n(homePts), status: final ? 'final' : 'scheduled',
+      awayScore: n(awayPts), homeScore: n(homePts),
+      status: final ? 'final' : e?.live ? 'in_progress' : 'scheduled',
+      statusDetail: e?.live ? e.detail : null,
       awayRank: e?.awayRank ?? inp.ranks.get(away.espnId) ?? null, homeRank: e?.homeRank ?? inp.ranks.get(home.espnId) ?? null,
     };
   });

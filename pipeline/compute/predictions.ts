@@ -53,11 +53,13 @@ export interface UpdateInputs {
   existing: LivePredictionsFile | null;
   season: number;
   now: Date;
-  /** The current slate (upcoming and just-played games). */
+  /** The published slate — now the whole season, so predictions are horizon-limited. */
   schedule: LiveGame[];
   teams: Team[];
   /** Final score for any game id this season, from the full results feed. */
   resolve: (id: string) => { homeScore: number; awayScore: number } | null;
+  /** Only predict games kicking off within this many days (default 10). */
+  horizonDays?: number;
 }
 
 export function updatePredictions(inp: UpdateInputs): LivePredictionsFile {
@@ -67,11 +69,15 @@ export function updatePredictions(inp: UpdateInputs): LivePredictionsFile {
   const nowIso = inp.now.toISOString();
   const nowMs = inp.now.getTime();
 
+  const horizonMs = (inp.horizonDays ?? 10) * 86_400_000;
   for (const g of inp.schedule) {
     const home = byId.get(g.homeId);
     const away = byId.get(g.awayId);
     if (!home || !away) continue;
     const kickoffMs = Date.parse(g.kickoff);
+    // A ratings snapshot months before kickoff says nothing useful, and running
+    // 10,000 simulations for a whole season every refresh is wasted work.
+    if (Number.isFinite(kickoffMs) && kickoffMs - nowMs > horizonMs && !records.has(g.id)) continue;
     const started = Number.isFinite(kickoffMs) && kickoffMs <= nowMs;
     const cur = records.get(g.id);
     if (started) {

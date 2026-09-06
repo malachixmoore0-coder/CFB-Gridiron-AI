@@ -121,7 +121,7 @@ console.log('\n— Track record (predictions lock at kickoff, grade on the final
   const game = {
     id: 'test-1', season: 2026, week: 14, gameType: 'regular', kickoff, timeTbd: false, weekday: 'Saturday', awayId: away.id, homeId: home.id, neutralSite: false, conferenceGame: true,
     stadium: home.stadium.name, roof: 'outdoors', homeSpread: -10.5, totalLine: 48.5, awayMoneyline: null, homeMoneyline: null, lineSource: 'test', primetime: false, broadcast: null, notes: null,
-    weather: null, weatherHint: null as null, awayScore: null, homeScore: null, status: 'scheduled' as const, awayRank: null, homeRank: null,
+    weather: null, weatherHint: null as null, awayScore: null, homeScore: null, status: 'scheduled' as const, statusDetail: null, awayRank: null, homeRank: null,
   };
   const before = updatePredictions({ existing: null, season: 2026, now: new Date('2026-11-27T12:00:00Z'), schedule: [game], teams: pool, resolve: () => null });
   const open = before.records[0];

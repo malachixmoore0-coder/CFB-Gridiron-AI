@@ -27,6 +27,8 @@ import { sourceLog } from '../pipeline/lib/fetch';
 const OUT_DIR = path.resolve(__dirname, '../data/live');
 const read = <T>(name: string): T | null => { try { return JSON.parse(fs.readFileSync(path.join(OUT_DIR, name), 'utf8')) as T; } catch { return null; } };
 const write = (name: string, data: unknown) => fs.writeFileSync(path.join(OUT_DIR, name), JSON.stringify(data, null, 1));
+/** The schedule is a whole season now — written without indentation, as the build does. */
+const writeCompact = (name: string, data: unknown) => fs.writeFileSync(path.join(OUT_DIR, name), JSON.stringify(data));
 
 async function main() {
   const today = new Date();
@@ -38,18 +40,24 @@ async function main() {
 
   const games = await loadSchedule(season, true);
   const dateWeek = weekByDate(games, season, today);
-  const weeks = dateWeek.postseason ? [dateWeek.week] : [dateWeek.week - 1, dateWeek.week, dateWeek.week + 1].filter((w) => w >= 1);
-  const boards = await Promise.all(weeks.map((w) => loadScoreboard(season, w, dateWeek.postseason ? 3 : 2)));
+  const fetchWeeks = dateWeek.postseason ? [dateWeek.week] : [dateWeek.week - 1, dateWeek.week, dateWeek.week + 1].filter((w) => w >= 1);
+  const boards = await Promise.all(fetchWeeks.map((w) => loadScoreboard(season, w, dateWeek.postseason ? 3 : 2)));
   const espn = new Map<string, EspnGame>(boards.flatMap((b) => [...b]));
-  console.log(`  weeks ${weeks.join(', ')} · ${espn.size} games from ESPN · ${[...espn.values()].filter((g) => g.final).length} final · ${games.length} on the schedule file`);
+  console.log(`  weeks ${fetchWeeks.join(', ')} · ${espn.size} games from ESPN · ${[...espn.values()].filter((g) => g.final).length} final · ${games.length} on the schedule file`);
 
   /** Final score for a game id, ESPN first (it posts within minutes), the schedule file second. */
   const finalOf = (id: string): { home: number; away: number } | null => {
     const e = espn.get(id);
     if (e?.final && e.homeScore !== null && e.awayScore !== null) return { home: e.homeScore, away: e.awayScore };
+    if (e?.live) return null; // a game under way has a score, but not a final one
     const g = games.find((x) => x.game_id === id);
     if (g && Number.isFinite(g.home_points) && Number.isFinite(g.away_points)) return { home: g.home_points, away: g.away_points };
     return null;
+  };
+  /** Score and clock for a game that is under way. */
+  const liveOf = (id: string): { home: number; away: number; detail: string | null } | null => {
+    const e = espn.get(id);
+    return e?.live && e.homeScore !== null && e.awayScore !== null ? { home: e.homeScore, away: e.awayScore, detail: e.detail } : null;
   };
 
   // ---- records ----
@@ -74,12 +82,21 @@ async function main() {
 
   // ---- schedule ----
   let scoreChanges = 0;
+  let liveChanges = 0;
   const schedule = scheduleFile.games.map((g) => {
     if (g.status === 'final') return g;
     const f = finalOf(g.id);
-    if (!f) return g;
-    scoreChanges++;
-    return { ...g, homeScore: f.home, awayScore: f.away, status: 'final' as const };
+    if (f) { scoreChanges++; return { ...g, homeScore: f.home, awayScore: f.away, status: 'final' as const, statusDetail: null }; }
+    const live = liveOf(g.id);
+    if (!live) return g;
+    if (g.status === 'in_progress' && g.homeScore === live.home && g.awayScore === live.away && g.statusDetail === live.detail) return g;
+    liveChanges++;
+    return { ...g, homeScore: live.home, awayScore: live.away, status: 'in_progress' as const, statusDetail: live.detail };
+  });
+  // Week counters follow the games, so the Slate's tabs stay accurate between builds.
+  const weeks = scheduleFile.weeks?.map((w) => {
+    const list = schedule.filter((g) => g.week === w.week && g.gameType === w.gameType);
+    return { ...w, games: list.length, final: list.filter((g) => g.status === 'final').length, live: list.filter((g) => g.status === 'in_progress').length };
   });
 
   // ---- predictions ----
@@ -126,15 +143,15 @@ async function main() {
   }
 
   const stamp = today.toISOString();
-  if (recordChanges || scoreChanges) {
-    write('teams.json', { ...teamsFile, generatedAt: stamp, teams });
-    write('schedule.json', { ...scheduleFile, generatedAt: stamp, games: schedule });
+  if (recordChanges || scoreChanges || liveChanges) {
+    if (recordChanges || scoreChanges) write('teams.json', { ...teamsFile, generatedAt: stamp, teams });
+    writeCompact('schedule.json', { ...scheduleFile, generatedAt: stamp, weeks, games: schedule });
   }
   if (predFile && (graded || locked)) write('predictions.json', { ...predFile, generatedAt: stamp, records: predFile.records });
 
   const ok = sourceLog.filter((s) => s.ok).length;
-  console.log(`  ${recordChanges} records changed · ${scoreChanges} games finalised · ${locked} predictions locked · ${graded} graded · ${rosterChanges} roster files touched · ${ok}/${sourceLog.length} sources OK`);
-  if (!recordChanges && !scoreChanges && !graded && !locked && !rosterChanges) console.log('  Nothing to update.');
+  console.log(`  ${recordChanges} records changed · ${scoreChanges} games finalised · ${liveChanges} live updates · ${locked} predictions locked · ${graded} graded · ${rosterChanges} roster files touched · ${ok}/${sourceLog.length} sources OK`);
+  if (!recordChanges && !scoreChanges && !liveChanges && !graded && !locked && !rosterChanges) console.log('  Nothing to update.');
 }
 
 main().catch((e) => { console.error(e); process.exitCode = 1; });

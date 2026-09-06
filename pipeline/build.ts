@@ -23,7 +23,7 @@ import type { BuildCtx } from './compute/context';
 import { blendWeight, gamesPlayed } from './compute/context';
 import { buildTeams, detectFront, roundMetrics } from './compute/teams';
 import { buildRosters, depthChartFrom, rosterGroup } from './compute/rosters';
-import { buildSchedule, currentWeek, mergeResults, records, weekByDate } from './compute/schedule';
+import { buildSchedule, currentWeek, mergeResults, records, weekByDate, weekIndex } from './compute/schedule';
 import { summarize, updatePredictions } from './compute/predictions';
 import type { LivePredictionsFile, TeamRosterFile } from '../src/data/liveTypes';
 
@@ -109,7 +109,8 @@ async function main() {
 
   console.log('\n[6/7] Schedule, lines & weather');
   const { games: schedule, skippedNonFbs } = await buildSchedule({ games, season, week, phase, teams, withWeather, espn, pbpLines: new Map([...(prior?.lines ?? []), ...(cur?.lines ?? [])]), ranks: ctx.ranks, today });
-  console.log(`  ${schedule.length} FBS-vs-FBS games for weeks ${week}-${week + 1} (${skippedNonFbs} vs FCS skipped) · lines on ${schedule.filter((g) => g.homeSpread !== null).length} · weather on ${schedule.filter((g) => g.weather).length}`);
+  const weeks = weekIndex(schedule);
+  console.log(`  ${schedule.length} FBS-vs-FBS games across ${weeks.length} weeks (${skippedNonFbs} vs FCS skipped) · ${schedule.filter((g) => g.status === 'final').length} final · ${schedule.filter((g) => g.status === 'in_progress').length} live · lines on ${schedule.filter((g) => g.homeSpread !== null).length} · weather on ${schedule.filter((g) => g.weather).length}`);
   if (skippedNonFbs) ctx.notes.push(`${skippedNonFbs} games against non-FBS opponents are not on the slate (no profile for the FCS side).`);
 
   console.log('\n[7/7] Model track record');
@@ -177,7 +178,7 @@ async function main() {
     teamMetrics: Object.fromEntries(built2.map((b) => [b.team.id, { gamesPlayed: b.gp, ...roundMetrics(b.metrics) }])),
   };
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, teams }, null, 1));
-  fs.writeFileSync(path.join(OUT_DIR, 'schedule.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, games: schedule }, null, 1));
+  fs.writeFileSync(path.join(OUT_DIR, 'schedule.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, weeks, games: schedule }));
   fs.writeFileSync(path.join(OUT_DIR, 'meta.json'), JSON.stringify(meta, null, 1));
   fs.writeFileSync(predPath, JSON.stringify(predictions, null, 1));
   const rosterDir = path.join(OUT_DIR, 'rosters');
