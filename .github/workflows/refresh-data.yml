@@ -12,7 +12,9 @@ name: Refresh live data & deploy
 
 on:
   schedule:
-    # Every 3 hours during the season (late Aug – mid Jan), every 12 hours otherwise. UTC.
+    # Every 3 hours during the season (late Aug – mid Jan), every 12 hours
+    # otherwise. Scores and records move faster than this — refresh-scores.yml
+    # handles those every 20 minutes on game days. UTC.
     - cron: '23 */3 * 8-12,1 *'
     - cron: '23 */12 * 2-7 *'
   workflow_dispatch:
@@ -69,6 +71,7 @@ jobs:
             WEEK=$(node -e "console.log(require('./data/live/meta.json').currentWeek)")
             SEASON=$(node -e "console.log(require('./data/live/meta.json').season)")
             git commit -m "data: refresh live dataset (season $SEASON, week $WEEK)"
+            git pull --rebase --autostash origin main
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

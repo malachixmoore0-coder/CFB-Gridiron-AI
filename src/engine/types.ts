@@ -63,6 +63,8 @@ export interface Player {
   headshotUrl?: string;
   /** Eligibility year 1-5 when known (Fr → Sr/Gr). */
   classYear?: number;
+  /** Jersey number as listed on the roster. */
+  jersey?: string;
 }
 
 export interface CoachingProfile {

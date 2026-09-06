@@ -33,7 +33,7 @@ export async function loadSchedule(season: number, optional = false): Promise<Ga
   }));
 }
 
-export interface RosterRow { athlete_id: string; name: string; team: string; position: string; year: number; weight: number; jersey: string; headshot_url: string; }
+export interface RosterRow { athlete_id: string; name: string; team: string; position: string; year: number; weight: number; height: number; jersey: string; headshot_url: string; hometown: string; }
 
 export async function loadRosters(season: number): Promise<RosterRow[]> {
   const file = await download(URLS.rosters(season), `CFBD rosters ${season} (cfbfastR-data)`, { ttlMinutes: 120, optional: true });
@@ -42,7 +42,8 @@ export async function loadRosters(season: number): Promise<RosterRow[]> {
     .filter((r) => r.athlete_id && r.athlete_id !== 'NA')
     .map((r) => ({
       athlete_id: r.athlete_id, name: `${r.first_name === 'NA' ? '' : r.first_name} ${r.last_name === 'NA' ? '' : r.last_name}`.trim(), team: r.team, position: r.position === 'NA' ? '' : r.position,
-      year: num(r.year), weight: num(r.weight), jersey: r.jersey === 'NA' ? '' : r.jersey, headshot_url: r.headshot_url === 'NA' ? '' : r.headshot_url,
+      year: num(r.year), weight: num(r.weight), height: num(r.height), jersey: r.jersey === 'NA' ? '' : r.jersey, headshot_url: r.headshot_url === 'NA' ? '' : r.headshot_url,
+      hometown: [r.home_city, r.home_state].filter((x) => x && x !== 'NA').join(', '),
     }));
 }
 

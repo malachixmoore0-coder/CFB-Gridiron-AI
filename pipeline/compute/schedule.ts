@@ -5,8 +5,8 @@
  */
 import type { Team, Weather } from '../../src/engine/types';
 import type { GameRow } from '../sources/cfbfastr';
-import type { EspnGame } from '../sources/espn';
 import type { GameLine, GameResult } from '../sources/sdvpbp';
+import type { EspnGame } from '../sources/espn';
 import { forecastAt } from '../sources/weather';
 import { mapLimit } from '../lib/util';
 import type { LiveGame, Phase } from '../../src/data/liveTypes';
@@ -17,15 +17,40 @@ const WEEKDAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday
 
 const played = (g: GameRow, now: Date) => Number.isFinite(g.home_points) || (g.completed && Date.parse(g.start_date) < now.getTime());
 
-/** Fill in scores the schedule file does not have yet from the play-by-play feed's completed games. */
-export function mergeResults(games: GameRow[], results: Map<string, GameResult> | undefined): GameRow[] {
-  if (!results) return games;
+/**
+ * Fill in scores the schedule file does not have yet. The CFBD schedule mirror
+ * can lag a finished game by hours, so ESPN's scoreboard (updated within
+ * minutes of the final whistle) and the play-by-play feed both stand in — that
+ * is what lets team records move right after a game ends.
+ */
+export function mergeResults(games: GameRow[], results: Map<string, GameResult> | undefined, espn?: Map<string, EspnGame>): GameRow[] {
+  if (!results && !espn) return games;
   return games.map((g) => {
-    if (Number.isFinite(g.home_points)) return g;
-    const r = results.get(g.game_id);
+    if (Number.isFinite(g.home_points) && Number.isFinite(g.away_points)) return g;
+    const e = espn?.get(g.game_id);
+    if (e?.final && e.homeScore !== null && e.awayScore !== null) {
+      // ESPN's own ids are the schedule's game ids, so home/away already line up.
+      return { ...g, completed: true, home_points: e.homeScore, away_points: e.awayScore };
+    }
+    const r = results?.get(g.game_id);
     if (!r || !r.completed) return g;
     return { ...g, completed: true, home_points: r.homeId === g.home_id ? r.homeScore : r.awayScore, away_points: r.homeId === g.home_id ? r.awayScore : r.homeScore };
   });
+}
+
+/**
+ * Week to fetch scoreboards for, from kickoff dates alone (no results needed):
+ * the week of the earliest game that has not kicked off, else the last week.
+ * Used before results are merged, so the ESPN fetch can happen early enough to
+ * supply those results.
+ */
+export function weekByDate(games: GameRow[], season: number, today: Date): { week: number; postseason: boolean } {
+  const reg = games.filter((g) => g.season === season && g.season_type === 'regular');
+  const upcoming = reg.filter((g) => Date.parse(g.start_date) > today.getTime() - 5 * 3_600_000);
+  if (upcoming.length) return { week: Math.min(...upcoming.map((g) => g.week)), postseason: false };
+  const post = games.filter((g) => g.season === season && g.season_type !== 'regular' && Date.parse(g.start_date) > today.getTime() - 5 * 3_600_000);
+  if (post.length) return { week: Math.min(...post.map((g) => g.week)), postseason: true };
+  return { week: reg.length ? Math.max(...reg.map((g) => g.week)) : 1, postseason: false };
 }
 
 export function currentWeek(games: GameRow[], season: number, today: Date): { week: number; phase: Phase } {
@@ -78,7 +103,11 @@ export async function buildSchedule(inp: ScheduleInputs): Promise<{ games: LiveG
     const away = byEspn.get(g.away_id)!;
     const e = inp.espn.get(g.game_id);
     const kickoff = e?.kickoff || g.start_date;
-    const final = Number.isFinite(g.home_points) && Number.isFinite(g.away_points);
+    // ESPN posts the final within minutes; the schedule mirror can lag hours.
+    const espnFinal = e?.final && e.homeScore !== null && e.awayScore !== null;
+    const homePts = espnFinal ? e!.homeScore! : g.home_points;
+    const awayPts = espnFinal ? e!.awayScore! : g.away_points;
+    const final = Number.isFinite(homePts) && Number.isFinite(awayPts);
     const neutral = e?.neutralSite ?? g.neutral_site;
     const outdoor = !home.stadium.dome || neutral;
     let weather: LiveGame['weather'] = null;
@@ -99,7 +128,7 @@ export async function buildSchedule(inp: ScheduleInputs): Promise<{ games: LiveG
       primetime: localHour >= 18.75 || (weekday !== 'Saturday' && localHour >= 18),
       broadcast: e?.broadcast ?? null, notes: g.notes || null,
       weather, weatherHint: !outdoor ? 'dome' : weather?.summary ?? null,
-      awayScore: n(g.away_points), homeScore: n(g.home_points), status: final ? 'final' : 'scheduled',
+      awayScore: n(awayPts), homeScore: n(homePts), status: final ? 'final' : 'scheduled',
       awayRank: e?.awayRank ?? inp.ranks.get(away.espnId) ?? null, homeRank: e?.homeRank ?? inp.ranks.get(home.espnId) ?? null,
     };
   });

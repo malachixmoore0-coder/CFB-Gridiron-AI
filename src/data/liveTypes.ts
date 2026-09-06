@@ -1,5 +1,5 @@
 /** Shapes shared by the data pipeline (writer) and the app (reader). */
-import type { Team, Weather } from '@/engine/types';
+import type { InjuryStatus, Team, Weather } from '@/engine/types';
 
 export interface GameWeather { tempF: number; windMph: number; precipPct: number; snowIn: number; summary: Weather; }
 
@@ -117,4 +117,117 @@ export interface LivePredictionsFile {
   /** Model settings the predictions were made with. */
   model: { weights: { scheme: number; personnel: number; environment: number; xfactor: number }; simulations: number; homeFieldBase: number };
   records: PredictionRecord[];
+}
+
+/* ------------------------------------------------------------------ */
+/* Per-team roster files: data/live/rosters/{teamId}.json               */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Box-score line for one game (or a season total). Zero counters are omitted
+ * from the published file to keep it small — read a missing field as 0 (use
+ * `stat()` in src/utils/roster.ts).
+ */
+export interface StatLine {
+  passAtt?: number; passCmp?: number; passYds?: number; passTd?: number; passInt?: number;
+  rushAtt?: number; rushYds?: number; rushTd?: number;
+  tgt?: number; rec?: number; recYds?: number; recTd?: number;
+  sacks?: number; int?: number; pbu?: number; ff?: number; fgm?: number; fga?: number;
+  /** Total expected points added on the player's plays. */
+  epa?: number;
+}
+
+export interface PlayerGameLog {
+  gameId: string;
+  week: number;
+  date: string;
+  /** Opponent team id (slug) or display name when the opponent is outside the dataset. */
+  oppId: string | null;
+  oppName: string;
+  home: boolean;
+  result: 'W' | 'L' | null;
+  teamScore: number | null;
+  oppScore: number | null;
+  stats: StatLine;
+}
+
+export interface PlayerTrait { label: string; value: string; percentile: number; }
+
+export type RosterPositionLabel = 'QB' | 'RB' | 'WR' | 'TE' | 'OL' | 'EDGE' | 'DT' | 'LB' | 'CB' | 'NCB' | 'S' | 'K' | 'P' | 'LS';
+
+export interface RosterPlayer {
+  /** Same id the engine depth chart uses: `${teamId}-${athleteId}`. */
+  id: string;
+  athleteId: string;
+  name: string;
+  jersey: string | null;
+  /** Engine-style position group. */
+  pos: RosterPositionLabel;
+  /** Position exactly as the roster lists it (OT, NT, DB…). */
+  listedPos: string;
+  unit: 'offense' | 'defense' | 'special';
+  /** Depth within the position group: 1 = first string. */
+  string: number;
+  /** Rank inside the position pool (1 = top). */
+  rank: number;
+  /** On the engine depth chart? Which role? */
+  role: 'starter' | 'rotational' | 'depth' | 'reserve';
+  /** Overall grade 1-100 (null when nothing measurable yet). */
+  rating: number | null;
+  ratingBasis: 'production' | 'roster';
+  headshotUrl: string | null;
+  height: string | null;
+  weight: number | null;
+  /** College: eligibility year 1-5. Pro: seasons of experience. */
+  classYear: number | null;
+  classLabel: string | null;
+  hometown: string | null;
+  college?: string | null;
+  age?: number | null;
+  reported?: InjuryStatus;
+  reportNote?: string;
+  usage: { snapPct: number; targetShare?: number; tprr?: number; prwr?: number; pbwr?: number };
+  strengths: PlayerTrait[];
+  weaknesses: PlayerTrait[];
+  /** Current-season totals (this team only) and games played. */
+  season: StatLine & { games: number };
+  /** Prior-season totals (any team) when the player has any. */
+  prior: (StatLine & { games: number }) | null;
+  games: PlayerGameLog[];
+  statLine: string | null;
+}
+
+export interface TeamScheduleGame {
+  id: string;
+  week: number;
+  gameType: string;
+  date: string;
+  oppId: string | null;
+  oppName: string;
+  home: boolean;
+  neutral: boolean;
+  status: 'scheduled' | 'final';
+  teamScore: number | null;
+  oppScore: number | null;
+  result: 'W' | 'L' | null;
+  notes: string | null;
+}
+
+export interface TeamRosterFile {
+  teamId: string;
+  generatedAt: string;
+  season: number;
+  record: string;
+  schedule: TeamScheduleGame[];
+  /** Next unplayed game, if any. */
+  nextGameId: string | null;
+  roster: RosterPlayer[];
+  /** How many players each position keeps on the first string (for the depth-chart sections). */
+  stringSizes: Record<RosterPositionLabel, number>;
+  /**
+   * When set, a player's headshot is `${headshotBase}${athleteId}.png` unless
+   * he carries an explicit `headshotUrl`. Keeps the file small; the app shows
+   * initials when the image 404s.
+   */
+  headshotBase?: string | null;
 }

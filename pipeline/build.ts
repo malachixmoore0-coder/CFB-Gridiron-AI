@@ -15,16 +15,17 @@ import process from 'node:process';
 import { TEAMS } from '../src/data/teams';
 import type { DefensiveFront, Team } from '../src/engine/types';
 import { sourceLog } from './lib/fetch';
+import { clamp, percentile } from './lib/util';
 import { latestElo, loadRosters, loadSchedule } from './sources/cfbfastr';
 import { aggregatePbp } from './sources/sdvpbp';
 import { loadDepthCharts, loadEspnInjuries, loadRankings, loadScoreboard } from './sources/espn';
 import type { BuildCtx } from './compute/context';
 import { blendWeight, gamesPlayed } from './compute/context';
 import { buildTeams, detectFront, roundMetrics } from './compute/teams';
-import { buildPlayers, rosterPosition } from './compute/players';
-import { buildSchedule, currentWeek, mergeResults, records } from './compute/schedule';
+import { buildRosters, depthChartFrom, rosterGroup } from './compute/rosters';
+import { buildSchedule, currentWeek, mergeResults, records, weekByDate } from './compute/schedule';
 import { summarize, updatePredictions } from './compute/predictions';
-import type { LivePredictionsFile } from '../src/data/liveTypes';
+import type { LivePredictionsFile, TeamRosterFile } from '../src/data/liveTypes';
 
 const OUT_DIR = path.resolve(__dirname, '../data/live');
 const withWeather = !process.argv.includes('--no-weather');
@@ -54,8 +55,17 @@ async function main() {
   ]);
   console.log(`  ${rosters.length} roster rows · depth charts for ${depth.ok} teams · ESPN injuries ${injuries.length} · ${rankings ? `${rankings.poll} (${rankings.ranks.size})` : 'no poll'}`);
 
+  // ESPN's scoreboard is loaded here — before results are merged — so a game
+  // that ended minutes ago still moves the records in this build. The weeks to
+  // fetch come from kickoff dates alone, which need no results.
+  const dateWeek = weekByDate(games, season, today);
+  const wantWeeks = dateWeek.postseason ? [dateWeek.week] : [dateWeek.week - 1, dateWeek.week, dateWeek.week + 1].filter((w) => w >= 1);
+  const boards = skipEspn ? [] : await Promise.all(wantWeeks.map((w) => loadScoreboard(season, w, dateWeek.postseason ? 3 : 2)));
+  const espn = new Map(boards.flatMap((b) => [...b]));
+  console.log(`  ESPN scoreboard weeks ${wantWeeks.join(', ')} · ${espn.size} games · ${[...espn.values()].filter((g) => g.final).length} final · odds on ${[...espn.values()].filter((g) => g.homeSpread !== null).length}`);
+
   const posById = new Map<string, string>();
-  for (const r of rosters) { const p = rosterPosition(r); if (p) posById.set(r.athlete_id, p === 'EDGE' || p === 'DT' ? 'DL' : p); }
+  for (const r of rosters) { const p = rosterGroup(r); if (p) posById.set(r.athlete_id, p === 'EDGE' || p === 'DT' ? 'DL' : p); }
   const fronts = new Map<number, DefensiveFront>(TEAMS.map((b) => [b.espnId, detectFront(depth.byTeam.get(b.espnId), b.coaching.defFront)]));
   const frontOf = (id: number) => fronts.get(id) ?? '4-2-5';
 
@@ -65,7 +75,7 @@ async function main() {
   const prior = await aggregatePbp(priorSeason, (id) => posById.get(id) ?? '', frontOf);
   console.log(`  ${priorSeason}: ${prior ? `${prior.plays} scrimmage plays · ${prior.games} games` : 'unavailable'}`);
   // Scores from the play-by-play feed fill in what the schedule file has not caught up on yet.
-  games = mergeResults(games, cur?.results);
+  games = mergeResults(games, cur?.results, espn);
   const { week, phase } = currentWeek(games, season, today);
   const all = [...priorGames, ...games];
   console.log(`  ${phase} · current week ${week} · ${games.filter((g) => Number.isFinite(g.home_points)).length} results on file`);
@@ -76,26 +86,28 @@ async function main() {
 
   console.log('\n[4/7] Team profiles');
   const built = buildTeams(ctx, () => undefined, () => undefined);
-  console.log('\n[5/7] Depth charts & player grades');
-  const players = buildPlayers(ctx, built.map((b) => b.team));
-  // Second pass so the QB1 / TE1 grades feed the team ratings.
-  const built2 = buildTeams(ctx, (id) => players.qbRating.get(id), (id) => players.teSpeed.get(id));
+  console.log('\n[5/7] Rosters, depth charts & player grades');
   const recs = records(games, season);
+  const pbwrOf = new Map(built.map((b) => [b.team.id, b.team.offense.pbwr]));
+  const rostersBuilt = buildRosters(ctx, built.map((b) => b.team), games, (id) => pbwrOf.get(id) ?? 0.6);
+  const depthCharts = new Map(built.map((b) => [b.team.id, depthChartFrom(rostersBuilt.byTeam.get(b.team.id) ?? [], b.team.id, rostersBuilt.files)]));
+  const qbPop = [...depthCharts.values()].map((d) => d.qbComposite).filter((v): v is number => v !== null);
+  const tePop = [...depthCharts.values()].map((d) => d.teComposite).filter((v): v is number => v !== null);
+  const rate = (v: number | null, pop: number[], lo: number, span: number) => (v === null ? undefined : Math.round(clamp(lo + (percentile(v, pop) / 100) * span, 1, 10) * 100) / 100);
+  // Second pass so the QB1 / TE1 grades feed the team ratings.
+  const built2 = buildTeams(ctx, (id) => rate(depthCharts.get(id)?.qbComposite ?? null, qbPop, 2.5, 7.5), (id) => rate(depthCharts.get(id)?.teComposite ?? null, tePop, 3, 6.5));
   const teams: Team[] = built2.map(({ team }) => ({
     ...team,
-    players: players.byTeam.get(team.id) ?? [],
+    players: depthCharts.get(team.id)?.players ?? [],
     record: recs.get(team.espnId) ?? '0-0',
   }));
-  if (!depth.ok) ctx.notes.push('ESPN depth charts unavailable — depth charts ordered by play-by-play usage and roster class.');
+  const rosterFiles = rostersBuilt.files;
+  for (const t of teams) { const f = rosterFiles.get(t.id); if (f) f.record = t.record ?? '0-0'; }
+  console.log(`  ${[...rosterFiles.values()].reduce((n, f) => n + f.roster.length, 0)} rostered players · ${teams.reduce((n, t) => n + t.players.length, 0)} on depth charts · ${[...rosterFiles.values()].reduce((n, f) => n + f.roster.filter((p) => p.games.length).length, 0)} with game logs`);
+  if (!depth.ok) ctx.notes.push('ESPN depth charts unavailable — strings are ordered by play-by-play usage, then class.');
   if (!injuries.length) ctx.notes.push('No availability report loaded — statuses can be set by hand on each team page.');
 
   console.log('\n[6/7] Schedule, lines & weather');
-  const [scoreboard, scoreboardNext] = await Promise.all([
-    skipEspn ? Promise.resolve(new Map()) : loadScoreboard(season, week, phase === 'postseason' ? 3 : 2),
-    skipEspn || phase === 'postseason' ? Promise.resolve(new Map()) : loadScoreboard(season, week + 1, 2),
-  ]);
-  const espn = new Map([...scoreboard, ...scoreboardNext]);
-  console.log(`  ESPN scoreboard odds for ${[...espn.values()].filter((g) => g.homeSpread !== null).length} games`);
   const { games: schedule, skippedNonFbs } = await buildSchedule({ games, season, week, phase, teams, withWeather, espn, pbpLines: new Map([...(prior?.lines ?? []), ...(cur?.lines ?? [])]), ranks: ctx.ranks, today });
   console.log(`  ${schedule.length} FBS-vs-FBS games for weeks ${week}-${week + 1} (${skippedNonFbs} vs FCS skipped) · lines on ${schedule.filter((g) => g.homeSpread !== null).length} · weather on ${schedule.filter((g) => g.weather).length}`);
   if (skippedNonFbs) ctx.notes.push(`${skippedNonFbs} games against non-FBS opponents are not on the slate (no profile for the FCS side).`);
@@ -168,9 +180,14 @@ async function main() {
   fs.writeFileSync(path.join(OUT_DIR, 'schedule.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, games: schedule }, null, 1));
   fs.writeFileSync(path.join(OUT_DIR, 'meta.json'), JSON.stringify(meta, null, 1));
   fs.writeFileSync(predPath, JSON.stringify(predictions, null, 1));
+  const rosterDir = path.join(OUT_DIR, 'rosters');
+  fs.mkdirSync(rosterDir, { recursive: true });
+  for (const [id, file] of rosterFiles) fs.writeFileSync(path.join(rosterDir, `${id}.json`), JSON.stringify(file));
+  // An index keeps the app from having to know the file list up front.
+  fs.writeFileSync(path.join(rosterDir, 'index.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, teams: [...rosterFiles.keys()].sort() }, null, 1));
 
   const ok = sourceLog.filter((s) => s.ok).length;
-  console.log(`\nWrote data/live/{teams,schedule,meta,predictions}.json · ${ok}/${sourceLog.length} sources OK · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`\nWrote data/live/{teams,schedule,meta,predictions}.json + rosters/ · ${ok}/${sourceLog.length} sources OK · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   for (const s of sourceLog.filter((s) => !s.ok)) console.log(`  ✗ ${s.name}: ${s.note}`);
   for (const id of ['ohio-state', 'kent-state']) {
     const t = teams.find((x) => x.id === id)!;

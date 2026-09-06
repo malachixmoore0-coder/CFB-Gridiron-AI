@@ -10,10 +10,11 @@ import { SlateScreen } from '@/screens/SlateScreen';
 import { RecordScreen } from '@/screens/RecordScreen';
 import { TeamsScreen } from '@/screens/TeamsScreen';
 import { TeamDetailScreen } from '@/screens/TeamDetailScreen';
+import { PlayerProfileScreen } from '@/screens/PlayerProfileScreen';
 import { SettingsScreen } from '@/screens/SettingsScreen';
 import { OnboardingScreen } from '@/screens/OnboardingScreen';
 
-type Overlay = { kind: 'result'; request: RunRequest } | { kind: 'team'; teamId: string };
+type Overlay = { kind: 'result'; request: RunRequest } | { kind: 'team'; teamId: string } | { kind: 'player'; teamId: string; playerId: string };
 
 /** Hand-rolled navigation: four tabs plus a small overlay stack (result / team detail). */
 export function RootNavigator() {
@@ -27,6 +28,7 @@ export function RootNavigator() {
   const push = (o: Overlay) => setStack((s) => [...s, o]);
   const pop = () => setStack((s) => s.slice(0, -1));
   const openTeam = (teamId: string) => push({ kind: 'team', teamId });
+  const openPlayer = (teamId: string, playerId: string) => push({ kind: 'player', teamId, playerId });
   const run = (request: RunRequest) => push({ kind: 'result', request });
 
   return (
@@ -42,9 +44,13 @@ export function RootNavigator() {
 
       {stack.map((o, i) => (
         <View key={`${o.kind}-${i}`} style={[StyleSheet.absoluteFill, styles.overlay]}>
-          {o.kind === 'result'
-            ? <ResultScreen request={o.request} onBack={pop} onOpenTeam={openTeam} />
-            : <TeamDetailScreen teamId={o.teamId} onBack={pop} />}
+          {o.kind === 'result' ? (
+            <ResultScreen request={o.request} onBack={pop} onOpenTeam={openTeam} />
+          ) : o.kind === 'team' ? (
+            <TeamDetailScreen teamId={o.teamId} onBack={pop} onOpenPlayer={openPlayer} onOpenTeam={openTeam} />
+          ) : (
+            <PlayerProfileScreen teamId={o.teamId} playerId={o.playerId} onBack={pop} onOpenTeam={openTeam} />
+          )}
         </View>
       ))}
     </View>

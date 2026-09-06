@@ -1,0 +1,50 @@
+name: Refresh scores
+
+# Fast path for game days: pulls the ESPN scoreboard, updates team records,
+# finalises games on the slate and grades any prediction whose game just ended.
+# It does not rebuild ratings, depth charts or rosters, so it runs in seconds
+# and produces a diff of a few lines — safe to run every 20 minutes.
+#
+# The full rebuild (refresh-data.yml) still runs on its own slower schedule.
+
+on:
+  schedule:
+    # Every 20 minutes on game days (Thu-Sun) from late August through mid January, UTC.
+    - cron: '7,27,47 * * 8-12,1 4-7'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-data
+  cancel-in-progress: false
+
+jobs:
+  scores:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Refresh scores & records
+        run: npm run data:scores
+
+      - name: Commit
+        run: |
+          git config user.name "cfb-gridiron-data-bot"
+          git config user.email "cfb-gridiron-data-bot@users.noreply.github.com"
+          git add data/live
+          if git diff --cached --quiet; then
+            echo "No score changes."
+          else
+            git commit -m "data: refresh scores & records"
+            git pull --rebase --autostash origin main
+            git push
+          fi

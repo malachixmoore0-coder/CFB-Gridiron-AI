@@ -14,6 +14,8 @@ export const espnLogo = (espnId: number) => `https://a.espncdn.com/i/teamlogos/n
 
 export interface EspnGame {
   id: string; kickoff: string; neutralSite: boolean; venue: string; broadcast: string | null; status: string;
+  /** Scores when the game has started; `final` once ESPN marks it complete. */
+  homeScore: number | null; awayScore: number | null; final: boolean;
   homeId: number; awayId: number; homeRank: number | null; awayRank: number | null;
   homeSpread: number | null; total: number | null; homeMoneyline: number | null; awayMoneyline: number | null; provider: string | null;
 }
@@ -44,9 +46,13 @@ export async function loadScoreboard(season: number, week: number, seasonType = 
         } else if (/EVEN/i.test(odds.details)) homeSpread = 0;
       }
       const rank = (c: any) => { const r = Number(c?.curatedRank?.current); return Number.isFinite(r) && r >= 1 && r <= 25 ? r : null; };
+      const st = String(comp.status?.type?.name ?? '');
+      const started = st !== 'STATUS_SCHEDULED' && st !== '';
+      const sc = (c: any) => { const v = Number(c?.score); return started && Number.isFinite(v) ? v : null; };
       out.set(String(ev.id), {
         id: String(ev.id), kickoff: String(comp.date ?? ev.date ?? ''), neutralSite: !!comp.neutralSite, venue: String(comp.venue?.fullName ?? ''),
-        broadcast: comp.broadcasts?.[0]?.names?.[0] ?? comp.geoBroadcasts?.[0]?.media?.shortName ?? null, status: String(comp.status?.type?.name ?? ''),
+        broadcast: comp.broadcasts?.[0]?.names?.[0] ?? comp.geoBroadcasts?.[0]?.media?.shortName ?? null, status: st,
+        homeScore: sc(home), awayScore: sc(away), final: st === 'STATUS_FINAL' || !!comp.status?.type?.completed,
         homeId: Number(home.team.id), awayId: Number(away.team.id), homeRank: rank(home), awayRank: rank(away),
         homeSpread, total: typeof odds?.overUnder === 'number' ? odds.overUnder : null,
         homeMoneyline: typeof odds?.homeTeamOdds?.moneyLine === 'number' ? odds.homeTeamOdds.moneyLine : null,

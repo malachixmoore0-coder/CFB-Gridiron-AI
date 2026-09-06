@@ -112,9 +112,16 @@ always reproduce the same games; "Re-roll" draws a fresh seed.
   predictions are all listed. Nothing is back-filled — a game first seen after
   kickoff is never scored.
 - **Teams** — every FBS program grouped by conference (or ordered by poll and
-  Elo), with search; each team page shows the measured tendencies and unit
-  grades feeding the nodes, and a depth chart with statuses you can override
-  (Active → Questionable → Out → back to reported).
+  Elo), with search. Each team gets its own scrolling page: identity and
+  tendencies, the season schedule with results, the depth chart split into
+  1st / 2nd / 3rd string, the full roster by position group, and the ratings
+  feeding the engine.
+- **Player profiles** — tap any player for his headshot (initials when the
+  feed has no photo), jersey, class, height and weight, hometown, depth and
+  starting status, availability you can override, a grade with its basis,
+  strengths and weaknesses as percentiles against every FBS player at his
+  position, how he projects against the next opponent, season totals and a
+  game-by-game log.
 - **Model** — node weights, simulation count, base home-field edge, the injury
   metric table, and a live-data panel (source, freshness, blend, poll, sources
   OK, manual refresh).
@@ -147,6 +154,10 @@ Two workflows ship with the repo:
   otherwise) and on demand: rebuilds the dataset, runs the engine checks,
   commits `data/live/` if anything changed, rebuilds the web app and publishes
   it to GitHub Pages.
+- **`refresh-scores.yml`** — every 20 minutes on game days: pulls the ESPN
+  scoreboard and updates team records, finalises games on the slate and grades
+  any prediction whose game just ended. It skips the rebuild entirely, so a
+  final score lands in the app within minutes (`npm run data:scores`).
 - **`deploy.yml`** — on pushes to `main` that touch app code: typecheck, engine
   checks, build, publish.
 
@@ -162,12 +173,13 @@ Native builds: `eas build --platform ios --profile preview`.
 ```
 ├── .github/workflows/     refresh-data.yml · deploy.yml
 ├── data/live/             generated: teams.json · schedule.json · meta.json · predictions.json (season track record)
+│   └── rosters/           generated: one file per team (full roster, game logs, schedule)
 ├── pipeline/              the data build (Node 22, TypeScript)
 │   ├── build.ts           orchestration, validation, writes data/live
 │   ├── sources/           sdvpbp.ts (parquet pbp aggregator) · cfbfastr.ts · espn.ts · weather.ts
-│   ├── compute/           teams.ts · players.ts · schedule.ts · predictions.ts (track record)
+│   ├── compute/           teams.ts · rosters.ts · schedule.ts · predictions.ts (track record)
 │   └── lib/               fetch/cache/CSV streaming · parquet reader · math helpers
-├── scripts/               engine-check.ts · gen-teams.ts · make-icons.js
+├── scripts/               engine-check.ts · gen-teams.ts · refresh-scores.ts · make-icons.js
 ├── src/
 │   ├── engine/            pure TypeScript engine (nodes, injuries, simulate, matrix, narrative)
 │   ├── data/              fbs.ts (generated identities) · curated.ts · teams.ts (baseline) · liveTypes.ts · slate.ts

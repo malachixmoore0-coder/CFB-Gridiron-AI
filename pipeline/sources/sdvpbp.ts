@@ -31,14 +31,24 @@ export interface TeamAcc {
   // offense EPA split by the opponent's base front
   vsFront: Record<DefensiveFront, { n: number; epa: number }>;
 }
+/** Box-score style line for one player in one game (all counts, plus total EPA generated). */
+export interface GameStat {
+  passAtt: number; passCmp: number; passYds: number; passTd: number; passInt: number;
+  rushAtt: number; rushYds: number; rushTd: number;
+  tgt: number; rec: number; recYds: number; recTd: number;
+  sacks: number; int: number; pbu: number; ff: number; fgm: number; fga: number; epa: number;
+}
+export const emptyGameStat = (): GameStat => ({ passAtt: 0, passCmp: 0, passYds: 0, passTd: 0, passInt: 0, rushAtt: 0, rushYds: 0, rushTd: 0, tgt: 0, rec: 0, recYds: 0, recTd: 0, sacks: 0, int: 0, pbu: 0, ff: 0, fgm: 0, fga: 0, epa: 0 });
 export interface PlayerAcc {
   name: string; team: number; games: Set<string>;
   targets: number; rec: number; recYds: number; recEpa: number; rushAtt: number; rushYds: number; rushEpa: number;
   dropbacks: number; passEpa: number; cpoe: number; cpoeN: number; passTd: number; passInt: number;
   sacks: number; ints: number; pbus: number; ffs: number; fgAtt: number; fgMade: number;
+  /** Per-game lines keyed by game id (the team the player was on for that game is in `log`). */
+  log: Map<string, GameStat & { team: number }>;
 }
 export interface GameLine { homeSpread: number | null; total: number | null; }
-export interface GameResult { homeId: number; awayId: number; homeScore: number; awayScore: number; completed: boolean; week: number; seasonType: number; }
+export interface GameResult { homeId: number; awayId: number; homeScore: number; awayScore: number; completed: boolean; week: number; seasonType: number; date: string; }
 export interface PbpAgg {
   season: number;
   teams: Map<number, TeamAcc>;
@@ -62,7 +72,7 @@ const newTeam = (): TeamAcc => ({
 });
 const newPlayer = (name: string, team: number): PlayerAcc => ({
   name, team, games: new Set(), targets: 0, rec: 0, recYds: 0, recEpa: 0, rushAtt: 0, rushYds: 0, rushEpa: 0, dropbacks: 0, passEpa: 0, cpoe: 0, cpoeN: 0, passTd: 0, passInt: 0,
-  sacks: 0, ints: 0, pbus: 0, ffs: 0, fgAtt: 0, fgMade: 0,
+  sacks: 0, ints: 0, pbus: 0, ffs: 0, fgAtt: 0, fgMade: 0, log: new Map(),
 });
 
 const COLUMNS = [
@@ -86,6 +96,7 @@ export async function aggregatePbp(season: number, posOf: (athleteId: string) =>
   const agg: PbpAgg = { season, teams: new Map(), players: new Map(), lines: new Map(), results: new Map(), plays: 0, games: 0 };
   const team = (id: number) => { if (!agg.teams.has(id)) agg.teams.set(id, newTeam()); return agg.teams.get(id)!; };
   const player = (id: string, name: string, tm: number) => { if (!agg.players.has(id)) agg.players.set(id, newPlayer(name, tm)); return agg.players.get(id)!; };
+  const line = (p: PlayerAcc, gameId: string, tm: number) => { let l = p.log.get(gameId); if (!l) { l = { ...emptyGameStat(), team: tm }; p.log.set(gameId, l); } p.games.add(gameId); return l; };
   const half = (m: Map<string, HalfSplit>, game: string) => { if (!m.has(game)) m.set(game, { h1: 0, h2: 0, n1: 0, n2: 0 }); return m.get(game)!; };
   const games = new Set<string>();
 
@@ -113,7 +124,7 @@ export async function aggregatePbp(season: number, posOf: (athleteId: string) =>
     if (Number.isFinite(hs) && Number.isFinite(as) && Number.isFinite(homeId) && Number.isFinite(awayId)) {
       const prev = agg.results.get(gameId);
       // Rows are in play order; keep the highest running score seen (scores never decrease).
-      if (!prev || hs + as >= prev.homeScore + prev.awayScore) agg.results.set(gameId, { homeId, awayId, homeScore: hs, awayScore: as, completed: pbool(r.status_type_completed), week: pnum(r.week), seasonType: st });
+      if (!prev || hs + as >= prev.homeScore + prev.awayScore) agg.results.set(gameId, { homeId, awayId, homeScore: hs, awayScore: as, completed: pbool(r.status_type_completed), week: pnum(r.week), seasonType: st, date: prev?.date || pstr(r.wallclock) });
     }
     const o = team(pos);
     const d = team(def);
@@ -138,7 +149,7 @@ export async function aggregatePbp(season: number, posOf: (athleteId: string) =>
 
     // Kicker credit (before the scrimmage filter).
     const kicker = pstr(r.fg_kicker_player_id);
-    if (kicker && pbool(r.fg_attempt)) { const k = player(kicker, pstr(r.fg_kicker_player_name), pos); k.fgAtt++; if (pbool(r.fg_made)) k.fgMade++; k.games.add(gameId); }
+    if (kicker && pbool(r.fg_attempt)) { const k = player(kicker, pstr(r.fg_kicker_player_name), pos); k.fgAtt++; const l = line(k, gameId, pos); l.fga++; if (pbool(r.fg_made)) { k.fgMade++; l.fgm++; } }
 
     if (!(isPass || isRush)) return;
     if (!pbool(r.scrimmage_play) || pbool(r.kneel_down) || pbool(r.penalty_no_play)) return;
@@ -185,11 +196,14 @@ export async function aggregatePbp(season: number, posOf: (athleteId: string) =>
       const pid = pstr(r.passer_player_id);
       if (pid) {
         const p = player(pid, pstr(r.passer_player_name), pos);
-        p.dropbacks++; p.passEpa += epa; p.games.add(gameId);
+        p.dropbacks++; p.passEpa += epa;
+        const l = line(p, gameId, pos);
+        l.epa += epa;
+        if (!sack) { l.passAtt++; if (pbool(r.completion)) { l.passCmp++; l.passYds += Number.isFinite(pnum(r.yds_receiving)) ? pnum(r.yds_receiving) : yards; } }
         const cpoe = pnum(r.cpoe);
         if (Number.isFinite(cpoe)) { p.cpoe += cpoe; p.cpoeN++; }
-        if (pbool(r.touchdown) && isPass) p.passTd++;
-        if (pbool(r.int)) p.passInt++;
+        if (pbool(r.touchdown) && isPass && !sack) { p.passTd++; l.passTd++; }
+        if (pbool(r.int)) { p.passInt++; l.passInt++; }
       }
       const air = pnum(r.air_yards);
       if (Number.isFinite(air)) { o.airYards += air; o.airN++; }
@@ -200,8 +214,10 @@ export async function aggregatePbp(season: number, posOf: (athleteId: string) =>
     const rid = pstr(r.receiver_player_id);
     if (isPass && rid && !sack) {
       const p = player(rid, pstr(r.receiver_player_name), pos);
-      p.targets++; p.recEpa += epa; p.games.add(gameId);
-      if (pbool(r.completion)) { p.rec++; p.recYds += Number.isFinite(pnum(r.yds_receiving)) ? pnum(r.yds_receiving) : yards; }
+      p.targets++; p.recEpa += epa;
+      const l = line(p, gameId, pos);
+      l.tgt++; l.epa += epa;
+      if (pbool(r.completion)) { const y = Number.isFinite(pnum(r.yds_receiving)) ? pnum(r.yds_receiving) : yards; p.rec++; p.recYds += y; l.rec++; l.recYds += y; if (pbool(r.touchdown)) l.recTd++; }
       const air = pnum(r.air_yards);
       const rpos = posOf(rid);
       if (Number.isFinite(air) && air <= 10) { o.shortTgtN++; o.shortTgtEpa += epa; }
@@ -211,20 +227,23 @@ export async function aggregatePbp(season: number, posOf: (athleteId: string) =>
     const rusher = pstr(r.rusher_player_id);
     if (isRush && rusher) {
       const p = player(rusher, pstr(r.rusher_player_name), pos);
-      p.rushAtt++; p.rushYds += Number.isFinite(pnum(r.yds_rushed)) ? pnum(r.yds_rushed) : yards; p.rushEpa += epa; p.games.add(gameId);
+      const y = Number.isFinite(pnum(r.yds_rushed)) ? pnum(r.yds_rushed) : yards;
+      p.rushAtt++; p.rushYds += y; p.rushEpa += epa;
+      const l = line(p, gameId, pos);
+      l.rushAtt++; l.rushYds += y; l.epa += epa; if (pbool(r.touchdown)) l.rushTd++;
       if (posOf(rusher) === 'QB') o.qbRushes++;
     }
     // Defender credit.
     for (const [idCol, nameCol, share] of [['sack_player_id', 'sack_player_name', 1], ['sack_player_id2', 'sack_player_name2', 0.5]] as const) {
       const id = pstr(r[idCol]);
-      if (id) { const p = player(id, pstr(r[nameCol]), def); p.sacks += share; p.games.add(gameId); }
+      if (id) { const p = player(id, pstr(r[nameCol]), def); p.sacks += share; line(p, gameId, def).sacks += share; }
     }
     const intId = pstr(r.interception_player_id);
-    if (intId) { const p = player(intId, pstr(r.interception_player_name), def); p.ints++; p.games.add(gameId); }
+    if (intId) { const p = player(intId, pstr(r.interception_player_name), def); p.ints++; line(p, gameId, def).int++; }
     const pbuId = pstr(r.pass_breakup_player_id);
-    if (pbuId) { const p = player(pbuId, pstr(r.pass_breakup_player_name), def); p.pbus++; p.games.add(gameId); }
+    if (pbuId) { const p = player(pbuId, pstr(r.pass_breakup_player_name), def); p.pbus++; line(p, gameId, def).pbu++; }
     const ffId = pstr(r.fumble_forced_player_id);
-    if (ffId) { const p = player(ffId, pstr(r.fumble_forced_player_name), def); p.ffs++; p.games.add(gameId); }
+    if (ffId) { const p = player(ffId, pstr(r.fumble_forced_player_name), def); p.ffs++; line(p, gameId, def).ff++; }
   });
   if (missing.length) console.warn(`  pbp ${season}: columns not in file — ${missing.join(', ')}`);
   agg.games = games.size;
