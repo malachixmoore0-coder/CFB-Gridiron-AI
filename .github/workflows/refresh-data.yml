@@ -30,7 +30,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  # Shares a group with refresh-scores.yml so the two never write data/live at once.
+  group: live-data
   cancel-in-progress: false
 
 jobs:
@@ -71,8 +72,16 @@ jobs:
             WEEK=$(node -e "console.log(require('./data/live/meta.json').currentWeek)")
             SEASON=$(node -e "console.log(require('./data/live/meta.json').season)")
             git commit -m "data: refresh live dataset (season $SEASON, week $WEEK)"
-            git pull --rebase --autostash origin main
-            git push
+            # These files are generated, so a concurrent commit is never worth
+            # merging: re-anchor onto whatever landed and keep what we just built.
+            for attempt in 1 2 3; do
+              git push && break
+              echo "Push rejected (attempt $attempt) — replaying our build on top of origin/main."
+              git fetch origin main
+              git reset --soft origin/main
+              git add data/live
+              git commit -m "data: refresh live dataset (season $SEASON, week $WEEK)" || true
+            done
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 

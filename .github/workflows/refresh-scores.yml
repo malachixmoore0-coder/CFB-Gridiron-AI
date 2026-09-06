@@ -47,6 +47,12 @@ jobs:
             echo "No score changes."
           else
             git commit -m "data: refresh scores & records"
-            git pull --rebase --autostash origin main
-            git push
+            for attempt in 1 2 3; do
+              git push && break
+              echo "Push rejected (attempt $attempt) — replaying our update on top of origin/main."
+              git fetch origin main
+              git reset --soft origin/main
+              git add data/live
+              git commit -m "data: refresh scores & records" || true
+            done
           fi
