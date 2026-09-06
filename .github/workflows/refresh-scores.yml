@@ -9,8 +9,10 @@ name: Refresh scores
 
 on:
   schedule:
-    # Every 20 minutes on game days (Thu-Sun) from late August through mid January, UTC.
-    - cron: '7,27,47 * * 8-12,1 4-7'
+    # Every 20 minutes on game days from late August through mid January, UTC.
+    # Day-of-week is 0-6 with Sunday = 0, so Thursday through Sunday is 4-6,0.
+    # Saturday-night finals land early Sunday UTC, which that range already covers.
+    - cron: '7,27,47 * * 8-12,1 0,4-6'
   workflow_dispatch:
 
 permissions:
