@@ -27,6 +27,11 @@ export function TeamDetailScreen({ teamId, onBack, onOpenPlayer, onOpenTeam }: P
   const { statusOf, hasOverride } = useSettings();
   const { roster: file, loading, error } = useRoster(teamId);
   const [tab, setTab] = useState<Tab>('depth');
+  // A full roster is ~90 players with a photo each. Rendering every one at once
+  // is enough to exhaust an installed web app's memory budget on a phone, so
+  // sections are revealed on demand.
+  const [strings, setStrings] = useState(2);
+  const [unit, setUnit] = useState<RosterPlayer['unit']>('offense');
   const c = t.coaching;
   const o = t.offense;
   const d = t.defense;
@@ -107,17 +112,30 @@ export function TeamDetailScreen({ teamId, onBack, onOpenPlayer, onOpenTeam }: P
             <Text style={styles.blurb}>
               Ordered by play-by-play usage, then class. {flagged > 0 ? `${flagged} flagged as questionable or out. ` : ''}Tap a player for his profile.
             </Text>
-            {byString.map((s) => (
+            {byString.slice(0, strings).map((s) => (
               <Section key={s.string} icon={s.string === 1 ? 'star' : 'people'} title={STRING_LABEL(s.string)} subtitle={`${s.players.length} player${s.players.length === 1 ? '' : 's'}`}>
                 {s.players.map((p) => (
                   <RosterRow key={p.id} player={p} file={file} team={t} status={statusFor(p)} overridden={hasOverride(p.id)} onPress={() => openPlayer(p)} showPos />
                 ))}
               </Section>
             ))}
+            {byString.length > strings && (
+              <TouchableOpacity style={styles.more} activeOpacity={0.8} onPress={() => setStrings((n) => n + 2)}>
+                <Text style={styles.moreText}>Show {STRING_LABEL(strings + 1)}{byString.length > strings + 1 ? ' and deeper' : ''} · {byString.slice(strings).reduce((n, s) => n + s.players.length, 0)} more</Text>
+                <Ionicons name="chevron-down" size={15} color={colors.gold} />
+              </TouchableOpacity>
+            )}
           </>
         )}
 
-        {tab === 'roster' && roster.length > 0 && byUnit.map((u) => (
+        {tab === 'roster' && roster.length > 0 && (
+          <View style={styles.tabs}>
+            {byUnit.map((u) => (
+              <Chip key={u.unit} label={`${UNIT_NAME[u.unit]} · ${u.groups.reduce((n, g) => n + g.players.length, 0)}`} active={unit === u.unit} onPress={() => setUnit(u.unit)} small />
+            ))}
+          </View>
+        )}
+        {tab === 'roster' && roster.length > 0 && byUnit.filter((u) => u.unit === unit).map((u) => (
           <Section key={u.unit} icon={u.unit === 'offense' ? 'rocket' : u.unit === 'defense' ? 'shield-checkmark' : 'football'} title={UNIT_NAME[u.unit]} subtitle={`${u.groups.reduce((n, g) => n + g.players.length, 0)} players`}>
             {u.groups.map((g) => (
               <View key={g.pos} style={styles.posGroup}>
@@ -222,6 +240,8 @@ const styles = StyleSheet.create({
   tabs: { flexDirection: 'row', gap: spacing.sm, marginBottom: spacing.md, flexWrap: 'wrap' },
   loading: { alignItems: 'center', gap: 8, paddingVertical: spacing.xl },
   blurb: { color: colors.inkFaint, fontSize: 11, lineHeight: 16, marginBottom: spacing.md },
+  more: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingVertical: 12, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, backgroundColor: colors.card, marginBottom: spacing.md },
+  moreText: { color: colors.gold, fontWeight: '800', fontSize: 13 },
   posGroup: { marginBottom: spacing.md },
   posTitle: { color: colors.gold, fontSize: 10, fontWeight: '900', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 4 },
   barRow: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 10 },

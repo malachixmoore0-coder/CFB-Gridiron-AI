@@ -11,6 +11,7 @@ import { RecordScreen } from '@/screens/RecordScreen';
 import { TeamsScreen } from '@/screens/TeamsScreen';
 import { TeamDetailScreen } from '@/screens/TeamDetailScreen';
 import { PlayerProfileScreen } from '@/screens/PlayerProfileScreen';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { SettingsScreen } from '@/screens/SettingsScreen';
 import { OnboardingScreen } from '@/screens/OnboardingScreen';
 
@@ -44,13 +45,15 @@ export function RootNavigator() {
 
       {stack.map((o, i) => (
         <View key={`${o.kind}-${i}`} style={[StyleSheet.absoluteFill, styles.overlay]}>
-          {o.kind === 'result' ? (
-            <ResultScreen request={o.request} onBack={pop} onOpenTeam={openTeam} />
-          ) : o.kind === 'team' ? (
-            <TeamDetailScreen teamId={o.teamId} onBack={pop} onOpenPlayer={openPlayer} onOpenTeam={openTeam} />
-          ) : (
-            <PlayerProfileScreen teamId={o.teamId} playerId={o.playerId} onBack={pop} onOpenTeam={openTeam} />
-          )}
+          <ErrorBoundary onBack={pop}>
+            {o.kind === 'result' ? (
+              <ResultScreen request={o.request} onBack={pop} onOpenTeam={openTeam} />
+            ) : o.kind === 'team' ? (
+              <TeamDetailScreen teamId={o.teamId} onBack={pop} onOpenPlayer={openPlayer} onOpenTeam={openTeam} />
+            ) : (
+              <PlayerProfileScreen teamId={o.teamId} playerId={o.playerId} onBack={pop} onOpenTeam={openTeam} />
+            )}
+          </ErrorBoundary>
         </View>
       ))}
     </View>

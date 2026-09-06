@@ -3,9 +3,36 @@ import type { RosterPlayer, RosterPositionLabel, StatLine, TeamRosterFile } from
 /** Published roster files drop zero counters — read them back as 0. */
 export const stat = (line: StatLine | null | undefined, key: keyof StatLine): number => (line?.[key] ?? 0);
 
-/** Headshot for a player: an explicit URL, else the feed's derived one. Null means show initials. */
-export const headshotOf = (p: RosterPlayer, file: TeamRosterFile | null | undefined): string | null =>
-  p.headshotUrl ?? (file?.headshotBase ? `${file.headshotBase}${p.athleteId}.png` : null);
+/**
+ * Ask the image host for a small, face-cropped derivative.
+ *
+ * Both feeds hand out full-resolution portraits — the NFL's are Cloudinary
+ * originals well over a megapixel. A roster page shows ~90 of them at once,
+ * which is enough to exhaust the memory an installed iOS web app is given and
+ * take the whole page down with it, so never request the original.
+ */
+export function sizedHeadshot(url: string, px: number): string {
+  const size = Math.round(px);
+  // Cloudinary (NFL): transforms live in the path segment after /upload/.
+  if (url.includes('/image/upload/')) {
+    return url.replace(/\/image\/upload\/([^/]*)\//, (_m, transform: string) => {
+      const kept = String(transform).split(',').filter((t) => !/^[wh]_|^c_|^g_|^dpr_/.test(t));
+      return `/image/upload/${[...kept, `w_${size}`, `h_${size}`, 'c_fill', 'g_face', 'dpr_2.0'].filter(Boolean).join(',')}/`;
+    });
+  }
+  // ESPN's image CDN takes width/height as query parameters.
+  if (url.includes('espncdn.com')) return `${url}${url.includes('?') ? '&' : '?'}w=${size * 2}&h=${size * 2}`;
+  return url;
+}
+
+/**
+ * Headshot for a player: an explicit URL, else the feed's derived one, always
+ * requested at roughly the size it will be drawn. Null means show initials.
+ */
+export function headshotOf(p: RosterPlayer, file: TeamRosterFile | null | undefined, px = 48): string | null {
+  const url = p.headshotUrl ?? (file?.headshotBase ? `${file.headshotBase}${p.athleteId}.png` : null);
+  return url ? sizedHeadshot(url, px) : null;
+}
 
 export const initialsOf = (name: string) =>
   name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]?.toUpperCase() ?? '').join('') || '?';

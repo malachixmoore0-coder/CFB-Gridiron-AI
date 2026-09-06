@@ -52,7 +52,7 @@ export function PlayerProfileScreen({ teamId, playerId, onBack, onOpenTeam }: Pr
       <ScreenHeader title={player.name} subtitle={`${team.school} · ${player.listedPos || player.pos}${player.jersey ? ` · #${player.jersey}` : ''}`} onBack={onBack} />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.hero}>
-          <PlayerAvatar uri={headshotOf(player, file)} name={player.name} team={team} size={92} />
+          <PlayerAvatar uri={headshotOf(player, file, 92)} name={player.name} team={team} size={92} />
           <View style={{ flex: 1 }}>
             <Text style={styles.heroName}>{player.jersey ? `#${player.jersey} ` : ''}{player.name}</Text>
             <TouchableOpacity style={styles.teamLink} onPress={() => onOpenTeam(team.id)} activeOpacity={0.7}>

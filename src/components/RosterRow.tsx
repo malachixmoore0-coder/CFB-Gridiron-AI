@@ -29,7 +29,7 @@ export function RosterRow({ player, file, team, status, overridden, onPress, sho
   const line = seasonLine(player);
   return (
     <TouchableOpacity style={[styles.row, status === 'out' && styles.dim]} activeOpacity={0.75} onPress={onPress}>
-      <PlayerAvatar uri={headshotOf(player, file)} name={player.name} team={team} size={40} />
+      <PlayerAvatar uri={headshotOf(player, file, 40)} name={player.name} team={team} size={40} />
       <View style={{ flex: 1 }}>
         <Text style={styles.name} numberOfLines={1}>
           {player.jersey ? <Text style={styles.jersey}>#{player.jersey} </Text> : null}
