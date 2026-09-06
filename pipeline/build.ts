@@ -23,6 +23,8 @@ import { blendWeight, gamesPlayed } from './compute/context';
 import { buildTeams, detectFront, roundMetrics } from './compute/teams';
 import { buildPlayers, rosterPosition } from './compute/players';
 import { buildSchedule, currentWeek, mergeResults, records } from './compute/schedule';
+import { summarize, updatePredictions } from './compute/predictions';
+import type { LivePredictionsFile } from '../src/data/liveTypes';
 
 const OUT_DIR = path.resolve(__dirname, '../data/live');
 const withWeather = !process.argv.includes('--no-weather');
@@ -33,7 +35,7 @@ async function main() {
   const today = new Date();
   console.log(`\nCFB Gridiron AI data build — ${today.toISOString()}`);
 
-  console.log('\n[1/6] Schedule, results & Elo');
+  console.log('\n[1/7] Schedule, results & Elo');
   let season = today.getUTCFullYear();
   let games = await loadSchedule(season, true);
   if (!games.length) { season -= 1; games = await loadSchedule(season); }
@@ -42,7 +44,7 @@ async function main() {
   const elo = latestElo([...priorGames, ...games]);
   console.log(`  season ${season} · ${games.length} games on file · Elo for ${elo.size} teams`);
 
-  console.log('\n[2/6] Rosters & ESPN enrichment');
+  console.log('\n[2/7] Rosters & ESPN enrichment');
   const espnIds = TEAMS.map((t) => t.espnId);
   const [rosters, depth, injuries, rankings] = await Promise.all([
     loadRosters(season),
@@ -57,7 +59,7 @@ async function main() {
   const fronts = new Map<number, DefensiveFront>(TEAMS.map((b) => [b.espnId, detectFront(depth.byTeam.get(b.espnId), b.coaching.defFront)]));
   const frontOf = (id: number) => fronts.get(id) ?? '4-2-5';
 
-  console.log('\n[3/6] Play-by-play (parquet)');
+  console.log('\n[3/7] Play-by-play (parquet)');
   const cur = await aggregatePbp(season, (id) => posById.get(id) ?? '', frontOf);
   console.log(`  ${season}: ${cur ? `${cur.plays} scrimmage plays · ${cur.games} games` : 'not published yet'}`);
   const prior = await aggregatePbp(priorSeason, (id) => posById.get(id) ?? '', frontOf);
@@ -72,9 +74,9 @@ async function main() {
     season, priorSeason, today, games: all, cur, prior, rosters, depth: depth.byTeam, espnInjuries: injuries, elo, ranks: rankings?.ranks ?? new Map(), baseline: TEAMS, notes: [],
   };
 
-  console.log('\n[4/6] Team profiles');
+  console.log('\n[4/7] Team profiles');
   const built = buildTeams(ctx, () => undefined, () => undefined);
-  console.log('\n[5/6] Depth charts & player grades');
+  console.log('\n[5/7] Depth charts & player grades');
   const players = buildPlayers(ctx, built.map((b) => b.team));
   // Second pass so the QB1 / TE1 grades feed the team ratings.
   const built2 = buildTeams(ctx, (id) => players.qbRating.get(id), (id) => players.teSpeed.get(id));
@@ -87,7 +89,7 @@ async function main() {
   if (!depth.ok) ctx.notes.push('ESPN depth charts unavailable — depth charts ordered by play-by-play usage and roster class.');
   if (!injuries.length) ctx.notes.push('No availability report loaded — statuses can be set by hand on each team page.');
 
-  console.log('\n[6/6] Schedule, lines & weather');
+  console.log('\n[6/7] Schedule, lines & weather');
   const [scoreboard, scoreboardNext] = await Promise.all([
     skipEspn ? Promise.resolve(new Map()) : loadScoreboard(season, week, phase === 'postseason' ? 3 : 2),
     skipEspn || phase === 'postseason' ? Promise.resolve(new Map()) : loadScoreboard(season, week + 1, 2),
@@ -97,6 +99,15 @@ async function main() {
   const { games: schedule, skippedNonFbs } = await buildSchedule({ games, season, week, phase, teams, withWeather, espn, pbpLines: new Map([...(prior?.lines ?? []), ...(cur?.lines ?? [])]), ranks: ctx.ranks, today });
   console.log(`  ${schedule.length} FBS-vs-FBS games for weeks ${week}-${week + 1} (${skippedNonFbs} vs FCS skipped) · lines on ${schedule.filter((g) => g.homeSpread !== null).length} · weather on ${schedule.filter((g) => g.weather).length}`);
   if (skippedNonFbs) ctx.notes.push(`${skippedNonFbs} games against non-FBS opponents are not on the slate (no profile for the FCS side).`);
+
+  console.log('\n[7/7] Model track record');
+  const predPath = path.join(OUT_DIR, 'predictions.json');
+  let existing: LivePredictionsFile | null = null;
+  try { existing = JSON.parse(fs.readFileSync(predPath, 'utf8')) as LivePredictionsFile; } catch { existing = null; }
+  const finalsById = new Map(games.filter((g) => Number.isFinite(g.home_points) && Number.isFinite(g.away_points)).map((g) => [g.game_id, { homeScore: g.home_points, awayScore: g.away_points }]));
+  const predictions = updatePredictions({ existing, season, now: today, schedule, teams, resolve: (id) => finalsById.get(id) ?? null });
+  const sum = summarize(predictions.records);
+  console.log(`  ${predictions.records.length} records · ${predictions.records.filter((r) => r.status === 'open').length} open · ${predictions.records.filter((r) => r.status === 'locked').length} locked · ${sum.finals} graded${sum.finals ? ` · SU ${sum.su}/${sum.finals} · ATS ${sum.ats}-${sum.atsL} · O/U ${sum.ou}-${sum.ouL} · Brier ${sum.brier?.toFixed(3)}` : ''}`);
 
   // ---- validation ----
   const problems: string[] = [];
@@ -156,9 +167,10 @@ async function main() {
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, teams }, null, 1));
   fs.writeFileSync(path.join(OUT_DIR, 'schedule.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, games: schedule }, null, 1));
   fs.writeFileSync(path.join(OUT_DIR, 'meta.json'), JSON.stringify(meta, null, 1));
+  fs.writeFileSync(predPath, JSON.stringify(predictions, null, 1));
 
   const ok = sourceLog.filter((s) => s.ok).length;
-  console.log(`\nWrote data/live/{teams,schedule,meta}.json · ${ok}/${sourceLog.length} sources OK · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`\nWrote data/live/{teams,schedule,meta,predictions}.json · ${ok}/${sourceLog.length} sources OK · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   for (const s of sourceLog.filter((s) => !s.ok)) console.log(`  ✗ ${s.name}: ${s.note}`);
   for (const id of ['ohio-state', 'kent-state']) {
     const t = teams.find((x) => x.id === id)!;

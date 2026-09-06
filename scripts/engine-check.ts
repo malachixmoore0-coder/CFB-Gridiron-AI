@@ -111,5 +111,36 @@ for (const [awayId, homeId] of pairs) {
   console.log(`    ${T(awayId).abbr} @ ${T(homeId).abbr}: home ${r.simulation.homeWinPct}% · spread ${r.simulation.spread} · total ${r.simulation.projectedTotal} · margin model ${r.modelMargin}`);
 }
 
+console.log('\n— Track record (predictions lock at kickoff, grade on the final)');
+{
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { grade, updatePredictions } = require('../pipeline/compute/predictions') as typeof import('../pipeline/compute/predictions');
+  const home = T('ohio-state');
+  const away = T('michigan');
+  const kickoff = '2026-11-28T17:00:00.000Z';
+  const game = {
+    id: 'test-1', season: 2026, week: 14, gameType: 'regular', kickoff, timeTbd: false, weekday: 'Saturday', awayId: away.id, homeId: home.id, neutralSite: false, conferenceGame: true,
+    stadium: home.stadium.name, roof: 'outdoors', homeSpread: -10.5, totalLine: 48.5, awayMoneyline: null, homeMoneyline: null, lineSource: 'test', primetime: false, broadcast: null, notes: null,
+    weather: null, weatherHint: null as null, awayScore: null, homeScore: null, status: 'scheduled' as const, awayRank: null, homeRank: null,
+  };
+  const before = updatePredictions({ existing: null, season: 2026, now: new Date('2026-11-27T12:00:00Z'), schedule: [game], teams: pool, resolve: () => null });
+  const open = before.records[0];
+  check(!!open && open.status === 'open' && open.updates === 1 && open.homeWinPct > 50, `prediction recorded before kickoff (OSU ${open?.homeWinPct}% · ${open?.spread})`);
+  const again = updatePredictions({ existing: before, season: 2026, now: new Date('2026-11-28T12:00:00Z'), schedule: [{ ...game, homeSpread: -12 }], teams: pool, resolve: () => null });
+  check(again.records[0].updates === 2 && again.records[0].marketHomeSpread === -12, 'open prediction is re-run and picks up the newer market line');
+  const locked = updatePredictions({ existing: again, season: 2026, now: new Date('2026-11-28T17:30:00Z'), schedule: [{ ...game, homeSpread: -15 }], teams: pool, resolve: () => null });
+  check(locked.records[0].status === 'locked' && locked.records[0].marketHomeSpread === -12 && locked.records[0].updates === 2, 'prediction freezes at kickoff and ignores later lines');
+  const final = updatePredictions({ existing: locked, season: 2026, now: new Date('2026-11-29T02:00:00Z'), schedule: [], teams: pool, resolve: (id) => (id === 'test-1' ? { homeScore: 31, awayScore: 17 } : null) });
+  const res = final.records[0].result!;
+  check(final.records[0].status === 'final' && res.winner === 'home' && res.suCorrect, 'final score grades the frozen prediction');
+  check(res.atsPick !== null && res.ats !== null && res.ou !== null, `market grading present (ATS pick ${res.atsPick} → ${res.ats}, O/U ${res.ouPick} → ${res.ou})`);
+  const unseen = updatePredictions({ existing: null, season: 2026, now: new Date('2026-11-28T17:30:00Z'), schedule: [game], teams: pool, resolve: () => ({ homeScore: 31, awayScore: 17 }) });
+  check(unseen.records.length === 0, 'a game first seen after kickoff is never back-filled');
+  const g = grade({ ...open, homeWinPct: 70, awayWinPct: 30, spread: -7, total: 50, marketHomeSpread: -3, marketTotal: 45 }, 20, 24);
+  check(!g.suCorrect && g.atsPick === 'home' && g.ats === 'loss' && g.ouPick === 'over' && g.ou === 'loss' && Math.abs(g.brier - 0.49) < 1e-9, 'grading arithmetic: upset ⇒ SU ✗, ATS ✗, O/U ✗, Brier 0.49');
+  const push = grade({ ...open, homeWinPct: 60, awayWinPct: 40, spread: -7, total: 50, marketHomeSpread: -3, marketTotal: 44 }, 24, 21);
+  check(push.ats === 'push' && push.ou === 'win', 'push on the number is a push, not a loss');
+}
+
 console.log(failures ? `\n${failures} check(s) FAILED` : '\nAll engine checks passed.');
 if (failures) throw new Error(`${failures} engine check(s) failed`);

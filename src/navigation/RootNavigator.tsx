@@ -7,6 +7,7 @@ import { BottomTabBar, TabKey } from '@/components/BottomTabBar';
 import { MatchupScreen } from '@/screens/MatchupScreen';
 import { ResultScreen } from '@/screens/ResultScreen';
 import { SlateScreen } from '@/screens/SlateScreen';
+import { RecordScreen } from '@/screens/RecordScreen';
 import { TeamsScreen } from '@/screens/TeamsScreen';
 import { TeamDetailScreen } from '@/screens/TeamDetailScreen';
 import { SettingsScreen } from '@/screens/SettingsScreen';
@@ -33,6 +34,7 @@ export function RootNavigator() {
       <View style={styles.content}>
         {tab === 'matchup' && <MatchupScreen onRun={run} onOpenTeam={openTeam} />}
         {tab === 'slate' && <SlateScreen onRun={run} />}
+        {tab === 'record' && <RecordScreen onRun={run} />}
         {tab === 'teams' && <TeamsScreen onOpenTeam={openTeam} />}
         {tab === 'settings' && <SettingsScreen />}
       </View>

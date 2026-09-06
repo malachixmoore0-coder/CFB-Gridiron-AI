@@ -27,7 +27,7 @@ current without anyone touching a file.
  ESPN odds · rankings · injuries · depth charts · Open-Meteo forecasts   (best-effort extras)
         │
         ▼   GitHub Action, every 3 h in-season (refresh-data.yml)
- pipeline/build.ts  ──►  data/live/{teams,schedule,meta}.json  ──►  commit
+ pipeline/build.ts  ──►  data/live/{teams,schedule,meta,predictions}.json  ──►  commit
         │
         ▼
  web app rebuilt & published to GitHub Pages
@@ -103,6 +103,14 @@ always reproduce the same games; "Re-roll" draws a fresh seed.
 - **Slate** — the real current-week FBS schedule filtered by Ranked / Power 4 /
   Group of 5 / conference, each game quick-simulated with your model and
   compared to the market spread and total.
+- **Record** — the model's track record. Every refresh predicts each upcoming
+  game with the default model and the market line at that moment; the
+  prediction is rewritten until kickoff, then frozen, then graded when the
+  final score lands: straight-up, against the spread, over/under, Brier score,
+  margin and total error, and a calibration table (when the favourite is
+  given 70-80%, does it win 70-80% of the time?). Graded, locked and open
+  predictions are all listed. Nothing is back-filled — a game first seen after
+  kickoff is never scored.
 - **Teams** — every FBS program grouped by conference (or ordered by poll and
   Elo), with search; each team page shows the measured tendencies and unit
   grades feeding the nodes, and a depth chart with statuses you can override
@@ -153,11 +161,11 @@ Native builds: `eas build --platform ios --profile preview`.
 
 ```
 ├── .github/workflows/     refresh-data.yml · deploy.yml
-├── data/live/             generated: teams.json · schedule.json · meta.json
+├── data/live/             generated: teams.json · schedule.json · meta.json · predictions.json (season track record)
 ├── pipeline/              the data build (Node 22, TypeScript)
 │   ├── build.ts           orchestration, validation, writes data/live
 │   ├── sources/           sdvpbp.ts (parquet pbp aggregator) · cfbfastr.ts · espn.ts · weather.ts
-│   ├── compute/           teams.ts · players.ts · schedule.ts
+│   ├── compute/           teams.ts · players.ts · schedule.ts · predictions.ts (track record)
 │   └── lib/               fetch/cache/CSV streaming · parquet reader · math helpers
 ├── scripts/               engine-check.ts · gen-teams.ts · make-icons.js
 ├── src/
