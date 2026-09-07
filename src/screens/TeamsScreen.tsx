@@ -8,15 +8,19 @@ import { colors, radius, spacing } from '@/theme';
 import { useSettings } from '@/context/SettingsContext';
 import { TeamMark } from '@/components/TeamMark';
 import { ScreenHeader } from '@/components/ScreenHeader';
+import { useEngagement } from '@/context/EngagementContext';
+import { useEntitlements } from '@/context/EntitlementsContext';
 import { Chip } from '@/components/Chip';
 import { CONFERENCE_SHORT } from '@/data/teams';
 import type { Team } from '@/engine/types';
 
-interface Props { onOpenTeam: (id: string) => void; }
+interface Props { onOpenTeam: (id: string) => void; onUpgrade?: () => void; }
 
 const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
-export function TeamsScreen({ onOpenTeam }: Props) {
+export function TeamsScreen({ onOpenTeam, onUpgrade }: Props) {
+  const eng = useEngagement();
+  const ent = useEntitlements();
   const { overrides, clearOverrides, statusOf } = useSettings();
   const { conferences, ranked, teams, poll } = useTeams();
   const [query, setQuery] = useState('');

@@ -12,9 +12,11 @@ import { DataBanner } from '@/components/DataBanner';
 import { Section } from '@/components/Section';
 import { Chip } from '@/components/Chip';
 import { calibration, pctOf, summarize } from '@/utils/record';
+import { useEntitlements } from '@/context/EntitlementsContext';
+import { Locked } from '@/components/Pro';
 import { spreadText, oneDp, timeAgo } from '@/utils/format';
 
-interface Props { onRun: (req: RunRequest) => void; }
+interface Props { onRun: (req: RunRequest) => void; onUpgrade?: () => void; }
 
 type View_ = 'final' | 'locked' | 'open';
 
@@ -22,13 +24,18 @@ type View_ = 'final' | 'locked' | 'open';
  * Model track record: every prediction the data feed made before kickoff,
  * frozen at kickoff and graded once the final score is in.
  */
-export function RecordScreen({ onRun }: Props) {
+export function RecordScreen({ onRun, onUpgrade }: Props) {
+  const ent = useEntitlements();
   const { records, getTeam, predictions, week } = useTeams();
   const [view, setView] = useState<View_>('final');
   const [weekFilter, setWeekFilter] = useState<number | 'all'>('all');
 
   const weeks = useMemo(() => [...new Set(records.map((r) => r.week))].sort((a, b) => a - b), [records]);
-  const scoped = weekFilter === 'all' ? records : records.filter((r) => r.week === weekFilter);
+  // Free accounts see a rolling window; paid accounts see the whole archive.
+  const horizon = Date.now() - ent.ent.historyDays * 86_400_000;
+  const inWindow = useMemo(() => records.filter((r) => Date.parse(r.kickoff) >= horizon), [records, horizon]);
+  const clipped = records.length - inWindow.length;
+  const scoped = weekFilter === 'all' ? inWindow : inWindow.filter((r) => r.week === weekFilter);
   const sum = useMemo(() => summarize(scoped), [scoped]);
   const cal = useMemo(() => calibration(scoped), [scoped]);
   const shown = scoped.filter((r) => r.status === view).sort((a, b) => (view === 'final' ? b.kickoff.localeCompare(a.kickoff) : a.kickoff.localeCompare(b.kickoff)));
@@ -58,7 +65,23 @@ export function RecordScreen({ onRun }: Props) {
           </ScrollView>
         )}
 
-        {sum.finals >= 5 && (
+        {sum.finals >= 5 && !ent.ent.calibration && (
+          <Locked
+            title="Calibration"
+            blurb="When the model says 70%, does it win 70% of the time? The calibration curve is how you tell a model that is right from one that is merely confident."
+            cta="Unlock calibration"
+            onPress={onUpgrade ?? (() => {})}
+            style={{ height: 150, marginBottom: 16 }}
+          />
+        )}
+
+        {!!clipped && (
+          <TouchableOpacity style={styles.clipped} activeOpacity={0.85} onPress={onUpgrade}>
+            <Text style={styles.clippedText}>{clipped} older prediction{clipped === 1 ? '' : 's'} hidden — free accounts see the last {ent.ent.historyDays} days</Text>
+          </TouchableOpacity>
+        )}
+
+        {sum.finals >= 5 && ent.ent.calibration && (
           <Section icon="analytics" title="Calibration" subtitle="When the model gives its favourite X%, does it win X% of the time?">
             <View style={styles.calHead}>
               <Text style={[styles.calCell, styles.calLabel]}>Favourite at</Text>
@@ -162,6 +185,8 @@ function Row({ r, getTeam, onRun }: { r: PredictionRecord; getTeam: (id: string)
 }
 
 const styles = StyleSheet.create({
+  clipped: { alignItems: 'center', paddingVertical: 10, paddingHorizontal: 14, borderRadius: 12, backgroundColor: colors.goldSoft, marginBottom: 16 },
+  clippedText: { color: colors.gold, fontSize: 11, fontWeight: '800', textAlign: 'center' },
   root: { flex: 1, backgroundColor: colors.bg },
   content: { paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl },
   tiles: { flexDirection: 'row', gap: spacing.sm, marginBottom: spacing.sm },

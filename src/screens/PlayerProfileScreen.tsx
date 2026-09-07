@@ -6,6 +6,9 @@ import type { RosterPlayer, StatLine, TeamRosterFile } from '@/data/liveTypes';
 import { useTeams } from '@/context/TeamsContext';
 import { useSettings } from '@/context/SettingsContext';
 import { useRoster } from '@/hooks/useRoster';
+import { useEntitlements } from '@/context/EntitlementsContext';
+import { propsFor } from '@/utils/props';
+import { Locked } from '@/components/Pro';
 import { colors, radius, ratingColor, shadow, sideColor, spacing } from '@/theme';
 import { headshotOf, logColumns, POSITION_NAME, stat, STRING_LABEL } from '@/utils/roster';
 import { matchupAngles } from '@/utils/matchup';
@@ -15,11 +18,12 @@ import { Section } from '@/components/Section';
 import { ScreenHeader } from '@/components/ScreenHeader';
 import { INJURY_DEGRADATION } from '@/engine/weights';
 
-interface Props { teamId: string; playerId: string; onBack: () => void; onOpenTeam: (id: string) => void; }
+interface Props { teamId: string; playerId: string; onBack: () => void; onOpenTeam: (id: string) => void; onUpgrade?: () => void; }
 
 /** Full profile for one player: status, traits, season and game-by-game stats, next matchup. */
-export function PlayerProfileScreen({ teamId, playerId, onBack, onOpenTeam }: Props) {
-  const { getTeam, hasTeam } = useTeams();
+export function PlayerProfileScreen({ teamId, playerId, onBack, onOpenTeam, onUpgrade }: Props) {
+  const { getTeam, hasTeam, findRecord } = useTeams();
+  const ent = useEntitlements();
   const { statusOf, cycleStatus, hasOverride } = useSettings();
   const { roster: file, loading } = useRoster(teamId);
   const team = getTeam(teamId);
@@ -42,6 +46,10 @@ export function PlayerProfileScreen({ teamId, playerId, onBack, onOpenTeam }: Pr
   const statusLabel = status === 'out' ? 'Out' : status === 'questionable' ? 'Questionable' : 'Active';
 
   const next = file?.schedule.find((g) => g.id === file.nextGameId);
+  // Volume scales with the points the model projects for this team in the next game.
+  const nextRec = next ? findRecord(next.id) : undefined;
+  const projectedPoints = nextRec ? (next!.home ? nextRec.projectedHome : nextRec.projectedAway) : null;
+  const props = propsFor(player, projectedPoints);
   const opp = next?.oppId && hasTeam(next.oppId) ? getTeam(next.oppId) : null;
   const angles = opp ? matchupAngles(player, team, opp) : [];
   const cols = logColumns(player.pos);
@@ -123,6 +131,36 @@ export function PlayerProfileScreen({ teamId, playerId, onBack, onOpenTeam }: Pr
           </Section>
         )}
 
+        {props.length > 0 && (ent.ent.props ? (
+          <Section
+            icon="speedometer"
+            title="Prop projections"
+            subtitle={next ? `Next: ${next.home ? 'vs' : 'at'} ${next.oppName}${projectedPoints ? ` · model has the offence at ${projectedPoints.toFixed(0)}` : ''}` : 'Per-game rates'}
+          >
+            {props.map((pr) => (
+              <View key={pr.key} style={styles.propRow}>
+                <Text style={styles.propLabel}>{pr.label}</Text>
+                <View style={styles.propRight}>
+                  <Text style={styles.propValue}>{pr.projection}</Text>
+                  <Text style={styles.propRange}>{pr.low}–{pr.high}</Text>
+                </View>
+              </View>
+            ))}
+            <Text style={styles.propFoot}>
+              Projection with a one-standard-deviation range. Ranges matter more than the middle number: a line inside
+              the range is close to a coin flip. Basis: {props[0].basis}.
+            </Text>
+          </Section>
+        ) : (
+          <Locked
+            title="Prop projections"
+            blurb="A projection and a range for every counting stat this player produces, scaled to the game the model is projecting."
+            cta="Unlock props"
+            onPress={onUpgrade ?? (() => {})}
+            style={{ height: 158, marginBottom: 16 }}
+          />
+        ))}
+
         <Section icon="stats-chart" title={`${file?.season ?? ''} season`} subtitle={player.season.games ? `${player.season.games} game${player.season.games === 1 ? '' : 's'} played` : 'No game action yet this season'}>
           {player.season.games ? (
             <View style={styles.totals}>
@@ -196,6 +234,12 @@ function Trait({ trait, good }: { trait: { label: string; value: string; percent
 }
 
 const styles = StyleSheet.create({
+  propRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingVertical: 9, borderBottomWidth: 1, borderBottomColor: colors.divider },
+  propLabel: { color: colors.inkDim, fontSize: 13, fontWeight: '700' },
+  propRight: { alignItems: 'flex-end' },
+  propValue: { color: colors.ink, fontSize: 16, fontWeight: '900' },
+  propRange: { color: colors.inkFaint, fontSize: 10, fontWeight: '700', marginTop: 1 },
+  propFoot: { color: colors.inkGhost, fontSize: 10, lineHeight: 15, marginTop: 10 },
   root: { flex: 1, backgroundColor: colors.bg },
   content: { paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl },
   empty: { color: colors.inkFaint, fontSize: 13, padding: spacing.lg },

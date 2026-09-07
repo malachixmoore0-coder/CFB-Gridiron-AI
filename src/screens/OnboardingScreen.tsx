@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useEntitlements } from '@/context/EntitlementsContext';
 import { colors, radius, spacing } from '@/theme';
 import { useSettings } from '@/context/SettingsContext';
 
@@ -14,6 +15,7 @@ const NODES: { icon: keyof typeof Ionicons.glyphMap; title: string; weight: stri
 
 export function OnboardingScreen({ onDone }: { onDone: () => void }) {
   const { setOnboarded } = useSettings();
+  const ent = useEntitlements();
   return (
     <SafeAreaView style={styles.root}>
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
@@ -40,8 +42,16 @@ export function OnboardingScreen({ onDone }: { onDone: () => void }) {
           <Ionicons name="information-circle" size={16} color={colors.inkDim} />
           <Text style={styles.noteText}>Ratings rebuild from public play-by-play, Elo and rosters every few hours in-season. Not betting advice.</Text>
         </View>
+        <TouchableOpacity
+          style={styles.trial}
+          activeOpacity={0.85}
+          onPress={() => { ent.startTrial(); setOnboarded(true); onDone(); }}
+        >
+          <Ionicons name="gift" size={16} color={colors.bg} />
+          <Text style={styles.trialText}>Start with 7 days of Blue Chip free</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.cta} activeOpacity={0.85} onPress={() => { setOnboarded(true); onDone(); }}>
-          <Text style={styles.ctaText}>Start simulating</Text>
+          <Text style={styles.ctaText}>Maybe later — just start</Text>
           <Ionicons name="arrow-forward" size={18} color={colors.bg} />
         </TouchableOpacity>
       </ScrollView>
@@ -50,6 +60,8 @@ export function OnboardingScreen({ onDone }: { onDone: () => void }) {
 }
 
 const styles = StyleSheet.create({
+  trial: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, paddingVertical: 14, borderRadius: 999, backgroundColor: colors.green, marginBottom: 10 },
+  trialText: { color: colors.bg, fontSize: 15, fontWeight: '900' },
   root: { flex: 1, backgroundColor: colors.bg },
   content: { padding: spacing.xl, paddingBottom: spacing.xxl },
   badge: { width: 64, height: 64, borderRadius: 20, backgroundColor: colors.gold, alignItems: 'center', justifyContent: 'center', marginBottom: spacing.lg },

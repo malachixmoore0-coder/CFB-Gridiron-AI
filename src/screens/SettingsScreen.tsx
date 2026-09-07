@@ -11,6 +11,11 @@ import { Section } from '@/components/Section';
 import { Stepper } from '@/components/Stepper';
 import { Chip } from '@/components/Chip';
 import { ScreenHeader } from '@/components/ScreenHeader';
+import { useEntitlements } from '@/context/EntitlementsContext';
+import { useEngagement } from '@/context/EngagementContext';
+import { TierPill } from '@/components/Pro';
+import { TIERS, price } from '@/monetize/tiers';
+import { Ionicons } from '@expo/vector-icons';
 
 const NODES: { key: keyof NodeWeights; label: string; hint: string }[] = [
   { key: 'scheme', label: 'Scheme & Tactical Bias', hint: 'Fronts, coverages, play-action, 3rd/4th down, red zone, adjustments' },
@@ -21,16 +26,45 @@ const NODES: { key: keyof NodeWeights; label: string; hint: string }[] = [
 
 const SIMS: SimCount[] = [2000, 5000, 10000, 25000];
 
-export function SettingsScreen() {
+interface Props { onBack?: () => void; onUpgrade?: () => void; onOpenCard?: () => void; }
+
+export function SettingsScreen({ onBack, onUpgrade, onOpenCard }: Props) {
   const s = useSettings();
   const live = useTeams();
+  const ent = useEntitlements();
+  const eng = useEngagement();
   const norm = normalizeWeights(s.weights);
   const rawTotal = s.weights.scheme + s.weights.personnel + s.weights.environment + s.weights.xfactor;
 
   return (
     <SafeAreaView style={styles.root} edges={['top']}>
-      <ScreenHeader title="Model" subtitle="Tune the engine's weighted nodes" />
+      <ScreenHeader title="Model" subtitle="Tune the engine's weighted nodes" onBack={onBack}
+        right={<TierPill tier={ent.tier} trial={ent.trial.active ? ent.trial.daysLeft : undefined} onPress={onUpgrade} />} />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <Section icon="person-circle" title="Your account" subtitle={`${ent.tier.name}${ent.trial.active ? ` · trial, ${ent.trial.daysLeft}d left` : ''}`}>
+          <View style={styles.accountRow}>
+            <AccountStat label="STREAK" value={`${eng.streak}d`} />
+            <AccountStat label="CARD" value={`${eng.summary.won}-${eng.summary.lost}`} />
+            <AccountStat label="SIMS TODAY" value={ent.simsLeft === Infinity ? '∞' : `${ent.simsLeft} left`} />
+            <AccountStat label="DEPTH" value={ent.ent.simDepth.toLocaleString()} />
+          </View>
+          <View style={styles.accountActions}>
+            {!!onOpenCard && (
+              <TouchableOpacity style={styles.accountBtn} activeOpacity={0.85} onPress={onOpenCard}>
+                <Ionicons name="bookmark" size={13} color={colors.ink} />
+                <Text style={styles.accountBtnText}>Your card</Text>
+              </TouchableOpacity>
+            )}
+            {!!onUpgrade && (
+              <TouchableOpacity style={[styles.accountBtn, styles.accountBtnGo]} activeOpacity={0.85} onPress={onUpgrade}>
+                <Ionicons name="flash" size={13} color={colors.bg} />
+                <Text style={[styles.accountBtnText, { color: colors.bg }]}>
+                  {ent.paid ? 'Manage plan' : `Go Pro · from ${price(TIERS[1].monthly)}/mo`}
+                </Text>
+              </TouchableOpacity>
+            )}
+          </View>
+        </Section>
         <Section
           icon="git-network"
           title="Node weights"
@@ -102,7 +136,23 @@ function Row({ k, v }: { k: string; v: string }) {
   );
 }
 
+function AccountStat({ label, value }: { label: string; value: string }) {
+  return (
+    <View style={{ flex: 1 }}>
+      <Text style={styles.accountLabel}>{label}</Text>
+      <Text style={styles.accountValue}>{value}</Text>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
+  accountRow: { flexDirection: 'row', gap: spacing.sm },
+  accountLabel: { color: colors.inkFaint, fontSize: 8, fontWeight: '900', letterSpacing: 0.8 },
+  accountValue: { color: colors.ink, fontSize: 15, fontWeight: '900', marginTop: 3 },
+  accountActions: { flexDirection: 'row', gap: spacing.sm, marginTop: spacing.md },
+  accountBtn: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingVertical: 9, borderRadius: radius.pill, backgroundColor: colors.cardAlt, borderWidth: 1, borderColor: colors.border },
+  accountBtnGo: { backgroundColor: colors.gold, borderColor: colors.gold },
+  accountBtnText: { color: colors.ink, fontSize: 12, fontWeight: '800' },
   root: { flex: 1, backgroundColor: colors.bg },
   content: { paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl },
   reset: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: radius.pill, backgroundColor: colors.cardAlt, borderWidth: 1, borderColor: colors.border },

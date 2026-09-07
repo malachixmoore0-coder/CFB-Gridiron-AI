@@ -4,6 +4,7 @@ import type { InjuryStatus, MatchupAnalysis, MatchupInput, Team } from '@/engine
 import { hashString } from '@/engine/rng';
 import { useSettings, MatchupContext, effectiveStatus } from '@/context/SettingsContext';
 import { useTeams } from '@/context/TeamsContext';
+import { useEntitlements } from '@/context/EntitlementsContext';
 
 export interface RunRequest {
   awayId: string;
@@ -27,13 +28,21 @@ export function buildInput(req: RunRequest, home: Team, away: Team, overrides: R
   };
 }
 
-/** Runs the full engine for a matchup, memoised on everything that can change the answer. */
+/**
+ * Runs the full engine for a matchup, memoised on everything that can change
+ * the answer.
+ *
+ * Depth is capped by the tier: a free account gets 2,000 runs, Starter 10,000,
+ * and so on. The cap is applied here rather than at the call sites so there is
+ * exactly one place where a simulation's size is decided.
+ */
 export function useAnalysis(req: RunRequest, reroll = 0, simulations?: number): MatchupAnalysis {
   const s = useSettings();
   const { getTeam, generatedAt } = useTeams();
+  const ent = useEntitlements();
   const ov = JSON.stringify(s.overrides);
   const w = `${s.weights.scheme}|${s.weights.personnel}|${s.weights.environment}|${s.weights.xfactor}`;
-  const runs = simulations ?? s.simulations;
+  const runs = Math.min(simulations ?? s.simulations, ent.ent.simDepth);
   return useMemo(() => {
     const input = buildInput(req, getTeam(req.homeId), getTeam(req.awayId), s.overrides);
     const seed = hashString(`${matchupKey(input)}#${reroll}`);
