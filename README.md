@@ -7,6 +7,16 @@ returns win probability, a projected score and total, a 1-10 advantage matrix,
 a three-act game script and a sleeper report — with every factor that moved
 the number laid out for you, and the market line next to the model's.
 
+
+> **This repository is now the college data pipeline.**
+> The app people use is [Gridiron AI](https://github.com/malachixmoore0-coder/Gridiron-Ai),
+> which covers the NFL and college football in one place under one subscription.
+> Everything here still runs: the pipeline rebuilds the college dataset on its
+> schedule, publishes it to `data/live/`, and the combined app reads it from
+> this repo. The standalone college app in `src/` remains deployed and working,
+> but new UI work happens in the combined app.
+
+
 It is the college sibling of [Gridiron AI](https://github.com/malachixmoore0-coder/Gridiron-Ai)
 (the NFL version): same engine shape, same app, rebuilt around what public
 college data actually exposes — Elo-driven talent gaps, 40-point lines,

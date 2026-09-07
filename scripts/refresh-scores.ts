@@ -20,6 +20,8 @@ import type { Team } from '../src/engine/types';
 import type { LivePredictionsFile, LiveScheduleFile, LiveTeamsFile, TeamRosterFile } from '../src/data/liveTypes';
 import { loadSchedule } from '../pipeline/sources/cfbfastr';
 import { loadScoreboard, type EspnGame } from '../pipeline/sources/espn';
+import { loadBooks } from '../pipeline/sources/books';
+import { loadTeamNews } from '../pipeline/sources/news';
 import { weekByDate } from '../pipeline/compute/schedule';
 import { grade } from '../pipeline/compute/predictions';
 import { sourceLog } from '../pipeline/lib/fetch';
@@ -142,8 +144,54 @@ async function main() {
     }
   }
 
+  /* ---- per-book lines ---------------------------------------------------
+     College game ids are ESPN event ids, so the provider list comes straight
+     off the event. Only games inside the window, and never a finished one. */
+  let bookedGames = 0;
+  const upcoming = schedule
+    .filter((g) => g.status !== 'final' && Date.parse(g.kickoff) > Date.now() - 6 * 3_600_000)
+    .sort((a, b) => a.kickoff.localeCompare(b.kickoff))
+    .slice(0, 30);
+  if (upcoming.length) {
+    const books = await loadBooks('college-football', upcoming.map((g) => g.id));
+    for (const g of upcoming) {
+      const list = books.get(g.id);
+      if (!list?.length) continue;
+      (g as unknown as { books: unknown }).books = list;
+      bookedGames += 1;
+    }
+    console.log(`  ${bookedGames}/${upcoming.length} games with per-book lines`);
+  }
+
+  /* ---- team headlines ---------------------------------------------------
+     Only for programs with a game inside the window: 134 teams every twenty
+     minutes would be rude, and nobody is reading Week 9 news for a team on a
+     bye. */
+  let newsFiles = 0;
+  try {
+    const soon = new Set<string>();
+    for (const g of upcoming) { soon.add(g.awayId); soon.add(g.homeId); }
+    const newsDir = path.join(OUT_DIR, 'news');
+    fs.mkdirSync(newsDir, { recursive: true });
+    const queue = teams.filter((t) => soon.has(t.id) && t.espnId).slice(0, 60).map((t) => t);
+    const run = async () => {
+      for (;;) {
+        const t = queue.shift();
+        if (!t) return;
+        const items = await loadTeamNews('college-football', t.espnId).catch(() => []);
+        if (!items.length) continue;
+        fs.writeFileSync(path.join(newsDir, `${t.id}.json`), JSON.stringify({ teamId: t.id, generatedAt: today.toISOString(), items }));
+        newsFiles += 1;
+      }
+    };
+    await Promise.all([run(), run(), run(), run()]);
+    console.log(`  ${newsFiles} team news files`);
+  } catch {
+    console.log('  team news unavailable this run');
+  }
+
   const stamp = today.toISOString();
-  if (recordChanges || scoreChanges || liveChanges) {
+  if (recordChanges || scoreChanges || liveChanges || bookedGames) {
     if (recordChanges || scoreChanges) write('teams.json', { ...teamsFile, generatedAt: stamp, teams });
     writeCompact('schedule.json', { ...scheduleFile, generatedAt: stamp, weeks, games: schedule });
   }
@@ -151,7 +199,7 @@ async function main() {
 
   const ok = sourceLog.filter((s) => s.ok).length;
   console.log(`  ${recordChanges} records changed · ${scoreChanges} games finalised · ${liveChanges} live updates · ${locked} predictions locked · ${graded} graded · ${rosterChanges} roster files touched · ${ok}/${sourceLog.length} sources OK`);
-  if (!recordChanges && !scoreChanges && !liveChanges && !graded && !locked && !rosterChanges) console.log('  Nothing to update.');
+  if (!recordChanges && !scoreChanges && !liveChanges && !graded && !locked && !rosterChanges && !bookedGames && !newsFiles) console.log('  Nothing to update.');
 }
 
 main().catch((e) => { console.error(e); process.exitCode = 1; });

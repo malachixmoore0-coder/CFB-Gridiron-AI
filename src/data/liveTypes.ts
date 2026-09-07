@@ -41,6 +41,23 @@ export interface LiveGame {
   /** AP ranks at build time, when ranked. */
   awayRank: number | null;
   homeRank: number | null;
+  /** Per-sportsbook numbers, when the refresh has them. */
+  books?: BookLine[] | null;
+}
+
+/** One sportsbook's price on one game. */
+export interface BookLine {
+  book: string;
+  name: string;
+  homeSpread: number | null;
+  spreadHomeOdds: number | null;
+  spreadAwayOdds: number | null;
+  totalLine: number | null;
+  overOdds: number | null;
+  underOdds: number | null;
+  homeMoneyline: number | null;
+  awayMoneyline: number | null;
+  updated?: string | null;
 }
 
 export type Phase = 'preseason' | 'regular' | 'postseason' | 'offseason';
