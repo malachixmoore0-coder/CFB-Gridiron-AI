@@ -135,6 +135,52 @@ always reproduce the same games; "Re-roll" draws a fresh seed.
 
 Nothing here is betting advice.
 
+## Tiers, and turning payments on
+
+Four tiers — Walk-On (free), Scholarship, Blue Chip, Dynasty — defined in one place,
+`src/monetize/tiers.ts`. Each is a set of entitlements (simulation depth, how far
+down the Edge Board you can see, history, props, parlay legs, share cards), and
+every gate in the app reads from that file, so changing the offer is a one-file
+edit.
+
+- The free tier is metered, not crippled: three simulations a day at 2,000 runs,
+  the top three of the Edge Board, every game on the slate and every box score.
+- A 7-day Blue Chip trial is offered in onboarding and on the wall. It takes no
+  card and simply ends.
+- The paywall's headline is the model's own graded record, computed live from
+  `predictions.json`. Under ten graded games it says so instead of cherry-picking.
+
+**Payments are Stripe Payment Links.** No server, no SDK, and no store cut on
+the web build. Create one link per tier per cycle and set them as build-time
+environment variables:
+
+```
+EXPO_PUBLIC_PAY_SCHOLARSHIP_MONTHLY=https://buy.stripe.com/...
+EXPO_PUBLIC_PAY_SCHOLARSHIP_SEASON=...
+EXPO_PUBLIC_PAY_BLUECHIP_MONTHLY=...
+EXPO_PUBLIC_PAY_BLUECHIP_SEASON=...
+EXPO_PUBLIC_PAY_DYNASTY_MONTHLY=...
+EXPO_PUBLIC_PAY_DYNASTY_SEASON=...
+EXPO_PUBLIC_BILLING_PORTAL=https://billing.stripe.com/p/login/...
+```
+
+Set the success URL on each link to `<site>/?upgraded=<tier>` and the app flips
+over the moment the buyer lands back. Until the variables are set the wall still
+sells — it records the intent rather than dead-ending on a broken button.
+
+One thing stated plainly: **the gate is a product boundary, not a security
+boundary.** The engine runs on the device and the dataset is a public repo, so a
+determined user can read past it. Moving premium computation behind a licence
+check is the next step on that road — see `docs/GROWTH.md`.
+
+## The commercial plan
+
+`docs/GROWTH.md` is the business half of this repo: the arithmetic to $10k a
+month (≈490 subscribers at a $20 blended ARPU, not 50,000 users), why the ladder
+is priced the way it is, the colour decisions and what job each one does, the
+channels ranked by cost, the retention loops, a 90-day plan and the risks —
+including the ones that are unflattering.
+
 ## Run it
 
 ```bash
