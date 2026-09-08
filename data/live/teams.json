@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-08T04:38:30.677Z",
+ "generatedAt": "2026-09-08T04:50:30.209Z",
  "season": 2026,
  "week": 2,
  "phase": "regular",
@@ -1889,7 +1889,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
    "elo": 1559,
    "talent": 5.9,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "georgia-tech",
@@ -4608,7 +4608,7 @@
    "elo": 1852,
    "talent": 7.8,
    "rank": 19,
-   "record": "0-0"
+   "record": "1-0"
   },
   {
    "id": "stanford",
