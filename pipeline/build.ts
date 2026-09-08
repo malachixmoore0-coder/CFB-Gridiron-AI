@@ -16,6 +16,7 @@ import { TEAMS } from '../src/data/teams';
 import type { DefensiveFront, Team } from '../src/engine/types';
 import { sourceLog } from './lib/fetch';
 import { clamp, percentile } from './lib/util';
+import { readLines, recordLines, writeLines } from './lib/lines';
 import { latestElo, loadRosters, loadSchedule } from './sources/cfbfastr';
 import { aggregatePbp } from './sources/sdvpbp';
 import { loadDepthCharts, loadEspnInjuries, loadRankings, loadScoreboard } from './sources/espn';
@@ -180,6 +181,20 @@ async function main() {
   fs.writeFileSync(path.join(OUT_DIR, 'teams.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, teams }, null, 1));
   fs.writeFileSync(path.join(OUT_DIR, 'schedule.json'), JSON.stringify({ generatedAt: meta.generatedAt, season, week, phase, weeks, games: schedule }));
   fs.writeFileSync(path.join(OUT_DIR, 'meta.json'), JSON.stringify(meta, null, 1));
+  // What the number was, every time we looked. Same append-only history the
+  // other leagues keep, so closing line value is measured the same way here as
+  // everywhere else.
+  {
+    const lines = readLines(OUT_DIR, 'cfb');
+    const run = recordLines(lines, schedule.map((g) => ({
+      id: g.id, kickoff: g.kickoff, status: g.status,
+      homeSpread: g.homeSpread ?? null, totalLine: g.totalLine ?? null,
+      homeMoneyline: g.homeMoneyline ?? null, awayMoneyline: g.awayMoneyline ?? null,
+    })));
+    writeLines(OUT_DIR, lines);
+    console.log(`lines: ${run.tracked} tracked · ${run.opened} opened · ${run.moved} moved · ${run.closed} closed`);
+  }
+
   fs.writeFileSync(predPath, JSON.stringify(predictions, null, 1));
   const rosterDir = path.join(OUT_DIR, 'rosters');
   fs.mkdirSync(rosterDir, { recursive: true });
