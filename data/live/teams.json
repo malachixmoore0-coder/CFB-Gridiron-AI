@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-11T04:50:01.894Z",
+ "generatedAt": "2026-09-11T11:32:04.058Z",
  "season": 2026,
  "week": 2,
  "phase": "regular",
@@ -325,7 +325,7 @@
      "name": "Isaiah Farris",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "6 PBU · 0 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4917124.png",
@@ -752,7 +752,7 @@
    },
    "offense": {
     "passEfficiency": 5.9,
-    "rushEfficiency": 4.7,
+    "rushEfficiency": 4.6,
     "explosiveness": 5.3,
     "qb": 5.42,
     "pbwr": 0.691,
@@ -761,9 +761,9 @@
     "vsFront": {
      "4-2-5": 5.5,
      "4-3": 4.8,
-     "3-3-5": 5.2,
-     "3-4": 5.7,
-     "Multiple": 5.1
+     "3-3-5": 5.1,
+     "3-4": 5.6,
+     "Multiple": 5
     },
     "vsCoverage": {
      "Cover-1": 5.6,
@@ -951,7 +951,7 @@
      "name": "Will Heldt",
      "pos": "EDGE",
      "role": "starter",
-     "rating": 59,
+     "rating": 60,
      "snapPct": 0.7,
      "prwr": 0.217,
      "note": "0.92 sacks/g · 0 FF in 6 g",
@@ -1050,7 +1050,7 @@
      "name": "Ashton Hampton",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "4 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5127738.png",
@@ -1153,8 +1153,8 @@
     "qbRunShare": 0.084
    },
    "offense": {
-    "passEfficiency": 7,
-    "rushEfficiency": 6.4,
+    "passEfficiency": 6.9,
+    "rushEfficiency": 6.3,
     "explosiveness": 6,
     "qb": 5.84,
     "pbwr": 0.634,
@@ -1164,15 +1164,15 @@
      "4-2-5": 6.7,
      "4-3": 7.3,
      "3-3-5": 7,
-     "3-4": 7,
-     "Multiple": 6.4
+     "3-4": 6.9,
+     "Multiple": 6.3
     },
     "vsCoverage": {
-     "Cover-1": 7.1,
-     "Cover-2": 6.4,
-     "Cover-3": 7.1,
-     "Quarters": 6.5,
-     "Cover-2 Man": 6.6
+     "Cover-1": 7,
+     "Cover-2": 6.3,
+     "Cover-3": 7,
+     "Quarters": 6.4,
+     "Cover-2 Man": 6.5
     }
    },
    "defense": {
@@ -1861,7 +1861,7 @@
      "name": "Ja'Bril Rawls",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "2 PBU · 1 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5085388.png",
@@ -2238,7 +2238,7 @@
      "name": "Jonas Duclona",
      "pos": "NCB",
      "role": "starter",
-     "rating": 56,
+     "rating": 58,
      "snapPct": 0.75,
      "note": "2 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4923251.png",
@@ -2320,7 +2320,7 @@
     "thirdDownDef": 0.655,
     "fourthDownGoRate": 0.804,
     "redZoneTd": 0.662,
-    "redZoneAggression": 5.5,
+    "redZoneAggression": 5.6,
     "halftimeAdjust": 5.9,
     "playActionRate": 0.24,
     "passRate": 0.526,
@@ -2331,7 +2331,7 @@
     "passEfficiency": 5.7,
     "rushEfficiency": 7.2,
     "explosiveness": 6.8,
-    "qb": 8.99,
+    "qb": 8.94,
     "pbwr": 0.657,
     "slotEfficiency": 5.4,
     "teSpeed": 8.7,
@@ -2356,7 +2356,7 @@
     "prwr": 0.429,
     "nickelCorner": 7.5,
     "lbCoverage": 5.8,
-    "secondaryAdjust": 5.3,
+    "secondaryAdjust": 5.2,
     "blitzRate": 0.298,
     "takeaways": 6
    },
@@ -2704,52 +2704,52 @@
     "lng": -80.2388604
    },
    "coaching": {
-    "offScheme": "Spread",
+    "offScheme": "Pro Style",
     "defFront": "4-2-5",
     "baseCoverage": "Cover-3",
-    "thirdDownOff": 0.517,
-    "thirdDownDef": 0.669,
-    "fourthDownGoRate": 0.714,
-    "redZoneTd": 0.793,
-    "redZoneAggression": 6,
-    "halftimeAdjust": 5.1,
+    "thirdDownOff": 0.54,
+    "thirdDownDef": 0.711,
+    "fourthDownGoRate": 0.722,
+    "redZoneTd": 0.761,
+    "redZoneAggression": 5.8,
+    "halftimeAdjust": 5.2,
     "playActionRate": 0.24,
-    "passRate": 0.467,
-    "pace": 65.3,
-    "qbRunShare": 0.009
+    "passRate": 0.456,
+    "pace": 66.3,
+    "qbRunShare": 0.038
    },
    "offense": {
-    "passEfficiency": 8.5,
-    "rushEfficiency": 6.5,
-    "explosiveness": 6.7,
-    "qb": 9.35,
+    "passEfficiency": 9.2,
+    "rushEfficiency": 7.2,
+    "explosiveness": 7.8,
+    "qb": 9.48,
     "pbwr": 0.75,
-    "slotEfficiency": 7.7,
+    "slotEfficiency": 8,
     "teSpeed": 7.2,
     "vsFront": {
-     "4-2-5": 7.8,
-     "4-3": 7.8,
-     "3-3-5": 7.3,
-     "3-4": 7.8,
-     "Multiple": 7.4
+     "4-2-5": 8.5,
+     "4-3": 8.3,
+     "3-3-5": 7.2,
+     "3-4": 8.3,
+     "Multiple": 8.2
     },
     "vsCoverage": {
-     "Cover-1": 9,
-     "Cover-2": 8.5,
-     "Cover-3": 9,
-     "Quarters": 8.7,
-     "Cover-2 Man": 8.6
+     "Cover-1": 9.4,
+     "Cover-2": 9.8,
+     "Cover-3": 9.7,
+     "Quarters": 9.6,
+     "Cover-2 Man": 9.3
     }
    },
    "defense": {
-    "passDefense": 8,
-    "rushDefense": 7.8,
-    "prwr": 0.478,
+    "passDefense": 8.1,
+    "rushDefense": 8,
+    "prwr": 0.471,
     "nickelCorner": 6.7,
-    "lbCoverage": 8,
-    "secondaryAdjust": 5.1,
-    "blitzRate": 0.32,
-    "takeaways": 7
+    "lbCoverage": 8.2,
+    "secondaryAdjust": 5.4,
+    "blitzRate": 0.324,
+    "takeaways": 6.3
    },
    "players": [
     {
@@ -2757,9 +2757,9 @@
      "name": "Darian Mensah",
      "pos": "QB",
      "role": "starter",
-     "rating": 94,
+     "rating": 95,
      "snapPct": 1,
-     "note": "0.33 EPA/dropback · 8.6 CPOE · 552 dropbacks",
+     "note": "0.35 EPA/dropback · 9.2 CPOE · 567 dropbacks",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5121169.png",
      "classYear": 3,
      "jersey": "10"
@@ -2781,11 +2781,11 @@
      "name": "Mark Fletcher Jr.",
      "pos": "RB",
      "role": "starter",
-     "rating": 91,
+     "rating": 93,
      "snapPct": 0.6,
      "targetShare": 0.047,
      "tprr": 0.078,
-     "note": "5.4 YPC · 15.98 EPA/season",
+     "note": "5.7 YPC · 19.97 EPA/season",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4870736.png",
      "classYear": 4,
      "jersey": "4"
@@ -2795,11 +2795,11 @@
      "name": "CharMar Brown",
      "pos": "RB",
      "role": "rotational",
-     "rating": 74,
+     "rating": 71,
      "snapPct": 0.35,
      "targetShare": 0.039,
      "tprr": 0.112,
-     "note": "4.1 YPC · 6.94 EPA/season",
+     "note": "4.2 YPC · 5.14 EPA/season",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5156998.png",
      "classYear": 3,
      "jersey": "6"
@@ -2809,11 +2809,11 @@
      "name": "Malachi Toney",
      "pos": "WR",
      "role": "starter",
-     "rating": 95,
+     "rating": 96,
      "snapPct": 0.85,
      "targetShare": 0.266,
      "tprr": 0.313,
-     "note": "0.57 EPA/target on 75 tgt/season",
+     "note": "0.59 EPA/target on 77 tgt/season",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5159175.png",
      "classYear": 2,
      "jersey": "1"
@@ -2827,7 +2827,7 @@
      "snapPct": 0.75,
      "targetShare": 0.233,
      "tprr": 0.311,
-     "note": "0.53 EPA/target on 62 tgt/season",
+     "note": "0.54 EPA/target on 63 tgt/season",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4804878.png",
      "classYear": 4,
      "jersey": "18"
@@ -2851,11 +2851,11 @@
      "name": "Vandrevius Jacobs",
      "pos": "WR",
      "role": "rotational",
-     "rating": 88,
+     "rating": 80,
      "snapPct": 0.42,
      "targetShare": 0.096,
      "tprr": 0.228,
-     "note": "0.49 EPA/target on 49 tgt/season",
+     "note": "0.52 EPA/target on 26 tgt/season",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4870842.png",
      "classYear": 3,
      "jersey": "8"
@@ -2869,7 +2869,7 @@
      "snapPct": 0.7,
      "targetShare": 0.059,
      "tprr": 0.084,
-     "note": "0.48 EPA/target on 16 tgt/season",
+     "note": "0.49 EPA/target on 16 tgt/season",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5079503.png",
      "classYear": 3,
      "jersey": "9"
@@ -2919,39 +2919,39 @@
      "name": "Damon Wilson II",
      "pos": "EDGE",
      "role": "starter",
-     "rating": 60,
+     "rating": 59,
      "snapPct": 0.7,
-     "prwr": 0.23,
-     "note": "1.00 sacks/g · 0 FF in 8 g",
+     "prwr": 0.212,
+     "note": "0.89 sacks/g · 0 FF in 9 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4871089.png",
      "classYear": 4,
      "jersey": "10"
     },
     {
-     "id": "miami-5141370",
-     "name": "Armondo Blount",
+     "id": "miami-5126999",
+     "name": "Marquise Lightfoot",
      "pos": "EDGE",
      "role": "starter",
      "rating": 60,
      "snapPct": 0.6,
      "prwr": 0.23,
-     "note": "1.00 sacks/g · 0 FF in 3 g",
-     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5141370.png",
+     "note": "1.00 sacks/g · 0 FF in 4 g",
+     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5126999.png",
      "classYear": 3,
-     "jersey": "18"
+     "jersey": "12"
     },
     {
-     "id": "miami-5126999",
-     "name": "Marquise Lightfoot",
+     "id": "miami-5141370",
+     "name": "Armondo Blount",
      "pos": "EDGE",
      "role": "rotational",
      "rating": 60,
      "snapPct": 0.42,
      "prwr": 0.23,
      "note": "1.00 sacks/g · 0 FF in 3 g",
-     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5126999.png",
+     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5141370.png",
      "classYear": 3,
-     "jersey": "12"
+     "jersey": "18"
     },
     {
      "id": "miami-4916996",
@@ -2992,16 +2992,16 @@
      "jersey": "1"
     },
     {
-     "id": "miami-4682490",
-     "name": "Chase Smith",
+     "id": "miami-5236220",
+     "name": "Kellen Wiley Jr.",
      "pos": "LB",
      "role": "starter",
-     "rating": 74,
+     "rating": 70,
      "snapPct": 0.85,
      "note": "no production yet · roster order by class",
-     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4682490.png",
-     "classYear": 4,
-     "jersey": "9"
+     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5236220.png",
+     "classYear": 2,
+     "jersey": "30"
     },
     {
      "id": "miami-5127735",
@@ -3016,28 +3016,28 @@
      "jersey": "6"
     },
     {
-     "id": "miami-5196025",
-     "name": "Omar Thornton",
-     "pos": "CB",
-     "role": "starter",
-     "rating": 45,
-     "snapPct": 0.9,
-     "note": "3 PBU · 1 INT in 5 g",
-     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5196025.png",
-     "classYear": 3,
-     "jersey": "0"
-    },
-    {
      "id": "miami-5298737",
      "name": "Bryce Fitzgerald",
-     "pos": "NCB",
+     "pos": "CB",
      "role": "starter",
-     "rating": 79,
-     "snapPct": 0.75,
-     "note": "2 PBU · 3 INT in 5 g",
+     "rating": 72,
+     "snapPct": 0.9,
+     "note": "3 PBU · 3 INT in 6 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5298737.png",
      "classYear": 2,
      "jersey": "3"
+    },
+    {
+     "id": "miami-4919038",
+     "name": "Ethan O'Connor",
+     "pos": "NCB",
+     "role": "starter",
+     "rating": 46,
+     "snapPct": 0.75,
+     "note": "6 PBU · 0 INT in 6 g",
+     "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4919038.png",
+     "classYear": 3,
+     "jersey": "24"
     },
     {
      "id": "miami-5123219",
@@ -3488,7 +3488,7 @@
     "thirdDownDef": 0.571,
     "fourthDownGoRate": 0.692,
     "redZoneTd": 0.514,
-    "redZoneAggression": 3.8,
+    "redZoneAggression": 3.7,
     "halftimeAdjust": 6.7,
     "playActionRate": 0.24,
     "passRate": 0.475,
@@ -3572,7 +3572,7 @@
      "name": "Demon June",
      "pos": "RB",
      "role": "rotational",
-     "rating": 71,
+     "rating": 72,
      "snapPct": 0.35,
      "targetShare": 0.054,
      "tprr": 0.153,
@@ -3872,7 +3872,7 @@
     "qbRunShare": 0.202
    },
    "offense": {
-    "passEfficiency": 7,
+    "passEfficiency": 6.9,
     "rushEfficiency": 5.7,
     "explosiveness": 7,
     "qb": 6.3,
@@ -3887,11 +3887,11 @@
      "Multiple": 6.1
     },
     "vsCoverage": {
-     "Cover-1": 7,
-     "Cover-2": 6.3,
-     "Cover-3": 7,
-     "Quarters": 6.4,
-     "Cover-2 Man": 6.5
+     "Cover-1": 6.9,
+     "Cover-2": 6.2,
+     "Cover-3": 6.9,
+     "Quarters": 6.3,
+     "Cover-2 Man": 6.4
     }
    },
    "defense": {
@@ -4250,7 +4250,7 @@
    "offense": {
     "passEfficiency": 7.2,
     "rushEfficiency": 5.8,
-    "explosiveness": 6.7,
+    "explosiveness": 6.6,
     "qb": 8.11,
     "pbwr": 0.743,
     "slotEfficiency": 5.7,
@@ -4738,7 +4738,7 @@
      "name": "Caden High",
      "pos": "WR",
      "role": "starter",
-     "rating": 75,
+     "rating": 74,
      "snapPct": 0.85,
      "targetShare": 0.123,
      "tprr": 0.145,
@@ -5047,7 +5047,7 @@
    },
    "offense": {
     "passEfficiency": 4.2,
-    "rushEfficiency": 4.9,
+    "rushEfficiency": 4.8,
     "explosiveness": 5,
     "qb": 6.98,
     "pbwr": 0.647,
@@ -5061,11 +5061,11 @@
      "Multiple": 4.1
     },
     "vsCoverage": {
-     "Cover-1": 5.2,
-     "Cover-2": 4.9,
-     "Cover-3": 5.3,
-     "Quarters": 4.8,
-     "Cover-2 Man": 4.8
+     "Cover-1": 5.1,
+     "Cover-2": 4.8,
+     "Cover-3": 5.2,
+     "Quarters": 4.7,
+     "Cover-2 Man": 4.7
     }
    },
    "defense": {
@@ -5354,7 +5354,7 @@
      "name": "Nazir Ward",
      "pos": "NCB",
      "role": "starter",
-     "rating": 76,
+     "rating": 77,
      "snapPct": 0.75,
      "note": "5 PBU · 1 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5103802.png",
@@ -5846,7 +5846,7 @@
     "prwr": 0.359,
     "nickelCorner": 5.4,
     "lbCoverage": 4.2,
-    "secondaryAdjust": 5.1,
+    "secondaryAdjust": 5,
     "blitzRate": 0.266,
     "takeaways": 3.8
    },
@@ -6596,7 +6596,7 @@
    "offense": {
     "passEfficiency": 6.4,
     "rushEfficiency": 6.7,
-    "explosiveness": 6,
+    "explosiveness": 5.9,
     "qb": 6.52,
     "pbwr": 0.667,
     "slotEfficiency": 7,
@@ -7567,7 +7567,7 @@
      "name": "Jasiyah Robinson",
      "pos": "EDGE",
      "role": "starter",
-     "rating": 59,
+     "rating": 60,
      "snapPct": 0.7,
      "prwr": 0.217,
      "note": "0.92 sacks/g · 0 FF in 6 g",
@@ -8526,9 +8526,9 @@
     "qbRunShare": 0.113
    },
    "offense": {
-    "passEfficiency": 7.2,
+    "passEfficiency": 7.1,
     "rushEfficiency": 7.7,
-    "explosiveness": 7.2,
+    "explosiveness": 7.1,
     "qb": 5.9,
     "pbwr": 0.682,
     "slotEfficiency": 4.9,
@@ -8554,7 +8554,7 @@
     "prwr": 0.409,
     "nickelCorner": 4.6,
     "lbCoverage": 3.6,
-    "secondaryAdjust": 5.8,
+    "secondaryAdjust": 5.7,
     "blitzRate": 0.266,
     "takeaways": 5.5
    },
@@ -9713,7 +9713,7 @@
     "thirdDownDef": 0.594,
     "fourthDownGoRate": 0.789,
     "redZoneTd": 0.733,
-    "redZoneAggression": 5.9,
+    "redZoneAggression": 6,
     "halftimeAdjust": 5.6,
     "playActionRate": 0.24,
     "passRate": 0.458,
@@ -10605,7 +10605,7 @@
      "name": "Anthony Brown-Stephens",
      "pos": "WR",
      "role": "starter",
-     "rating": 86,
+     "rating": 87,
      "snapPct": 0.85,
      "targetShare": 0.154,
      "tprr": 0.181,
@@ -11309,25 +11309,25 @@
    },
    "offense": {
     "passEfficiency": 5.8,
-    "rushEfficiency": 5.8,
+    "rushEfficiency": 5.7,
     "explosiveness": 4.8,
     "qb": 7.36,
     "pbwr": 0.616,
     "slotEfficiency": 6.3,
     "teSpeed": 5.1,
     "vsFront": {
-     "4-2-5": 5.8,
+     "4-2-5": 5.7,
      "4-3": 5.9,
      "3-3-5": 5.8,
      "3-4": 5.8,
      "Multiple": 5.4
     },
     "vsCoverage": {
-     "Cover-1": 6.6,
-     "Cover-2": 6.3,
-     "Cover-3": 6.7,
-     "Quarters": 6.2,
-     "Cover-2 Man": 6.2
+     "Cover-1": 6.5,
+     "Cover-2": 6.2,
+     "Cover-3": 6.6,
+     "Quarters": 6.1,
+     "Cover-2 Man": 6.1
     }
    },
    "defense": {
@@ -12092,7 +12092,7 @@
    "offense": {
     "passEfficiency": 5.5,
     "rushEfficiency": 6.8,
-    "explosiveness": 6.5,
+    "explosiveness": 6.4,
     "qb": 6.73,
     "pbwr": 0.683,
     "slotEfficiency": 6.3,
@@ -12374,7 +12374,7 @@
      "name": "Jay'Vion Cole",
      "pos": "CB",
      "role": "starter",
-     "rating": 52,
+     "rating": 51,
      "snapPct": 0.9,
      "note": "1 PBU · 2 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5083142.png",
@@ -12495,7 +12495,7 @@
     "slotEfficiency": 5.9,
     "teSpeed": 5.2,
     "vsFront": {
-     "4-2-5": 6.5,
+     "4-2-5": 6.4,
      "4-3": 6.7,
      "3-3-5": 6.1,
      "3-4": 6.9,
@@ -12798,7 +12798,7 @@
      "name": "Montana Warren",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "4 PBU · 0 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5077117.png",
@@ -12888,7 +12888,7 @@
    },
    "offense": {
     "passEfficiency": 5.6,
-    "rushEfficiency": 5.4,
+    "rushEfficiency": 5.3,
     "explosiveness": 5.4,
     "qb": 4.61,
     "pbwr": 0.737,
@@ -13171,7 +13171,7 @@
      "name": "LeVar Thornton Jr.",
      "pos": "CB",
      "role": "starter",
-     "rating": 55,
+     "rating": 54,
      "snapPct": 0.9,
      "note": "5 PBU · 1 INT in 6 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5078158.png",
@@ -13287,7 +13287,7 @@
    "offense": {
     "passEfficiency": 6.2,
     "rushEfficiency": 6.8,
-    "explosiveness": 6.6,
+    "explosiveness": 6.5,
     "qb": 7.2,
     "pbwr": 0.709,
     "slotEfficiency": 5,
@@ -13686,7 +13686,7 @@
    },
    "offense": {
     "passEfficiency": 7.1,
-    "rushEfficiency": 6.8,
+    "rushEfficiency": 6.7,
     "explosiveness": 7.3,
     "qb": 5.8,
     "pbwr": 0.748,
@@ -13694,17 +13694,17 @@
     "teSpeed": 5.1,
     "vsFront": {
      "4-2-5": 7.4,
-     "4-3": 7.2,
+     "4-3": 7.1,
      "3-3-5": 6.6,
      "3-4": 4.7,
-     "Multiple": 6.8
+     "Multiple": 6.7
     },
     "vsCoverage": {
-     "Cover-1": 7.3,
-     "Cover-2": 6.8,
-     "Cover-3": 7.3,
-     "Quarters": 7,
-     "Cover-2 Man": 6.9
+     "Cover-1": 7.2,
+     "Cover-2": 6.7,
+     "Cover-3": 7.2,
+     "Quarters": 6.9,
+     "Cover-2 Man": 6.8
     }
    },
    "defense": {
@@ -14758,7 +14758,7 @@
      "name": "Will James",
      "pos": "CB",
      "role": "starter",
-     "rating": 56,
+     "rating": 55,
      "snapPct": 0.9,
      "note": "6 PBU · 1 INT in 7 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4966464.png",
@@ -14770,7 +14770,7 @@
      "name": "Kentrell Webb",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "4 PBU · 0 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4833590.png",
@@ -15628,7 +15628,7 @@
     "thirdDownDef": 0.594,
     "fourthDownGoRate": 0.817,
     "redZoneTd": 0.706,
-    "redZoneAggression": 5.9,
+    "redZoneAggression": 6,
     "halftimeAdjust": 5.2,
     "playActionRate": 0.24,
     "passRate": 0.439,
@@ -15666,7 +15666,7 @@
     "lbCoverage": 5.4,
     "secondaryAdjust": 5.2,
     "blitzRate": 0.295,
-    "takeaways": 7.5
+    "takeaways": 7.6
    },
    "players": [
     {
@@ -15726,7 +15726,7 @@
      "name": "Jaron Tibbs",
      "pos": "WR",
      "role": "starter",
-     "rating": 78,
+     "rating": 77,
      "snapPct": 0.85,
      "targetShare": 0.223,
      "tprr": 0.262,
@@ -16037,7 +16037,7 @@
    },
    "offense": {
     "passEfficiency": 3,
-    "rushEfficiency": 2.7,
+    "rushEfficiency": 2.6,
     "explosiveness": 3.3,
     "qb": 7.98,
     "pbwr": 0.631,
@@ -16045,10 +16045,10 @@
     "teSpeed": 4.7,
     "vsFront": {
      "4-2-5": 2.5,
-     "4-3": 3.1,
+     "4-3": 3,
      "3-3-5": 3.5,
-     "3-4": 3.1,
-     "Multiple": 2.7
+     "3-4": 3,
+     "Multiple": 2.6
     },
     "vsCoverage": {
      "Cover-1": 3.8,
@@ -16436,7 +16436,7 @@
    "offense": {
     "passEfficiency": 6,
     "rushEfficiency": 4.7,
-    "explosiveness": 4.8,
+    "explosiveness": 4.7,
     "qb": 6.2,
     "pbwr": 0.688,
     "slotEfficiency": 5.9,
@@ -17072,7 +17072,7 @@
      "name": "Amier Boyd",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "5 PBU · 2 INT in 6 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5088887.png",
@@ -17497,7 +17497,7 @@
      "name": "Jayden Bellamy",
      "pos": "NCB",
      "role": "starter",
-     "rating": 60,
+     "rating": 62,
      "snapPct": 0.75,
      "note": "4 PBU · 1 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4832028.png",
@@ -17554,7 +17554,7 @@
     "thirdDownDef": 0.658,
     "fourthDownGoRate": 0.905,
     "redZoneTd": 0.81,
-    "redZoneAggression": 7.2,
+    "redZoneAggression": 7.3,
     "halftimeAdjust": 5.2,
     "playActionRate": 0.24,
     "passRate": 0.399,
@@ -17849,7 +17849,7 @@
      "name": "Elijah Davis",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "2 PBU · 2 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4808760.png",
@@ -17958,7 +17958,7 @@
     "fourthDownGoRate": 0.915,
     "redZoneTd": 0.61,
     "redZoneAggression": 5.8,
-    "halftimeAdjust": 5.3,
+    "halftimeAdjust": 5.2,
     "playActionRate": 0.24,
     "passRate": 0.301,
     "pace": 69.7,
@@ -18396,7 +18396,7 @@
     "lbCoverage": 7.4,
     "secondaryAdjust": 5.8,
     "blitzRate": 0.292,
-    "takeaways": 5.2
+    "takeaways": 5.3
    },
    "players": [
     {
@@ -19150,7 +19150,7 @@
     "lbCoverage": 7.8,
     "secondaryAdjust": 4.6,
     "blitzRate": 0.302,
-    "takeaways": 6.2
+    "takeaways": 6.3
    },
    "players": [
     {
@@ -19525,7 +19525,7 @@
     "prwr": 0.348,
     "nickelCorner": 4.3,
     "lbCoverage": 5.3,
-    "secondaryAdjust": 4.8,
+    "secondaryAdjust": 4.7,
     "blitzRate": 0.291,
     "takeaways": 6.8
    },
@@ -19877,7 +19877,7 @@
     "explosiveness": 5.9,
     "qb": 5.05,
     "pbwr": 0.705,
-    "slotEfficiency": 6.2,
+    "slotEfficiency": 6.1,
     "teSpeed": 8.1,
     "vsFront": {
      "4-2-5": 6.3,
@@ -20158,7 +20158,7 @@
      "name": "Smith Snowden",
      "pos": "CB",
      "role": "starter",
-     "rating": 53,
+     "rating": 52,
      "snapPct": 0.9,
      "note": "5 PBU · 2 INT in 8 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4918445.png",
@@ -21349,7 +21349,7 @@
      "name": "Donovan Jones",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "6 PBU · 0 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5148418.png",
@@ -21481,7 +21481,7 @@
     "lbCoverage": 6.6,
     "secondaryAdjust": 5.8,
     "blitzRate": 0.28,
-    "takeaways": 5.1
+    "takeaways": 5.2
    },
    "players": [
     {
@@ -21760,7 +21760,7 @@
      "name": "Ore Adeyi",
      "pos": "NCB",
      "role": "starter",
-     "rating": 62,
+     "rating": 63,
      "snapPct": 0.75,
      "note": "5 PBU · 0 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4699437.png",
@@ -21825,7 +21825,7 @@
     "qbRunShare": 0.089
    },
    "offense": {
-    "passEfficiency": 9.4,
+    "passEfficiency": 9.3,
     "rushEfficiency": 7.3,
     "explosiveness": 6.9,
     "qb": 9.75,
@@ -21835,9 +21835,9 @@
     "vsFront": {
      "4-2-5": 8.6,
      "4-3": 9.2,
-     "3-3-5": 8.4,
+     "3-3-5": 8.3,
      "3-4": 8.1,
-     "Multiple": 8.3
+     "Multiple": 8.2
     },
     "vsCoverage": {
      "Cover-1": 9.9,
@@ -21887,7 +21887,7 @@
      "name": "Bo Jackson",
      "pos": "RB",
      "role": "starter",
-     "rating": 93,
+     "rating": 92,
      "snapPct": 0.6,
      "targetShare": 0.045,
      "tprr": 0.075,
@@ -22135,7 +22135,7 @@
      "name": "Jermaine Mathews Jr.",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "0 PBU · 2 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5150710.png",
@@ -22229,12 +22229,12 @@
     "passEfficiency": 7.4,
     "rushEfficiency": 7.1,
     "explosiveness": 8.4,
-    "qb": 9.31,
+    "qb": 9.26,
     "pbwr": 0.75,
     "slotEfficiency": 7.3,
     "teSpeed": 9,
     "vsFront": {
-     "4-2-5": 7.9,
+     "4-2-5": 7.8,
      "4-3": 6.9,
      "3-3-5": 7.6,
      "3-4": 6.1,
@@ -22264,7 +22264,7 @@
      "name": "Dante Moore",
      "pos": "QB",
      "role": "starter",
-     "rating": 95,
+     "rating": 94,
      "snapPct": 1,
      "note": "0.24 EPA/dropback · 12.2 CPOE · 452 dropbacks",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4870921.png",
@@ -22512,7 +22512,7 @@
      "name": "Brandon Finney Jr.",
      "pos": "CB",
      "role": "starter",
-     "rating": 71,
+     "rating": 70,
      "snapPct": 0.9,
      "note": "3 PBU · 2 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5179153.png",
@@ -22536,7 +22536,7 @@
      "name": "Aaron Flowers",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "2 PBU · 1 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5079428.png",
@@ -22604,11 +22604,11 @@
    },
    "offense": {
     "passEfficiency": 6.7,
-    "rushEfficiency": 7,
-    "explosiveness": 6.2,
+    "rushEfficiency": 6.9,
+    "explosiveness": 6.1,
     "qb": 6.35,
     "pbwr": 0.717,
-    "slotEfficiency": 7.4,
+    "slotEfficiency": 7.3,
     "teSpeed": 9.1,
     "vsFront": {
      "4-2-5": 6.9,
@@ -22618,11 +22618,11 @@
      "Multiple": 6.7
     },
     "vsCoverage": {
-     "Cover-1": 7,
-     "Cover-2": 7.4,
-     "Cover-3": 7.3,
-     "Quarters": 7.2,
-     "Cover-2 Man": 6.9
+     "Cover-1": 6.9,
+     "Cover-2": 7.3,
+     "Cover-3": 7.2,
+     "Quarters": 7.1,
+     "Cover-2 Man": 6.8
     }
    },
    "defense": {
@@ -22887,7 +22887,7 @@
      "name": "Daryus Dixson",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "6 PBU · 0 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5141411.png",
@@ -23381,7 +23381,7 @@
     "explosiveness": 4.6,
     "qb": 6.42,
     "pbwr": 0.641,
-    "slotEfficiency": 7.5,
+    "slotEfficiency": 7.4,
     "teSpeed": 7.8,
     "vsFront": {
      "4-2-5": 5.1,
@@ -23438,7 +23438,7 @@
      "name": "Antwan Raymond",
      "pos": "RB",
      "role": "starter",
-     "rating": 92,
+     "rating": 91,
      "snapPct": 0.6,
      "targetShare": 0.062,
      "tprr": 0.104,
@@ -24063,7 +24063,7 @@
      "name": "Derrick Barksdale",
      "pos": "NCB",
      "role": "starter",
-     "rating": 77,
+     "rating": 79,
      "snapPct": 0.75,
      "note": "7 PBU · 1 INT in 6 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5079055.png",
@@ -24537,7 +24537,7 @@
     "qb": 8.25,
     "pbwr": 0.659,
     "slotEfficiency": 5.6,
-    "teSpeed": 7,
+    "teSpeed": 6.9,
     "vsFront": {
      "4-2-5": 7.6,
      "4-3": 7.6,
@@ -24940,7 +24940,7 @@
     "slotEfficiency": 5,
     "teSpeed": 6,
     "vsFront": {
-     "4-2-5": 3.5,
+     "4-2-5": 3.6,
      "4-3": 3,
      "3-3-5": 3.9,
      "3-4": 4.8,
@@ -25320,7 +25320,7 @@
    },
    "offense": {
     "passEfficiency": 5.7,
-    "rushEfficiency": 4.9,
+    "rushEfficiency": 4.8,
     "explosiveness": 5.2,
     "qb": 6.12,
     "pbwr": 0.628,
@@ -25604,7 +25604,7 @@
      "name": "Jaquise Alexander",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "4 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5087158.png",
@@ -26000,7 +26000,7 @@
      "name": "Shamir Sterlin",
      "pos": "CB",
      "role": "starter",
-     "rating": 71,
+     "rating": 70,
      "snapPct": 0.9,
      "note": "3 PBU · 2 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5196863.png",
@@ -26489,7 +26489,7 @@
    "offense": {
     "passEfficiency": 5,
     "rushEfficiency": 5.6,
-    "explosiveness": 5.9,
+    "explosiveness": 5.8,
     "qb": 3.28,
     "pbwr": 0.675,
     "slotEfficiency": 4.6,
@@ -26862,7 +26862,7 @@
    "offense": {
     "passEfficiency": 6,
     "rushEfficiency": 6,
-    "explosiveness": 6.1,
+    "explosiveness": 6,
     "qb": 4.73,
     "pbwr": 0.669,
     "slotEfficiency": 6.3,
@@ -27656,7 +27656,7 @@
    },
    "offense": {
     "passEfficiency": 5.3,
-    "rushEfficiency": 4,
+    "rushEfficiency": 3.9,
     "explosiveness": 5.7,
     "qb": 3.25,
     "pbwr": 0.603,
@@ -27940,7 +27940,7 @@
      "name": "Joel Boamah",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "2 PBU · 1 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5077283.png",
@@ -28052,7 +28052,7 @@
    },
    "offense": {
     "passEfficiency": 5.1,
-    "rushEfficiency": 3.7,
+    "rushEfficiency": 3.6,
     "explosiveness": 4.7,
     "qb": 5.16,
     "pbwr": 0.674,
@@ -28060,17 +28060,17 @@
     "teSpeed": 4.7,
     "vsFront": {
      "4-2-5": 4.5,
-     "4-3": 4.5,
-     "3-3-5": 4.4,
-     "3-4": 4.6,
-     "Multiple": 4.4
+     "4-3": 4.4,
+     "3-3-5": 4.3,
+     "3-4": 4.5,
+     "Multiple": 4.3
     },
     "vsCoverage": {
-     "Cover-1": 4.8,
-     "Cover-2": 4,
-     "Cover-3": 4.7,
-     "Quarters": 4,
-     "Cover-2 Man": 4.3
+     "Cover-1": 4.7,
+     "Cover-2": 3.9,
+     "Cover-3": 4.6,
+     "Quarters": 3.9,
+     "Cover-2 Man": 4.2
     }
    },
    "defense": {
@@ -28443,7 +28443,7 @@
     "fourthDownGoRate": 0.83,
     "redZoneTd": 0.485,
     "redZoneAggression": 4.4,
-    "halftimeAdjust": 5.7,
+    "halftimeAdjust": 5.6,
     "playActionRate": 0.24,
     "passRate": 0.5,
     "pace": 63.7,
@@ -29156,7 +29156,7 @@
      "name": "Dave Herard",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "4 PBU · 0 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4565536.png",
@@ -29222,7 +29222,7 @@
    },
    "offense": {
     "passEfficiency": 8.6,
-    "rushEfficiency": 8.4,
+    "rushEfficiency": 8.3,
     "explosiveness": 9.5,
     "qb": 9.24,
     "pbwr": 0.75,
@@ -29625,19 +29625,19 @@
     "qbRunShare": 0.043
    },
    "offense": {
-    "passEfficiency": 7.6,
+    "passEfficiency": 7.5,
     "rushEfficiency": 6.6,
     "explosiveness": 6.4,
     "qb": 6.7,
     "pbwr": 0.709,
-    "slotEfficiency": 7.4,
+    "slotEfficiency": 7.3,
     "teSpeed": 5.1,
     "vsFront": {
-     "4-2-5": 7.5,
-     "4-3": 7.4,
-     "3-3-5": 7.1,
+     "4-2-5": 7.4,
+     "4-3": 7.3,
+     "3-3-5": 7,
      "3-4": 5.7,
-     "Multiple": 7
+     "Multiple": 6.9
     },
     "vsCoverage": {
      "Cover-1": 7.7,
@@ -30771,7 +30771,7 @@
    "offense": {
     "passEfficiency": 4.3,
     "rushEfficiency": 3.3,
-    "explosiveness": 4.9,
+    "explosiveness": 4.8,
     "qb": 4.3,
     "pbwr": 0.634,
     "slotEfficiency": 5.5,
@@ -31641,7 +31641,7 @@
      "name": "Vaughn Blue",
      "pos": "RB",
      "role": "rotational",
-     "rating": 73,
+     "rating": 74,
      "snapPct": 0.35,
      "targetShare": 0.043,
      "tprr": 0.122,
@@ -32044,7 +32044,7 @@
      "name": "Harold Mack",
      "pos": "WR",
      "role": "starter",
-     "rating": 83,
+     "rating": 84,
      "snapPct": 0.75,
      "targetShare": 0.066,
      "tprr": 0.088,
@@ -32726,7 +32726,7 @@
     "rushDefense": 4.7,
     "prwr": 0.319,
     "nickelCorner": 1.8,
-    "lbCoverage": 2.2,
+    "lbCoverage": 2.3,
     "secondaryAdjust": 5.7,
     "blitzRate": 0.283,
     "takeaways": 4.5
@@ -33095,7 +33095,7 @@
    },
    "offense": {
     "passEfficiency": 3.9,
-    "rushEfficiency": 4.5,
+    "rushEfficiency": 4.4,
     "explosiveness": 4.4,
     "qb": 3.7,
     "pbwr": 0.565,
@@ -33103,10 +33103,10 @@
     "teSpeed": 4.7,
     "vsFront": {
      "4-2-5": 4.2,
-     "4-3": 4.4,
-     "3-3-5": 4.1,
+     "4-3": 4.3,
+     "3-3-5": 4,
      "3-4": 2.3,
-     "Multiple": 4
+     "Multiple": 3.9
     },
     "vsCoverage": {
      "Cover-1": 3.8,
@@ -33868,7 +33868,7 @@
    "offense": {
     "passEfficiency": 4.6,
     "rushEfficiency": 6.4,
-    "explosiveness": 6.8,
+    "explosiveness": 6.7,
     "qb": 3.12,
     "pbwr": 0.604,
     "slotEfficiency": 6.3,
@@ -34292,7 +34292,7 @@
     "lbCoverage": 6.5,
     "secondaryAdjust": 5,
     "blitzRate": 0.325,
-    "takeaways": 6.8
+    "takeaways": 6.9
    },
    "players": [
     {
@@ -35717,7 +35717,7 @@
      "name": "Matagi Thompson",
      "pos": "CB",
      "role": "starter",
-     "rating": 71,
+     "rating": 70,
      "snapPct": 0.9,
      "note": "5 PBU · 1 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5084119.png",
@@ -35806,7 +35806,7 @@
     "qbRunShare": 0.082
    },
    "offense": {
-    "passEfficiency": 3.2,
+    "passEfficiency": 3.3,
     "rushEfficiency": 4.8,
     "explosiveness": 5.1,
     "qb": 4.62,
@@ -35817,8 +35817,8 @@
      "4-2-5": 4,
      "4-3": 4.5,
      "3-3-5": 4,
-     "3-4": 3.6,
-     "Multiple": 3.9
+     "3-4": 3.7,
+     "Multiple": 4
     },
     "vsCoverage": {
      "Cover-1": 3.6,
@@ -36181,7 +36181,7 @@
     "qbRunShare": 0.257
    },
    "offense": {
-    "passEfficiency": 5.6,
+    "passEfficiency": 5.5,
     "rushEfficiency": 6.3,
     "explosiveness": 5.4,
     "qb": 5.85,
@@ -36189,7 +36189,7 @@
     "slotEfficiency": 3.7,
     "teSpeed": 7.3,
     "vsFront": {
-     "4-2-5": 6.1,
+     "4-2-5": 6,
      "4-3": 6.1,
      "3-3-5": 5.3,
      "3-4": 5.5,
@@ -36607,7 +36607,7 @@
     "prwr": 0.458,
     "nickelCorner": 6.2,
     "lbCoverage": 7.2,
-    "secondaryAdjust": 5.5,
+    "secondaryAdjust": 5.4,
     "blitzRate": 0.317,
     "takeaways": 7
    },
@@ -38052,7 +38052,7 @@
      "name": "Tre Fulton",
      "pos": "CB",
      "role": "starter",
-     "rating": 53,
+     "rating": 52,
      "snapPct": 0.9,
      "note": "4 PBU · 0 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5147224.png",
@@ -38157,7 +38157,7 @@
     "thirdDownDef": 0.706,
     "fourthDownGoRate": 0.919,
     "redZoneTd": 0.679,
-    "redZoneAggression": 6.3,
+    "redZoneAggression": 6.4,
     "halftimeAdjust": 6.5,
     "playActionRate": 0.24,
     "passRate": 0.451,
@@ -38449,7 +38449,7 @@
      "name": "Justin Content",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "4 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5176113.png",
@@ -39035,7 +39035,7 @@
      "name": "Sire Gaines",
      "pos": "RB",
      "role": "rotational",
-     "rating": 82,
+     "rating": 81,
      "snapPct": 0.35,
      "targetShare": 0.03,
      "tprr": 0.086,
@@ -39255,7 +39255,7 @@
      "name": "Sherrod Smith",
      "pos": "CB",
      "role": "starter",
-     "rating": 71,
+     "rating": 70,
      "snapPct": 0.9,
      "note": "5 PBU · 1 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5295048.png",
@@ -39325,7 +39325,7 @@
     "thirdDownDef": 0.516,
     "fourthDownGoRate": 0.841,
     "redZoneTd": 0.733,
-    "redZoneAggression": 6.2,
+    "redZoneAggression": 6.3,
     "halftimeAdjust": 7,
     "playActionRate": 0.24,
     "passRate": 0.47,
@@ -39436,7 +39436,7 @@
      "name": "Tay Lanier",
      "pos": "WR",
      "role": "starter",
-     "rating": 80,
+     "rating": 81,
      "snapPct": 0.75,
      "targetShare": 0.104,
      "tprr": 0.138,
@@ -40422,7 +40422,7 @@
    "offense": {
     "passEfficiency": 4.4,
     "rushEfficiency": 6.6,
-    "explosiveness": 5.4,
+    "explosiveness": 5.3,
     "qb": 3.81,
     "pbwr": 0.664,
     "slotEfficiency": 3.6,
@@ -40446,7 +40446,7 @@
     "passDefense": 7.3,
     "rushDefense": 5.8,
     "prwr": 0.411,
-    "nickelCorner": 5.2,
+    "nickelCorner": 5.1,
     "lbCoverage": 6.5,
     "secondaryAdjust": 5.8,
     "blitzRate": 0.28,
@@ -40524,7 +40524,7 @@
      "name": "Jordan Napier",
      "pos": "WR",
      "role": "starter",
-     "rating": 77,
+     "rating": 76,
      "snapPct": 0.75,
      "targetShare": 0.212,
      "tprr": 0.283,
@@ -40809,7 +40809,7 @@
     "thirdDownDef": 0.577,
     "fourthDownGoRate": 0.769,
     "redZoneTd": 0.695,
-    "redZoneAggression": 5.5,
+    "redZoneAggression": 5.6,
     "halftimeAdjust": 5.5,
     "playActionRate": 0.24,
     "passRate": 0.406,
@@ -40845,7 +40845,7 @@
     "prwr": 0.375,
     "nickelCorner": 2.5,
     "lbCoverage": 5.1,
-    "secondaryAdjust": 5,
+    "secondaryAdjust": 4.9,
     "blitzRate": 0.306,
     "takeaways": 4.6
    },
@@ -41218,7 +41218,7 @@
     "rushDefense": 4.2,
     "prwr": 0.359,
     "nickelCorner": 5.9,
-    "lbCoverage": 4,
+    "lbCoverage": 4.1,
     "secondaryAdjust": 5.1,
     "blitzRate": 0.304,
     "takeaways": 5.5
@@ -41837,7 +41837,7 @@
      "name": "Jalil Tucker",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "4 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4685584.png",
@@ -41952,7 +41952,7 @@
    "offense": {
     "passEfficiency": 6.9,
     "rushEfficiency": 6,
-    "explosiveness": 6.2,
+    "explosiveness": 6.1,
     "qb": 8.77,
     "pbwr": 0.696,
     "slotEfficiency": 5.8,
@@ -42068,7 +42068,7 @@
      "name": "Noah Rogers",
      "pos": "WR",
      "role": "starter",
-     "rating": 87,
+     "rating": 88,
      "snapPct": 0.62,
      "targetShare": 0.094,
      "tprr": 0.151,
@@ -42246,7 +42246,7 @@
      "name": "Dijon Lee Jr.",
      "pos": "CB",
      "role": "starter",
-     "rating": 71,
+     "rating": 70,
      "snapPct": 0.9,
      "note": "3 PBU · 2 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5141562.png",
@@ -42612,7 +42612,7 @@
      "name": "Joker Johnson",
      "pos": "CB",
      "role": "starter",
-     "rating": 56,
+     "rating": 55,
      "snapPct": 0.9,
      "note": "4 PBU · 2 INT in 7 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5121992.png",
@@ -43401,7 +43401,7 @@
      "name": "Jordy Lowery",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "4 PBU · 0 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4812379.png",
@@ -43506,7 +43506,7 @@
    "offense": {
     "passEfficiency": 7.4,
     "rushEfficiency": 6.7,
-    "explosiveness": 6.2,
+    "explosiveness": 6.1,
     "qb": 9.19,
     "pbwr": 0.744,
     "slotEfficiency": 7.2,
@@ -43608,7 +43608,7 @@
      "name": "London Humphreys",
      "pos": "WR",
      "role": "starter",
-     "rating": 81,
+     "rating": 82,
      "snapPct": 0.75,
      "targetShare": 0.062,
      "tprr": 0.083,
@@ -43789,7 +43789,7 @@
      "name": "Ellis Robinson IV",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "4 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5079698.png",
@@ -44285,7 +44285,7 @@
     "thirdDownDef": 0.661,
     "fourthDownGoRate": 0.752,
     "redZoneTd": 0.629,
-    "redZoneAggression": 4.9,
+    "redZoneAggression": 5,
     "halftimeAdjust": 5.5,
     "playActionRate": 0.24,
     "passRate": 0.52,
@@ -44383,7 +44383,7 @@
      "name": "Jackson Harris",
      "pos": "WR",
      "role": "starter",
-     "rating": 96,
+     "rating": 95,
      "snapPct": 0.85,
      "targetShare": 0.167,
      "tprr": 0.197,
@@ -44411,7 +44411,7 @@
      "name": "Winston Watkins Jr.",
      "pos": "WR",
      "role": "starter",
-     "rating": 74,
+     "rating": 73,
      "snapPct": 0.62,
      "targetShare": 0.078,
      "tprr": 0.126,
@@ -44701,7 +44701,7 @@
    "offense": {
     "passEfficiency": 5.4,
     "rushEfficiency": 6,
-    "explosiveness": 5.7,
+    "explosiveness": 5.6,
     "qb": 4.25,
     "pbwr": 0.578,
     "slotEfficiency": 5.7,
@@ -45779,7 +45779,7 @@
      "name": "Peyton Bowen",
      "pos": "CB",
      "role": "starter",
-     "rating": 71,
+     "rating": 70,
      "snapPct": 0.9,
      "note": "5 PBU · 1 INT in 5 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4870625.png",
@@ -46276,7 +46276,7 @@
    },
    "offense": {
     "passEfficiency": 6.2,
-    "rushEfficiency": 6.5,
+    "rushEfficiency": 6.4,
     "explosiveness": 6.8,
     "qb": 4.62,
     "pbwr": 0.644,
@@ -46290,11 +46290,11 @@
      "Multiple": 6
     },
     "vsCoverage": {
-     "Cover-1": 6.2,
-     "Cover-2": 6.3,
-     "Cover-3": 6.4,
-     "Quarters": 5.8,
-     "Cover-2 Man": 6
+     "Cover-1": 6.1,
+     "Cover-2": 6.2,
+     "Cover-3": 6.3,
+     "Quarters": 5.7,
+     "Cover-2 Man": 5.9
     }
    },
    "defense": {
@@ -46574,7 +46574,7 @@
      "name": "Vicari Swain",
      "pos": "CB",
      "role": "starter",
-     "rating": 73,
+     "rating": 72,
      "snapPct": 0.9,
      "note": "2 PBU · 2 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/4921117.png",
@@ -46586,7 +46586,7 @@
      "name": "Quay'sheed Scott",
      "pos": "NCB",
      "role": "starter",
-     "rating": 63,
+     "rating": 65,
      "snapPct": 0.75,
      "note": "2 PBU · 1 INT in 3 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5149824.png",
@@ -46653,7 +46653,7 @@
    },
    "offense": {
     "passEfficiency": 7,
-    "rushEfficiency": 7.4,
+    "rushEfficiency": 7.3,
     "explosiveness": 6.3,
     "qb": 3.76,
     "pbwr": 0.729,
@@ -46661,17 +46661,17 @@
     "teSpeed": 8.3,
     "vsFront": {
      "4-2-5": 7.3,
-     "4-3": 7.3,
+     "4-3": 7.2,
      "3-3-5": 6.3,
      "3-4": 6.8,
-     "Multiple": 6.8
+     "Multiple": 6.7
     },
     "vsCoverage": {
-     "Cover-1": 6.9,
-     "Cover-2": 6.6,
-     "Cover-3": 7,
-     "Quarters": 6.5,
-     "Cover-2 Man": 6.5
+     "Cover-1": 6.8,
+     "Cover-2": 6.5,
+     "Cover-3": 6.9,
+     "Quarters": 6.4,
+     "Cover-2 Man": 6.4
     }
    },
    "defense": {
@@ -47343,7 +47343,7 @@
      "name": "Bo Mascoe",
      "pos": "NCB",
      "role": "starter",
-     "rating": 56,
+     "rating": 58,
      "snapPct": 0.75,
      "note": "2 PBU · 1 INT in 4 g",
      "headshotUrl": "https://a.espncdn.com/i/headshots/college-football/players/full/5078162.png",
@@ -47816,7 +47816,7 @@
    },
    "offense": {
     "passEfficiency": 8.4,
-    "rushEfficiency": 8.1,
+    "rushEfficiency": 8,
     "explosiveness": 8,
     "qb": 7.4,
     "pbwr": 0.683,
@@ -47825,9 +47825,9 @@
     "vsFront": {
      "4-2-5": 9,
      "4-3": 7.5,
-     "3-3-5": 8.2,
+     "3-3-5": 8.1,
      "3-4": 6.3,
-     "Multiple": 8.1
+     "Multiple": 8
     },
     "vsCoverage": {
      "Cover-1": 9,
@@ -48619,7 +48619,7 @@
     "lbCoverage": 5.8,
     "secondaryAdjust": 5,
     "blitzRate": 0.326,
-    "takeaways": 4.5
+    "takeaways": 4.6
    },
    "players": [
     {
@@ -49104,7 +49104,7 @@
      "name": "Clayton Coppock Jr.",
      "pos": "WR",
      "role": "starter",
-     "rating": 82,
+     "rating": 83,
      "snapPct": 0.62,
      "targetShare": 0.094,
      "tprr": 0.152,
@@ -50145,7 +50145,7 @@
    "offense": {
     "passEfficiency": 6.4,
     "rushEfficiency": 7.6,
-    "explosiveness": 7.2,
+    "explosiveness": 7.1,
     "qb": 7.5,
     "pbwr": 0.646,
     "slotEfficiency": 6.9,
@@ -50941,7 +50941,7 @@
    "offense": {
     "passEfficiency": 3.8,
     "rushEfficiency": 5.5,
-    "explosiveness": 5.7,
+    "explosiveness": 5.6,
     "qb": 7,
     "pbwr": 0.661,
     "slotEfficiency": 5.1,
@@ -51375,7 +51375,7 @@
      "name": "Jo'Shon Barbie",
      "pos": "RB",
      "role": "starter",
-     "rating": 72,
+     "rating": 73,
      "snapPct": 0.6,
      "targetShare": 0.015,
      "tprr": 0.04,
