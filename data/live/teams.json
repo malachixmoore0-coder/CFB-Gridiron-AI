@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-11T23:21:16.036Z",
+ "generatedAt": "2026-09-12T04:43:36.587Z",
  "season": 2026,
  "week": 2,
  "phase": "regular",
@@ -375,7 +375,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
    "elo": 1370,
    "talent": 4.6,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "california",
@@ -2680,7 +2680,7 @@
    "elo": 1668,
    "talent": 6.7,
    "rank": 24,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "miami",
@@ -3457,7 +3457,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
    "elo": 1509,
    "talent": 5.6,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "north-carolina",
@@ -5779,7 +5779,7 @@
    "elo": 1652,
    "talent": 6.6,
    "rank": 25,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "virginia-tech",
@@ -15597,7 +15597,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
    "elo": 1510,
    "talent": 5.6,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "kansas-state",
@@ -23714,7 +23714,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
    "elo": 1408,
    "talent": 4.8,
-   "record": "0-1"
+   "record": "0-2"
   },
   {
    "id": "ucla",
@@ -45455,7 +45455,7 @@
    "elo": 1666,
    "talent": 6.7,
    "rank": 23,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "oklahoma",
