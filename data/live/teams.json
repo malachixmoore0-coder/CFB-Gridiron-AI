@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-12T23:05:13.907Z",
+ "generatedAt": "2026-09-13T00:51:50.466Z",
  "season": 2026,
  "week": 2,
  "phase": "regular",
@@ -712,7 +712,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
    "elo": 1346,
    "talent": 4.4,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "clemson",
@@ -4209,7 +4209,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
    "elo": 1688,
    "talent": 6.9,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "smu",
@@ -4609,7 +4609,7 @@
    "elo": 1734,
    "talent": 7.2,
    "rank": 17,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "stanford",
@@ -5380,7 +5380,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
    "elo": 1288,
    "talent": 4,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "virginia",
@@ -9288,7 +9288,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
    "elo": 1571,
    "talent": 6,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "rice",
@@ -12055,7 +12055,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
    "elo": 1522,
    "talent": 5.7,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "arizona",
@@ -14426,7 +14426,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
    "elo": 1404,
    "talent": 4.8,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "houston",
@@ -17528,7 +17528,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
    "elo": 1465,
    "talent": 5.3,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "utah",
@@ -25683,7 +25683,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
    "elo": 1404,
    "talent": 4.8,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "florida-international",
@@ -36548,7 +36548,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1564,
    "talent": 6,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "north-dakota-state",
@@ -38134,7 +38134,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
    "elo": 1589,
    "talent": 6.1,
-   "record": "1-1"
+   "record": "1-2"
   },
   {
    "id": "utep",
@@ -38928,7 +38928,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
    "elo": 1309,
    "talent": 4.1,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "boise-state",
@@ -41160,7 +41160,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
    "elo": 1433,
    "talent": 5,
-   "record": "0-1"
+   "record": "0-2"
   },
   {
    "id": "utah-state",
@@ -42295,7 +42295,7 @@
    "elo": 1829,
    "talent": 7.9,
    "rank": 12,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "arkansas",
@@ -43473,7 +43473,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
    "elo": 1669,
    "talent": 6.7,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "georgia",
@@ -44262,7 +44262,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
    "elo": 1476,
    "talent": 5.3,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "lsu",
@@ -48182,7 +48182,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
    "elo": 1753,
    "talent": 7.3,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "app-state",
@@ -53270,7 +53270,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
    "elo": 1416,
    "talent": 4.9,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "ul-monroe",
