@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-13T04:57:27.819Z",
+ "generatedAt": "2026-09-13T05:59:03.139Z",
  "season": 2026,
  "week": 2,
  "phase": "regular",
@@ -1114,7 +1114,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
    "elo": 1550,
    "talent": 5.9,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "duke",
@@ -17932,7 +17932,7 @@
    "elo": 1817,
    "talent": 7.8,
    "rank": 20,
-   "record": "1-0"
+   "record": "2-0"
   },
   {
    "id": "west-virginia",
@@ -34232,7 +34232,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
    "elo": 1476,
    "talent": 5.3,
-   "record": "1-1"
+   "record": "1-2"
   },
   {
    "id": "toledo",
@@ -35401,7 +35401,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
    "elo": 1424,
    "talent": 5,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "hawaii",
@@ -36151,7 +36151,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
    "elo": 1451,
    "talent": 5.1,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "new-mexico",
@@ -36945,7 +36945,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
    "elo": 1562,
    "talent": 6,
-   "record": "2-0"
+   "record": "3-0"
   },
   {
    "id": "northern-illinois",
@@ -40053,7 +40053,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
    "elo": 1449,
    "talent": 5.1,
-   "record": "0-1"
+   "record": "1-1"
   },
   {
    "id": "oregon-state",
@@ -42673,7 +42673,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
    "elo": 1547,
    "talent": 5.8,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "auburn",
@@ -49714,7 +49714,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
    "elo": 1376,
    "talent": 4.6,
-   "record": "1-0"
+   "record": "1-1"
   },
   {
    "id": "georgia-state",
