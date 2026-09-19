@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-19T20:50:04.560Z",
+ "generatedAt": "2026-09-19T22:30:26.925Z",
  "season": 2026,
  "week": 3,
  "phase": "regular",
@@ -377,7 +377,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
    "elo": 1379,
    "talent": 4.7,
-   "record": "1-1"
+   "record": "2-1"
   },
   {
    "id": "california",
@@ -1116,7 +1116,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
    "elo": 1562,
    "talent": 5.9,
-   "record": "1-1"
+   "record": "2-1"
   },
   {
    "id": "duke",
@@ -3837,7 +3837,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
    "elo": 1395,
    "talent": 4.8,
-   "record": "2-0"
+   "record": "2-1"
   },
   {
    "id": "pittsburgh",
@@ -18720,7 +18720,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
    "elo": 1587,
    "talent": 6.1,
-   "record": "1-1"
+   "record": "2-1"
   },
   {
    "id": "indiana",
