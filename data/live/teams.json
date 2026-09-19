@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-18T23:22:18.831Z",
+ "generatedAt": "2026-09-19T04:44:55.768Z",
  "season": 2026,
  "week": 3,
  "phase": "regular",
@@ -3059,7 +3059,7 @@
    "elo": 1930,
    "talent": 8.5,
    "rank": 5,
-   "record": "2-0"
+   "record": "3-0"
   },
   {
    "id": "nc-state",
@@ -6559,7 +6559,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
    "elo": 1513,
    "talent": 5.6,
-   "record": "2-0"
+   "record": "2-1"
   },
   {
    "id": "army",
@@ -14806,7 +14806,7 @@
    "elo": 1521,
    "talent": 5.7,
    "rank": 22,
-   "record": "2-0"
+   "record": "2-1"
   },
   {
    "id": "iowa-state",
@@ -17160,7 +17160,7 @@
    "elo": 1845,
    "talent": 7.9,
    "rank": 13,
-   "record": "2-0"
+   "record": "3-0"
   },
   {
    "id": "ucf",
