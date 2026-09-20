@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-19T23:13:36.707Z",
+ "generatedAt": "2026-09-20T00:25:07.973Z",
  "season": 2026,
  "week": 3,
  "phase": "regular",
@@ -1514,7 +1514,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1615,
    "talent": 6.3,
-   "record": "2-0"
+   "record": "3-0"
   },
   {
    "id": "florida-state",
@@ -2683,7 +2683,7 @@
    "elo": 1668,
    "talent": 6.7,
    "rank": 23,
-   "record": "1-1"
+   "record": "2-1"
   },
   {
    "id": "miami",
@@ -4615,7 +4615,7 @@
    "elo": 1734,
    "talent": 7.1,
    "rank": 16,
-   "record": "2-0"
+   "record": "2-1"
   },
   {
    "id": "stanford",
@@ -5013,7 +5013,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
    "elo": 1408,
    "talent": 4.9,
-   "record": "1-1"
+   "record": "1-2"
   },
   {
    "id": "syracuse",
@@ -13258,7 +13258,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
    "elo": 1509,
    "talent": 5.6,
-   "record": "1-1"
+   "record": "2-1"
   },
   {
    "id": "byu",
@@ -19098,7 +19098,7 @@
    "elo": 2132,
    "talent": 9.8,
    "rank": 4,
-   "record": "2-0"
+   "record": "3-0"
   },
   {
    "id": "iowa",
@@ -19475,7 +19475,7 @@
    "elo": 1841,
    "talent": 7.8,
    "rank": 18,
-   "record": "2-0"
+   "record": "3-0"
   },
   {
    "id": "maryland",
@@ -23735,7 +23735,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
    "elo": 1372,
    "talent": 4.6,
-   "record": "0-2"
+   "record": "0-3"
   },
   {
    "id": "ucla",
@@ -24513,7 +24513,7 @@
    "elo": 1837,
    "talent": 7.8,
    "rank": 12,
-   "record": "3-0"
+   "record": "4-0"
   },
   {
    "id": "washington",
@@ -29205,7 +29205,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
    "elo": 1224,
    "talent": 3.6,
-   "record": "0-2"
+   "record": "0-3"
   },
   {
    "id": "notre-dame",
@@ -51302,7 +51302,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
    "elo": 1405,
    "talent": 4.8,
-   "record": "1-1"
+   "record": "1-2"
   },
   {
    "id": "marshall",
@@ -53687,7 +53687,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
    "elo": 1076,
    "talent": 2.6,
-   "record": "0-2"
+   "record": "0-3"
   }
  ]
 }
