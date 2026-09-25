@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T05:25:46.682Z",
+ "generatedAt": "2026-09-25T22:33:12.108Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -4091,8 +4091,8 @@
    "marketTotal": null,
    "predictedAt": "2026-09-20T11:35:13.544Z",
    "updates": 21,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-09-25T20:00Z",
    "result": null
   },
   {
