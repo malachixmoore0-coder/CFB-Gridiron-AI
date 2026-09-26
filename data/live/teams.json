@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-26T00:54:32.986Z",
+ "generatedAt": "2026-09-26T06:04:34.058Z",
  "season": 2026,
  "week": 4,
  "phase": "regular",
@@ -714,7 +714,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
    "elo": 1353,
    "talent": 4.5,
-   "record": "2-1"
+   "record": "2-2"
   },
   {
    "id": "clemson",
@@ -1117,7 +1117,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
    "elo": 1562,
    "talent": 5.9,
-   "record": "2-1"
+   "record": "3-1"
   },
   {
    "id": "duke",
@@ -8902,7 +8902,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
    "elo": 1513,
    "talent": 5.6,
-   "record": "1-1"
+   "record": "1-2"
   },
   {
    "id": "north-texas",
@@ -11670,7 +11670,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
    "elo": 1406,
    "talent": 4.9,
-   "record": "1-2"
+   "record": "2-2"
   },
   {
    "id": "utsa",
@@ -19103,7 +19103,7 @@
    "elo": 2132,
    "talent": 9.8,
    "rank": 4,
-   "record": "3-0"
+   "record": "4-0"
   },
   {
    "id": "iowa",
@@ -21814,7 +21814,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
    "elo": 1549,
    "talent": 5.8,
-   "record": "2-0"
+   "record": "2-1"
   },
   {
    "id": "ohio-state",
@@ -23742,7 +23742,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
    "elo": 1372,
    "talent": 4.6,
-   "record": "0-3"
+   "record": "1-3"
   },
   {
    "id": "ucla",
