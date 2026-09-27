@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-27T05:26:33.342Z",
+ "generatedAt": "2026-09-27T10:37:52.978Z",
  "season": 2026,
  "week": 4,
  "phase": "regular",
@@ -2294,7 +2294,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
    "elo": 1503,
    "talent": 5.5,
-   "record": "1-2"
+   "record": "1-3"
   },
   {
    "id": "louisville",
@@ -5013,7 +5013,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
    "elo": 1300,
    "talent": 4.2,
-   "record": "1-2"
+   "record": "2-2"
   },
   {
    "id": "syracuse",
@@ -9697,7 +9697,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
    "elo": 1162,
    "talent": 3.3,
-   "record": "1-2"
+   "record": "1-3"
   },
   {
    "id": "south-florida",
@@ -21041,7 +21041,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
    "elo": 1484,
    "talent": 5.4,
-   "record": "2-1"
+   "record": "3-1"
   },
   {
    "id": "nebraska",
@@ -24924,7 +24924,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
    "elo": 1752,
    "talent": 7.2,
-   "record": "3-0"
+   "record": "3-1"
   },
   {
    "id": "wisconsin",
@@ -35433,7 +35433,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
    "elo": 1423,
    "talent": 5,
-   "record": "1-1"
+   "record": "2-1"
   },
   {
    "id": "hawaii",
@@ -36184,7 +36184,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
    "elo": 1441,
    "talent": 5.1,
-   "record": "1-2"
+   "record": "1-3"
   },
   {
    "id": "new-mexico",
@@ -40091,7 +40091,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
    "elo": 1611,
    "talent": 6.3,
-   "record": "2-1"
+   "record": "3-1"
   },
   {
    "id": "oregon-state",
