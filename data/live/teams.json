@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T00:53:12.498Z",
+ "generatedAt": "2026-10-02T08:41:46.689Z",
  "season": 2026,
  "week": 5,
  "phase": "regular",
@@ -9300,7 +9300,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
    "elo": 1662,
    "talent": 6.6,
-   "record": "2-2"
+   "record": "3-2"
   },
   {
    "id": "rice",
@@ -11287,7 +11287,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
    "elo": 1221,
    "talent": 3.6,
-   "record": "3-1"
+   "record": "3-2"
   },
   {
    "id": "uab",
@@ -28453,7 +28453,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
    "elo": 1231,
    "talent": 3.7,
-   "record": "1-3"
+   "record": "2-3"
   },
   {
    "id": "sam-houston",
@@ -29224,7 +29224,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
    "elo": 1202,
    "talent": 3.5,
-   "record": "1-3"
+   "record": "1-4"
   },
   {
    "id": "notre-dame",
