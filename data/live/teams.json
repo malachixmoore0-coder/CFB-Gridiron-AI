@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-02T22:20:34.530Z",
+ "generatedAt": "2026-10-03T05:27:18.322Z",
  "season": 2026,
  "week": 5,
  "phase": "regular",
@@ -4214,7 +4214,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
    "elo": 1687,
    "talent": 6.8,
-   "record": "4-0"
+   "record": "5-0"
   },
   {
    "id": "smu",
@@ -6187,7 +6187,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
    "elo": 1494,
    "talent": 5.5,
-   "record": "4-0"
+   "record": "4-1"
   },
   {
    "id": "wake-forest",
@@ -21825,7 +21825,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
    "elo": 1640,
    "talent": 6.5,
-   "record": "2-1"
+   "record": "3-1"
   },
   {
    "id": "ohio-state",
@@ -23000,7 +23000,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
    "elo": 1901,
    "talent": 8.2,
-   "record": "3-1"
+   "record": "3-2"
   },
   {
    "id": "purdue",
@@ -25715,7 +25715,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
    "elo": 1328,
    "talent": 4.3,
-   "record": "2-2"
+   "record": "2-3"
   },
   {
    "id": "florida-international",
@@ -27261,7 +27261,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
    "elo": 1725,
    "talent": 7,
-   "record": "3-1"
+   "record": "4-1"
   },
   {
    "id": "middle-tennessee",
