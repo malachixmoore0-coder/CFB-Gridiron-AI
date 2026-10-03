@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T05:27:18.322Z",
+ "generatedAt": "2026-10-03T11:48:51.094Z",
  "season": 2026,
  "priorSeason": 2025,
  "currentWeek": 5,
@@ -32,716 +32,716 @@
    "name": "CFBD schedule & results 2026 (cfbfastR-data)",
    "url": "https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/main/schedules/csv/cfb_schedules_2026.csv",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:18.854Z"
+   "fetchedAt": "2026-10-03T11:48:51.234Z"
   },
   {
    "name": "CFBD schedule & results 2025 (cfbfastR-data)",
    "url": "https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/main/schedules/csv/cfb_schedules_2025.csv",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:19.076Z"
+   "fetchedAt": "2026-10-03T11:48:51.431Z"
   },
   {
    "name": "ESPN rankings (best-effort)",
    "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:19.273Z"
-  },
-  {
-   "name": "ESPN injuries (best-effort)",
-   "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/injuries",
-   "ok": true,
-   "fetchedAt": "2026-10-03T05:27:19.316Z"
+   "fetchedAt": "2026-10-03T11:48:51.775Z"
   },
   {
    "name": "ESPN depth charts (probe, best-effort)",
    "url": "https://site.web.api.espn.com/apis/common/v3/sports/football/college-football/teams/103/depthcharts",
    "ok": false,
-   "fetchedAt": "2026-10-03T05:27:19.407Z",
+   "fetchedAt": "2026-10-03T11:48:51.776Z",
    "note": "HTTP 404"
+  },
+  {
+   "name": "ESPN injuries (best-effort)",
+   "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/injuries",
+   "ok": true,
+   "fetchedAt": "2026-10-03T11:48:51.777Z"
   },
   {
    "name": "CFBD rosters 2026 (cfbfastR-data)",
    "url": "https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/main/rosters/csv/cfb_rosters_2026.csv",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:19.662Z"
+   "fetchedAt": "2026-10-03T11:48:52.101Z"
   },
   {
    "name": "ESPN scoreboard week 5 (best-effort)",
    "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?groups=80&limit=400&dates=2026&seasontype=2&week=5",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:20.038Z"
+   "fetchedAt": "2026-10-03T11:48:52.457Z"
   },
   {
    "name": "ESPN scoreboard week 4 (best-effort)",
    "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?groups=80&limit=400&dates=2026&seasontype=2&week=4",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:20.045Z"
+   "fetchedAt": "2026-10-03T11:48:52.510Z"
   },
   {
    "name": "ESPN scoreboard week 6 (best-effort)",
    "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?groups=80&limit=400&dates=2026&seasontype=2&week=6",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:20.058Z"
+   "fetchedAt": "2026-10-03T11:48:52.532Z"
   },
   {
    "name": "sportsdataverse ESPN CFB play-by-play 2026",
    "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_cfb_pbp/play_by_play_2026.parquet",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:20.679Z"
+   "fetchedAt": "2026-10-03T11:48:53.131Z"
   },
   {
    "name": "sportsdataverse ESPN CFB play-by-play 2025",
    "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_cfb_pbp/play_by_play_2025.parquet",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:24.211Z"
-  },
-  {
-   "name": "Open-Meteo forecast 35.91,-79.05",
-   "url": "https://api.open-meteo.com/v1/forecast?latitude=35.9069294&longitude=-79.0478889&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
-   "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.667Z"
-  },
-  {
-   "name": "Open-Meteo forecast 36.13,-80.25",
-   "url": "https://api.open-meteo.com/v1/forecast?latitude=36.1305507&longitude=-80.2545851&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
-   "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.668Z"
+   "fetchedAt": "2026-10-03T11:48:55.496Z"
   },
   {
    "name": "Open-Meteo forecast 32.84,-96.78",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.8377223&longitude=-96.7827859&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.751Z"
+   "fetchedAt": "2026-10-03T11:49:02.366Z"
   },
   {
    "name": "Open-Meteo forecast 41.76,-72.62",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.7595675&longitude=-72.6187728&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.752Z"
+   "fetchedAt": "2026-10-03T11:49:02.373Z"
+  },
+  {
+   "name": "Open-Meteo forecast 35.91,-79.05",
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=35.9069294&longitude=-79.0478889&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
+   "ok": true,
+   "fetchedAt": "2026-10-03T11:49:02.376Z"
+  },
+  {
+   "name": "Open-Meteo forecast 36.13,-80.25",
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=36.1305507&longitude=-80.2545851&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
+   "ok": true,
+   "fetchedAt": "2026-10-03T11:49:02.382Z"
   },
   {
    "name": "Open-Meteo forecast 44.98,-93.22",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=44.976525&longitude=-93.2245462&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.811Z"
+   "fetchedAt": "2026-10-03T11:49:02.501Z"
   },
   {
    "name": "Open-Meteo forecast 39.00,-104.84",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.9969701&longitude=-104.8436165&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.812Z"
+   "fetchedAt": "2026-10-03T11:49:02.510Z"
   },
   {
    "name": "Open-Meteo forecast 33.46,-88.79",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.4563403&longitude=-88.7933652&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.894Z"
+   "fetchedAt": "2026-10-03T11:49:02.514Z"
   },
   {
    "name": "Open-Meteo forecast 42.01,-93.64",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.0139977&longitude=-93.6357716&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.895Z"
+   "fetchedAt": "2026-10-03T11:49:02.522Z"
   },
   {
    "name": "Open-Meteo forecast 29.72,-95.35",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=29.7219885&longitude=-95.3491623&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.955Z"
+   "fetchedAt": "2026-10-03T11:49:02.637Z"
   },
   {
    "name": "Open-Meteo forecast 38.96,-95.25",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.9629418&longitude=-95.2463686&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:31.956Z"
+   "fetchedAt": "2026-10-03T11:49:02.647Z"
   },
   {
    "name": "Open-Meteo forecast 43.07,-89.41",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=43.06994&longitude=-89.4126943&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.036Z"
+   "fetchedAt": "2026-10-03T11:49:02.653Z"
   },
   {
    "name": "Open-Meteo forecast 33.95,-83.37",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.9498197&longitude=-83.3733813&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.037Z"
+   "fetchedAt": "2026-10-03T11:49:02.662Z"
   },
   {
    "name": "Open-Meteo forecast 43.00,-78.78",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.9991334&longitude=-78.7775113&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.099Z"
+   "fetchedAt": "2026-10-03T11:49:02.771Z"
   },
   {
    "name": "Open-Meteo forecast 40.22,-85.42",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.2159422&longitude=-85.4161148&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.100Z"
+   "fetchedAt": "2026-10-03T11:49:02.785Z"
   },
   {
    "name": "Open-Meteo forecast 42.38,-72.54",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3773244&longitude=-72.5360595&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.179Z"
+   "fetchedAt": "2026-10-03T11:49:02.792Z"
   },
   {
    "name": "Open-Meteo forecast 35.96,-83.93",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.9550131&longitude=-83.9250128&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.180Z"
+   "fetchedAt": "2026-10-03T11:49:02.802Z"
   },
   {
    "name": "Open-Meteo forecast 39.52,-84.73",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=39.5197009&longitude=-84.7330255&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.241Z"
+   "fetchedAt": "2026-10-03T11:49:02.907Z"
   },
   {
    "name": "Open-Meteo forecast 35.31,-80.74",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.3105033&longitude=-80.7401194&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.242Z"
+   "fetchedAt": "2026-10-03T11:49:02.921Z"
   },
   {
    "name": "Open-Meteo forecast 41.66,-91.55",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.6586045&longitude=-91.5510829&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.322Z"
+   "fetchedAt": "2026-10-03T11:49:02.929Z"
   },
   {
    "name": "Open-Meteo forecast 43.58,-84.77",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=43.5777313&longitude=-84.7709904&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.323Z"
+   "fetchedAt": "2026-10-03T11:49:02.941Z"
   },
   {
    "name": "Open-Meteo forecast 30.44,-84.30",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=30.4381692&longitude=-84.3044032&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.385Z"
+   "fetchedAt": "2026-10-03T11:49:03.042Z"
   },
   {
    "name": "Open-Meteo forecast 41.14,-81.31",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.1390935&longitude=-81.31346&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.386Z"
+   "fetchedAt": "2026-10-03T11:49:03.058Z"
   },
   {
    "name": "Open-Meteo forecast 33.74,-84.39",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.735267&longitude=-84.389949&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.465Z"
+   "fetchedAt": "2026-10-03T11:49:03.067Z"
   },
   {
    "name": "Open-Meteo forecast 38.94,-92.33",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.9358491&longitude=-92.3332009&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.466Z"
+   "fetchedAt": "2026-10-03T11:49:03.081Z"
   },
   {
    "name": "Open-Meteo forecast 35.80,-78.72",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.8008001&longitude=-78.7195655&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.528Z"
+   "fetchedAt": "2026-10-03T11:49:03.177Z"
   },
   {
    "name": "Open-Meteo forecast 38.44,-78.87",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.4352919&longitude=-78.8729349&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.529Z"
+   "fetchedAt": "2026-10-03T11:49:03.195Z"
+  },
+  {
+   "name": "Open-Meteo forecast 40.82,-96.71",
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=40.820682&longitude=-96.705594&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
+   "ok": true,
+   "fetchedAt": "2026-10-03T11:49:03.204Z"
   },
   {
    "name": "Open-Meteo forecast 35.07,-106.63",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.0669479&longitude=-106.6283225&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.615Z"
-  },
-  {
-   "name": "Open-Meteo forecast 40.82,-96.71",
-   "url": "https://api.open-meteo.com/v1/forecast?latitude=40.820682&longitude=-96.705594&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
-   "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.615Z"
+   "fetchedAt": "2026-10-03T11:49:03.220Z"
   },
   {
    "name": "Open-Meteo forecast 40.10,-88.24",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.0993268&longitude=-88.2359569&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.673Z"
+   "fetchedAt": "2026-10-03T11:49:03.312Z"
   },
   {
    "name": "Open-Meteo forecast 33.97,-81.02",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.9730239&longitude=-81.0191726&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.674Z"
+   "fetchedAt": "2026-10-03T11:49:03.331Z"
   },
   {
    "name": "Open-Meteo forecast 40.57,-105.09",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.570015&longitude=-105.088435&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.759Z"
+   "fetchedAt": "2026-10-03T11:49:03.342Z"
   },
   {
    "name": "Open-Meteo forecast 33.79,-79.02",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.7928506&longitude=-79.0166946&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.760Z"
+   "fetchedAt": "2026-10-03T11:49:03.360Z"
   },
   {
    "name": "Open-Meteo forecast 30.61,-96.34",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=30.6098891&longitude=-96.3403828&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.815Z"
+   "fetchedAt": "2026-10-03T11:49:03.447Z"
   },
   {
    "name": "Open-Meteo forecast 32.71,-97.37",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.7096604&longitude=-97.3680835&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.816Z"
+   "fetchedAt": "2026-10-03T11:49:03.468Z"
   },
   {
    "name": "Open-Meteo forecast 29.72,-95.41",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=29.7163297&longitude=-95.4093261&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.902Z"
+   "fetchedAt": "2026-10-03T11:49:03.480Z"
   },
   {
    "name": "Open-Meteo forecast 30.70,-88.19",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=30.696904&longitude=-88.192013&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.903Z"
+   "fetchedAt": "2026-10-03T11:49:03.499Z"
   },
   {
    "name": "Open-Meteo forecast 27.98,-82.50",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=27.9758691&longitude=-82.5033344&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.959Z"
+   "fetchedAt": "2026-10-03T11:49:03.582Z"
   },
   {
    "name": "Open-Meteo forecast 32.53,-92.66",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.5321487&longitude=-92.6560019&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:32.960Z"
+   "fetchedAt": "2026-10-03T11:49:03.604Z"
   },
   {
    "name": "Open-Meteo forecast 40.01,-105.27",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.0094746&longitude=-105.266905&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.046Z"
+   "fetchedAt": "2026-10-03T11:49:03.619Z"
   },
   {
    "name": "Open-Meteo forecast 34.68,-82.84",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=34.6787737&longitude=-82.8432428&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.047Z"
+   "fetchedAt": "2026-10-03T11:49:03.638Z"
   },
   {
    "name": "Open-Meteo forecast 34.01,-118.29",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=34.014167&longitude=-118.287778&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.102Z"
+   "fetchedAt": "2026-10-03T11:49:03.716Z"
   },
   {
    "name": "Open-Meteo forecast 43.60,-116.20",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=43.6028839&longitude=-116.1958882&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.103Z"
+   "fetchedAt": "2026-10-03T11:49:03.742Z"
   },
   {
    "name": "Open-Meteo forecast 30.22,-92.04",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=30.2158434&longitude=-92.0417371&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.189Z"
+   "fetchedAt": "2026-10-03T11:49:03.757Z"
   },
   {
    "name": "Open-Meteo forecast 40.51,-74.47",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.513611&longitude=-74.465278&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.190Z"
+   "fetchedAt": "2026-10-03T11:49:03.778Z"
   },
   {
    "name": "Open-Meteo forecast 46.73,-117.16",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=46.731831&longitude=-117.1604991&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.245Z"
+   "fetchedAt": "2026-10-03T11:49:03.851Z"
   },
   {
    "name": "Open-Meteo forecast 32.78,-117.12",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.784444&longitude=-117.122833&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.249Z"
+   "fetchedAt": "2026-10-03T11:49:03.879Z"
   },
   {
    "name": "Open-Meteo forecast 33.43,-111.93",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.4264471&longitude=-111.9325005&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.332Z"
+   "fetchedAt": "2026-10-03T11:49:03.895Z"
   },
   {
    "name": "Open-Meteo forecast 32.23,-110.95",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.2288054&longitude=-110.9488677&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.333Z"
+   "fetchedAt": "2026-10-03T11:49:03.917Z"
   },
   {
    "name": "Open-Meteo forecast 21.29,-157.82",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=21.294294&longitude=-157.819338&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.390Z"
+   "fetchedAt": "2026-10-03T11:49:03.986Z"
   },
   {
    "name": "Open-Meteo forecast 31.80,-85.95",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=31.7995565&longitude=-85.9518328&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.393Z"
+   "fetchedAt": "2026-10-03T11:49:04.016Z"
   },
   {
    "name": "Open-Meteo forecast 34.03,-84.57",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=34.0289318&longitude=-84.5676234&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.474Z"
+   "fetchedAt": "2026-10-03T11:49:04.032Z"
   },
   {
    "name": "Open-Meteo forecast 25.75,-80.38",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=25.7525&longitude=-80.37778&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.476Z"
+   "fetchedAt": "2026-10-03T11:49:04.057Z"
   },
   {
    "name": "Open-Meteo forecast 37.35,-79.18",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=37.3544305&longitude=-79.1750239&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.543Z"
+   "fetchedAt": "2026-10-03T11:49:04.121Z"
   },
   {
    "name": "Open-Meteo forecast 36.98,-86.46",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=36.9847901&longitude=-86.4594041&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.548Z"
+   "fetchedAt": "2026-10-03T11:49:04.154Z"
   },
   {
    "name": "Open-Meteo forecast 35.85,-90.67",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.8488977&longitude=-90.6677436&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.616Z"
+   "fetchedAt": "2026-10-03T11:49:04.172Z"
   },
   {
    "name": "Open-Meteo forecast 38.21,-85.76",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.2057621&longitude=-85.7588141&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.618Z"
+   "fetchedAt": "2026-10-03T11:49:04.196Z"
   },
   {
    "name": "Open-Meteo forecast 41.75,-111.81",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.7517394&longitude=-111.8116007&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.685Z"
+   "fetchedAt": "2026-10-03T11:49:04.255Z"
   },
   {
    "name": "Open-Meteo forecast 47.65,-122.30",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=47.6503235&longitude=-122.3015746&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.688Z"
+   "fetchedAt": "2026-10-03T11:49:04.291Z"
   },
   {
    "name": "Open-Meteo forecast 37.32,-121.87",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=37.3196675&longitude=-121.8682962&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.759Z"
+   "fetchedAt": "2026-10-03T11:49:04.309Z"
   },
   {
    "name": "Open-Meteo forecast 40.26,-111.65",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.2575347&longitude=-111.6545247&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.761Z"
+   "fetchedAt": "2026-10-03T11:49:04.336Z"
   },
   {
    "name": "Open-Meteo forecast 33.20,-97.16",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.203899&longitude=-97.159245&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.828Z"
+   "fetchedAt": "2026-10-03T11:49:04.390Z"
   },
   {
    "name": "Open-Meteo forecast 29.65,-82.35",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=29.6499357&longitude=-82.3485788&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.833Z"
+   "fetchedAt": "2026-10-03T11:49:04.428Z"
   },
   {
    "name": "Open-Meteo forecast 32.53,-92.66",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.5321487&longitude=-92.6560019&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.903Z"
+   "fetchedAt": "2026-10-03T11:49:04.447Z"
   },
   {
    "name": "Open-Meteo forecast 35.60,-77.36",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.5968486&longitude=-77.364564&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.905Z"
+   "fetchedAt": "2026-10-03T11:49:04.475Z"
   },
   {
    "name": "Open-Meteo forecast 38.02,-84.51",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.0220905&longitude=-84.5053408&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.973Z"
+   "fetchedAt": "2026-10-03T11:49:04.526Z"
   },
   {
    "name": "Open-Meteo forecast 40.76,-111.85",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.7599724&longitude=-111.8488255&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:33.977Z"
+   "fetchedAt": "2026-10-03T11:49:04.565Z"
   },
   {
    "name": "Open-Meteo forecast 32.41,-81.78",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=32.4122471&longitude=-81.7849296&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.046Z"
+   "fetchedAt": "2026-10-03T11:49:04.585Z"
   },
   {
    "name": "Open-Meteo forecast 42.38,-72.54",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.3773244&longitude=-72.5360595&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.047Z"
+   "fetchedAt": "2026-10-03T11:49:04.614Z"
   },
   {
    "name": "Open-Meteo forecast 39.32,-82.10",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=39.3212794&longitude=-82.1034315&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.116Z"
+   "fetchedAt": "2026-10-03T11:49:04.660Z"
   },
   {
    "name": "Open-Meteo forecast 42.06,-87.67",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.058246&longitude=-87.670876&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.120Z"
+   "fetchedAt": "2026-10-03T11:49:04.703Z"
   },
   {
    "name": "Open-Meteo forecast 31.77,-106.51",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=31.7733353&longitude=-106.507957&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.192Z"
+   "fetchedAt": "2026-10-03T11:49:04.723Z"
   },
   {
    "name": "Open-Meteo forecast 35.12,-89.98",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.1209429&longitude=-89.977147&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.193Z"
-  },
-  {
-   "name": "Open-Meteo forecast 39.20,-96.59",
-   "url": "https://api.open-meteo.com/v1/forecast?latitude=39.2020096&longitude=-96.5938395&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
-   "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.263Z"
+   "fetchedAt": "2026-10-03T11:49:04.754Z"
   },
   {
    "name": "Open-Meteo forecast 40.00,-83.02",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.0016447&longitude=-83.0197266&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.264Z"
+   "fetchedAt": "2026-10-03T11:49:04.795Z"
+  },
+  {
+   "name": "Open-Meteo forecast 39.20,-96.59",
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=39.2020096&longitude=-96.5938395&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
+   "ok": true,
+   "fetchedAt": "2026-10-03T11:49:04.840Z"
   },
   {
    "name": "Open-Meteo forecast 39.65,-79.96",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=39.6502744&longitude=-79.9551873&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.334Z"
+   "fetchedAt": "2026-10-03T11:49:04.861Z"
   },
   {
    "name": "Open-Meteo forecast 36.14,-86.81",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=36.1440455&longitude=-86.8088942&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.334Z"
+   "fetchedAt": "2026-10-03T11:49:04.894Z"
   },
   {
    "name": "Open-Meteo forecast 35.80,-78.72",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.8008001&longitude=-78.7195655&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.408Z"
+   "fetchedAt": "2026-10-03T11:49:04.930Z"
   },
   {
    "name": "Open-Meteo forecast 38.03,-78.51",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.0311801&longitude=-78.5137897&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.409Z"
+   "fetchedAt": "2026-10-03T11:49:04.977Z"
   },
   {
    "name": "Open-Meteo forecast 40.45,-80.02",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.4467648&longitude=-80.0157603&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.478Z"
+   "fetchedAt": "2026-10-03T11:49:04.999Z"
   },
   {
    "name": "Open-Meteo forecast 33.77,-84.39",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.7724449&longitude=-84.3928054&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.479Z"
+   "fetchedAt": "2026-10-03T11:49:05.034Z"
   },
   {
    "name": "Open-Meteo forecast 36.13,-97.07",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=36.125673&longitude=-97.066513&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.552Z"
+   "fetchedAt": "2026-10-03T11:49:05.065Z"
   },
   {
    "name": "Open-Meteo forecast 38.94,-92.33",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.9358491&longitude=-92.3332009&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.553Z"
+   "fetchedAt": "2026-10-03T11:49:05.114Z"
   },
   {
    "name": "Open-Meteo forecast 33.21,-87.55",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.2082752&longitude=-87.5503836&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.622Z"
+   "fetchedAt": "2026-10-03T11:49:05.137Z"
   },
   {
    "name": "Open-Meteo forecast 42.29,-85.60",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.2860064&longitude=-85.6007573&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.623Z"
+   "fetchedAt": "2026-10-03T11:49:05.174Z"
   },
   {
    "name": "Open-Meteo forecast 33.43,-111.93",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.4264471&longitude=-111.9325005&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.697Z"
+   "fetchedAt": "2026-10-03T11:49:05.199Z"
   },
   {
    "name": "Open-Meteo forecast 36.21,-81.69",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=36.2114267&longitude=-81.6854278&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.698Z"
+   "fetchedAt": "2026-10-03T11:49:05.251Z"
   },
   {
    "name": "Open-Meteo forecast 36.07,-94.18",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=36.0680662&longitude=-94.1789534&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.766Z"
+   "fetchedAt": "2026-10-03T11:49:05.275Z"
   },
   {
    "name": "Open-Meteo forecast 41.38,-83.62",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.3780114&longitude=-83.6225&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.766Z"
+   "fetchedAt": "2026-10-03T11:49:05.314Z"
   },
   {
    "name": "Open-Meteo forecast 41.66,-83.61",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.6574777&longitude=-83.6135652&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.840Z"
+   "fetchedAt": "2026-10-03T11:49:05.333Z"
   },
   {
    "name": "Open-Meteo forecast 44.06,-123.07",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=44.0582712&longitude=-123.0684883&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.841Z"
+   "fetchedAt": "2026-10-03T11:49:05.389Z"
   },
   {
    "name": "Open-Meteo forecast 39.90,-75.17",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=39.9007995&longitude=-75.1675414&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.907Z"
+   "fetchedAt": "2026-10-03T11:49:05.413Z"
   },
   {
    "name": "Open-Meteo forecast 37.87,-122.25",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=37.8710434&longitude=-122.2507729&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.908Z"
+   "fetchedAt": "2026-10-03T11:49:05.454Z"
   },
   {
    "name": "Open-Meteo forecast 40.81,-77.86",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.8121958&longitude=-77.8561023&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.982Z"
+   "fetchedAt": "2026-10-03T11:49:05.468Z"
   },
   {
    "name": "Open-Meteo forecast 40.44,-86.92",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.4352253&longitude=-86.9186843&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:34.983Z"
+   "fetchedAt": "2026-10-03T11:49:05.526Z"
   },
   {
    "name": "Open-Meteo forecast 40.82,-96.71",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=40.820682&longitude=-96.705594&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.050Z"
+   "fetchedAt": "2026-10-03T11:49:05.551Z"
   },
   {
    "name": "Open-Meteo forecast 42.73,-84.48",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=42.7281474&longitude=-84.4848526&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.051Z"
+   "fetchedAt": "2026-10-03T11:49:05.593Z"
   },
   {
    "name": "Open-Meteo forecast 38.42,-82.42",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.4247042&longitude=-82.4214412&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.125Z"
+   "fetchedAt": "2026-10-03T11:49:05.602Z"
   },
   {
    "name": "Open-Meteo forecast 41.39,-73.96",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.3874924&longitude=-73.9640891&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.125Z"
+   "fetchedAt": "2026-10-03T11:49:05.663Z"
   },
   {
    "name": "Open-Meteo forecast 38.98,-76.51",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=38.9846985&longitude=-76.5076335&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.194Z"
+   "fetchedAt": "2026-10-03T11:49:05.689Z"
   },
   {
    "name": "Open-Meteo forecast 41.70,-86.23",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.698378&longitude=-86.2339425&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.195Z"
+   "fetchedAt": "2026-10-03T11:49:05.734Z"
   },
   {
    "name": "Open-Meteo forecast 41.07,-81.51",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.0725534&longitude=-81.5083408&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.268Z"
+   "fetchedAt": "2026-10-03T11:49:05.737Z"
   },
   {
    "name": "Open-Meteo forecast 44.56,-123.28",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=44.5594559&longitude=-123.2814341&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.269Z"
+   "fetchedAt": "2026-10-03T11:49:05.803Z"
   },
   {
    "name": "Open-Meteo forecast 41.93,-88.78",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=41.9339586&longitude=-88.7778357&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.337Z"
-  },
-  {
-   "name": "Open-Meteo forecast 36.81,-119.76",
-   "url": "https://api.open-meteo.com/v1/forecast?latitude=36.8143527&longitude=-119.7580092&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
-   "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.339Z"
+   "fetchedAt": "2026-10-03T11:49:05.828Z"
   },
   {
    "name": "Open-Meteo forecast 35.85,-86.37",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.8511463&longitude=-86.3681649&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.411Z"
+   "fetchedAt": "2026-10-03T11:49:05.872Z"
+  },
+  {
+   "name": "Open-Meteo forecast 36.81,-119.76",
+   "url": "https://api.open-meteo.com/v1/forecast?latitude=36.8143527&longitude=-119.7580092&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
+   "ok": true,
+   "fetchedAt": "2026-10-03T11:49:05.873Z"
   },
   {
    "name": "Open-Meteo forecast 33.82,-85.77",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=33.8201052&longitude=-85.76647&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.413Z"
+   "fetchedAt": "2026-10-03T11:49:05.940Z"
   },
   {
    "name": "Open-Meteo forecast 37.20,-93.28",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=37.1976229&longitude=-93.2798119&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.479Z"
+   "fetchedAt": "2026-10-03T11:49:05.966Z"
   },
   {
    "name": "Open-Meteo forecast 30.71,-95.54",
    "url": "https://api.open-meteo.com/v1/forecast?latitude=30.713926&longitude=-95.5419802&hourly=temperature_2m,precipitation_probability,wind_speed_10m,snowfall&forecast_days=16&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch&timezone=UTC",
    "ok": true,
-   "fetchedAt": "2026-10-03T05:27:35.480Z"
+   "fetchedAt": "2026-10-03T11:49:06.007Z"
   }
  ],
  "notes": [
@@ -1100,35 +1100,35 @@
    "vsMultiple": null
   },
   "pittsburgh": {
-   "gamesPlayed": 4,
-   "epaPlay": 0.106,
-   "passEpa": 0.209,
-   "rushEpa": -0.015,
-   "success": 0.449,
-   "explosive": 0.123,
-   "earlyPass": 0.539,
-   "thirdConv": 0.427,
+   "gamesPlayed": 5,
+   "epaPlay": 0.102,
+   "passEpa": 0.199,
+   "rushEpa": -0.011,
+   "success": 0.437,
+   "explosive": 0.121,
+   "earlyPass": 0.526,
+   "thirdConv": 0.414,
    "fourthGo": 1,
-   "fourthOpp": 6,
-   "rzTd": 0.594,
-   "pace": 69.202,
+   "fourthOpp": 6.667,
+   "rzTd": 0.611,
+   "pace": 68.179,
    "pressureAllowed": 0.125,
-   "adot": 8.692,
-   "shortTgtEpa": 0.126,
-   "qbRunShare": 0.202,
-   "offAdjust": -0.141,
-   "dEpa": -0.104,
-   "dPassEpa": -0.066,
-   "dRushEpa": -0.149,
-   "dExplosive": 0.077,
-   "dThirdStop": 0.686,
-   "pressure": 0.119,
-   "havoc": 0.172,
-   "takeaways": 1.144,
-   "dTeRbEpa": -0.047,
-   "dShortWrEpa": 0.097,
-   "defAdjust": 0.015,
-   "vs425": 0.102,
+   "adot": 8.614,
+   "shortTgtEpa": 0.111,
+   "qbRunShare": 0.195,
+   "offAdjust": -0.157,
+   "dEpa": -0.085,
+   "dPassEpa": -0.031,
+   "dRushEpa": -0.155,
+   "dExplosive": 0.086,
+   "dThirdStop": 0.678,
+   "pressure": 0.118,
+   "havoc": 0.167,
+   "takeaways": 1.462,
+   "dTeRbEpa": 0.041,
+   "dShortWrEpa": 0.071,
+   "defAdjust": 0.028,
+   "vs425": 0.098,
    "vs43": null,
    "vs335": 0.066,
    "vs34": null,
@@ -1275,35 +1275,35 @@
    "vsMultiple": null
   },
   "virginia-tech": {
-   "gamesPlayed": 4,
-   "epaPlay": 0.131,
-   "passEpa": 0.117,
-   "rushEpa": 0.138,
-   "success": 0.472,
-   "explosive": 0.096,
-   "earlyPass": 0.459,
-   "thirdConv": 0.436,
-   "fourthGo": 0.847,
-   "fourthOpp": 9.5,
-   "rzTd": 0.69,
-   "pace": 69.5,
-   "pressureAllowed": 0.096,
-   "adot": 8.369,
-   "shortTgtEpa": 0.187,
-   "qbRunShare": 0.05,
-   "offAdjust": -0.018,
-   "dEpa": 0.017,
-   "dPassEpa": 0.126,
-   "dRushEpa": -0.086,
-   "dExplosive": 0.095,
-   "dThirdStop": 0.623,
-   "pressure": 0.163,
-   "havoc": 0.172,
-   "takeaways": 0.5,
-   "dTeRbEpa": 0.179,
-   "dShortWrEpa": 0.015,
-   "defAdjust": -0.096,
-   "vs425": 0.131,
+   "gamesPlayed": 5,
+   "epaPlay": 0.12,
+   "passEpa": 0.124,
+   "rushEpa": 0.106,
+   "success": 0.469,
+   "explosive": 0.101,
+   "earlyPass": 0.47,
+   "thirdConv": 0.429,
+   "fourthGo": 0.85,
+   "fourthOpp": 9.333,
+   "rzTd": 0.646,
+   "pace": 69.889,
+   "pressureAllowed": 0.099,
+   "adot": 8.573,
+   "shortTgtEpa": 0.163,
+   "qbRunShare": 0.058,
+   "offAdjust": -0.032,
+   "dEpa": 0.021,
+   "dPassEpa": 0.121,
+   "dRushEpa": -0.073,
+   "dExplosive": 0.096,
+   "dThirdStop": 0.631,
+   "pressure": 0.158,
+   "havoc": 0.173,
+   "takeaways": 0.444,
+   "dTeRbEpa": 0.082,
+   "dShortWrEpa": 0.045,
+   "defAdjust": -0.054,
+   "vs425": 0.12,
    "vs43": null,
    "vs335": 0.095,
    "vs34": null,
@@ -2675,36 +2675,36 @@
    "vsMultiple": null
   },
   "northwestern": {
-   "gamesPlayed": 3,
-   "epaPlay": 0.119,
-   "passEpa": 0.18,
-   "rushEpa": 0.066,
-   "success": 0.455,
-   "explosive": 0.104,
-   "earlyPass": 0.429,
-   "thirdConv": 0.445,
-   "fourthGo": 0.738,
-   "fourthOpp": 7.714,
-   "rzTd": 0.556,
-   "pace": 61.956,
-   "pressureAllowed": 0.116,
-   "adot": 9.37,
-   "shortTgtEpa": 0.185,
-   "qbRunShare": 0.122,
-   "offAdjust": 0.082,
-   "dEpa": 0.015,
-   "dPassEpa": 0.024,
-   "dRushEpa": 0.007,
-   "dExplosive": 0.103,
-   "dThirdStop": 0.552,
-   "pressure": 0.099,
-   "havoc": 0.136,
-   "takeaways": 1.374,
-   "dTeRbEpa": -0.169,
-   "dShortWrEpa": 0.403,
-   "defAdjust": -0.046,
-   "vs425": 0.121,
-   "vs43": 0.03,
+   "gamesPlayed": 4,
+   "epaPlay": 0.129,
+   "passEpa": 0.158,
+   "rushEpa": 0.11,
+   "success": 0.472,
+   "explosive": 0.114,
+   "earlyPass": 0.403,
+   "thirdConv": 0.446,
+   "fourthGo": 0.708,
+   "fourthOpp": 8,
+   "rzTd": 0.58,
+   "pace": 62.462,
+   "pressureAllowed": 0.12,
+   "adot": 9.062,
+   "shortTgtEpa": 0.146,
+   "qbRunShare": 0.111,
+   "offAdjust": 0.06,
+   "dEpa": 0.006,
+   "dPassEpa": 0.017,
+   "dRushEpa": -0.003,
+   "dExplosive": 0.093,
+   "dThirdStop": 0.563,
+   "pressure": 0.102,
+   "havoc": 0.146,
+   "takeaways": 1.452,
+   "dTeRbEpa": -0.064,
+   "dShortWrEpa": 0.389,
+   "defAdjust": -0.048,
+   "vs425": 0.133,
+   "vs43": 0.115,
    "vs335": 0.014,
    "vs34": null,
    "vsMultiple": null
@@ -2780,36 +2780,36 @@
    "vsMultiple": null
   },
   "penn-state": {
-   "gamesPlayed": 4,
-   "epaPlay": 0.103,
-   "passEpa": 0.19,
-   "rushEpa": 0.039,
-   "success": 0.458,
-   "explosive": 0.1,
-   "earlyPass": 0.421,
-   "thirdConv": 0.426,
-   "fourthGo": 1,
-   "fourthOpp": 7,
-   "rzTd": 0.64,
-   "pace": 64.413,
-   "pressureAllowed": 0.089,
-   "adot": 8.898,
-   "shortTgtEpa": 0.164,
-   "qbRunShare": 0.098,
-   "offAdjust": -0.048,
-   "dEpa": -0.09,
-   "dPassEpa": -0.16,
-   "dRushEpa": -0.02,
-   "dExplosive": 0.085,
-   "dThirdStop": 0.682,
+   "gamesPlayed": 5,
+   "epaPlay": 0.086,
+   "passEpa": 0.154,
+   "rushEpa": 0.024,
+   "success": 0.46,
+   "explosive": 0.091,
+   "earlyPass": 0.42,
+   "thirdConv": 0.418,
+   "fourthGo": 0.444,
+   "fourthOpp": 6.778,
+   "rzTd": 0.659,
+   "pace": 64.256,
+   "pressureAllowed": 0.093,
+   "adot": 8.814,
+   "shortTgtEpa": 0.189,
+   "qbRunShare": 0.112,
+   "offAdjust": -0.036,
+   "dEpa": -0.053,
+   "dPassEpa": -0.173,
+   "dRushEpa": 0.041,
+   "dExplosive": 0.097,
+   "dThirdStop": 0.67,
    "pressure": 0.172,
-   "havoc": 0.164,
-   "takeaways": 1.462,
-   "dTeRbEpa": 0.149,
-   "dShortWrEpa": -0.258,
-   "defAdjust": -0.181,
-   "vs425": 0.174,
-   "vs43": 0.008,
+   "havoc": 0.161,
+   "takeaways": 1.41,
+   "dTeRbEpa": 0.121,
+   "dShortWrEpa": -0.244,
+   "defAdjust": -0.151,
+   "vs425": 0.179,
+   "vs43": -0.03,
    "vs335": 0.402,
    "vs34": -0.311,
    "vsMultiple": null
@@ -3025,35 +3025,35 @@
    "vsMultiple": null
   },
   "delaware": {
-   "gamesPlayed": 4,
-   "epaPlay": 0.031,
-   "passEpa": 0.025,
-   "rushEpa": 0.029,
-   "success": 0.427,
-   "explosive": 0.096,
-   "earlyPass": 0.542,
-   "thirdConv": 0.377,
-   "fourthGo": 0.906,
-   "fourthOpp": 8.5,
-   "rzTd": 0.605,
-   "pace": 67.846,
-   "pressureAllowed": 0.162,
-   "adot": 9.492,
-   "shortTgtEpa": 0.002,
-   "qbRunShare": 0.198,
+   "gamesPlayed": 5,
+   "epaPlay": 0.019,
+   "passEpa": 0.032,
+   "rushEpa": -0.006,
+   "success": 0.421,
+   "explosive": 0.101,
+   "earlyPass": 0.536,
+   "thirdConv": 0.37,
+   "fourthGo": 0.917,
+   "fourthOpp": 7.667,
+   "rzTd": 0.578,
+   "pace": 66.974,
+   "pressureAllowed": 0.169,
+   "adot": 9.45,
+   "shortTgtEpa": -0.025,
+   "qbRunShare": 0.219,
    "offAdjust": -0.089,
-   "dEpa": 0.068,
-   "dPassEpa": 0.124,
-   "dRushEpa": -0.006,
-   "dExplosive": 0.098,
-   "dThirdStop": 0.603,
-   "pressure": 0.158,
-   "havoc": 0.15,
-   "takeaways": 1.404,
-   "dTeRbEpa": 0.435,
-   "dShortWrEpa": 0.199,
-   "defAdjust": 0.027,
-   "vs425": 0.051,
+   "dEpa": 0.064,
+   "dPassEpa": 0.092,
+   "dRushEpa": 0.032,
+   "dExplosive": 0.101,
+   "dThirdStop": 0.61,
+   "pressure": 0.17,
+   "havoc": 0.149,
+   "takeaways": 1.248,
+   "dTeRbEpa": 0.339,
+   "dShortWrEpa": 0.165,
+   "defAdjust": 0.114,
+   "vs425": 0.034,
    "vs43": null,
    "vs335": -0.128,
    "vs34": null,
@@ -3165,35 +3165,35 @@
    "vsMultiple": null
   },
   "liberty": {
-   "gamesPlayed": 4,
-   "epaPlay": 0.108,
-   "passEpa": 0.175,
-   "rushEpa": 0.066,
-   "success": 0.466,
-   "explosive": 0.121,
+   "gamesPlayed": 5,
+   "epaPlay": 0.098,
+   "passEpa": 0.12,
+   "rushEpa": 0.086,
+   "success": 0.467,
+   "explosive": 0.122,
    "earlyPass": 0.377,
-   "thirdConv": 0.445,
-   "fourthGo": 0.829,
-   "fourthOpp": 9.5,
-   "rzTd": 0.602,
-   "pace": 65.667,
-   "pressureAllowed": 0.122,
-   "adot": 11.265,
-   "shortTgtEpa": 0.284,
-   "qbRunShare": 0.202,
-   "offAdjust": 0.042,
-   "dEpa": 0.044,
-   "dPassEpa": -0.053,
-   "dRushEpa": 0.139,
-   "dExplosive": 0.106,
-   "dThirdStop": 0.603,
-   "pressure": 0.112,
-   "havoc": 0.147,
-   "takeaways": 1.333,
-   "dTeRbEpa": 0.081,
-   "dShortWrEpa": 0.075,
-   "defAdjust": 0.136,
-   "vs425": 0.108,
+   "thirdConv": 0.43,
+   "fourthGo": 0.825,
+   "fourthOpp": 9,
+   "rzTd": 0.576,
+   "pace": 66.37,
+   "pressureAllowed": 0.143,
+   "adot": 11.371,
+   "shortTgtEpa": 0.164,
+   "qbRunShare": 0.194,
+   "offAdjust": -0.054,
+   "dEpa": 0.03,
+   "dPassEpa": -0.033,
+   "dRushEpa": 0.095,
+   "dExplosive": 0.111,
+   "dThirdStop": 0.613,
+   "pressure": 0.126,
+   "havoc": 0.155,
+   "takeaways": 1.407,
+   "dTeRbEpa": 0.149,
+   "dShortWrEpa": -0.001,
+   "defAdjust": 0.131,
+   "vs425": 0.098,
    "vs43": null,
    "vs335": null,
    "vs34": null,
