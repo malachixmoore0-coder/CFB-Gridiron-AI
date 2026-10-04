@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T06:02:32.078Z",
+ "generatedAt": "2026-10-04T08:51:04.133Z",
  "season": 2026,
  "week": 5,
  "phase": "regular",
@@ -12470,7 +12470,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
    "elo": 1646,
    "talent": 6.5,
-   "record": "3-1"
+   "record": "4-1"
   },
   {
    "id": "arizona-state",
@@ -12870,7 +12870,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
    "elo": 1535,
    "talent": 5.7,
-   "record": "2-1"
+   "record": "2-2"
   },
   {
    "id": "baylor",
@@ -13270,7 +13270,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
    "elo": 1537,
    "talent": 5.7,
-   "record": "3-1"
+   "record": "4-1"
   },
   {
    "id": "byu",
@@ -14069,7 +14069,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
    "elo": 1525,
    "talent": 5.7,
-   "record": "4-0"
+   "record": "4-1"
   },
   {
    "id": "colorado",
@@ -35828,7 +35828,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
    "elo": 1378,
    "talent": 4.7,
-   "record": "1-3"
+   "record": "1-4"
   },
   {
    "id": "nevada",
@@ -37796,7 +37796,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
    "elo": 1393,
    "talent": 4.8,
-   "record": "2-2"
+   "record": "3-2"
   },
   {
    "id": "unlv",
@@ -40849,7 +40849,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
    "elo": 1415,
    "talent": 4.9,
-   "record": "1-3"
+   "record": "2-3"
   },
   {
    "id": "texas-state",
@@ -41223,7 +41223,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
    "elo": 1475,
    "talent": 5.3,
-   "record": "2-2"
+   "record": "2-3"
   },
   {
    "id": "utah-state",

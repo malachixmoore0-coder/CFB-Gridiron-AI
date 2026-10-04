@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T06:02:32.078Z",
+ "generatedAt": "2026-10-04T08:51:04.133Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -7906,9 +7906,21 @@
    "marketTotal": 48.5,
    "predictedAt": "2026-10-03T21:26:41.808Z",
    "updates": 27,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-04T02:30Z",
-   "result": null
+   "result": {
+    "homeScore": 19,
+    "awayScore": 55,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": -41.5,
+    "totalError": 16.7,
+    "brier": 0.3612
+   }
   },
   {
    "id": "401860900",
@@ -7929,9 +7941,21 @@
    "marketTotal": 57.5,
    "predictedAt": "2026-10-03T21:26:41.808Z",
    "updates": 27,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-04T02:30Z",
-   "result": null
+   "result": {
+    "homeScore": 31,
+    "awayScore": 29,
+    "winner": "home",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "win",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": 11,
+    "totalError": 0.6,
+    "brier": 0.461
+   }
   },
   {
    "id": "401856820",
@@ -7952,9 +7976,21 @@
    "marketTotal": 55.5,
    "predictedAt": "2026-10-03T21:26:41.808Z",
    "updates": 27,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-04T03:00Z",
-   "result": null
+   "result": {
+    "homeScore": 34,
+    "awayScore": 7,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "away",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": 25.5,
+    "totalError": -21,
+    "brier": 0.2333
+   }
   },
   {
    "id": "401864513",
@@ -7975,9 +8011,21 @@
    "marketTotal": 50.5,
    "predictedAt": "2026-10-03T21:26:41.808Z",
    "updates": 27,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-04T03:59Z",
-   "result": null
+   "result": {
+    "homeScore": 16,
+    "awayScore": 20,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": -7.5,
+    "totalError": -21.9,
+    "brier": 0.3376
+   }
   },
   {
    "id": "401871090",
