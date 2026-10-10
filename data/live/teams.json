@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T00:58:59.077Z",
+ "generatedAt": "2026-10-10T08:41:39.458Z",
  "season": 2026,
  "week": 6,
  "phase": "regular",
@@ -1894,7 +1894,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
    "elo": 1656,
    "talent": 6.5,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "georgia-tech",
@@ -2685,7 +2685,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
    "elo": 1671,
    "talent": 6.6,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "miami",
@@ -13673,7 +13673,7 @@
    "elo": 1699,
    "talent": 6.8,
    "rank": 8,
-   "record": "4-0"
+   "record": "5-0"
   },
   {
    "id": "cincinnati",
@@ -15229,7 +15229,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
    "elo": 1669,
    "talent": 6.6,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "kansas",
@@ -19501,7 +19501,7 @@
    "elo": 1821,
    "talent": 7.6,
    "rank": 20,
-   "record": "4-1"
+   "record": "5-1"
   },
   {
    "id": "maryland",
@@ -24941,7 +24941,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
    "elo": 1734,
    "talent": 7,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "wisconsin",
@@ -37800,7 +37800,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
    "elo": 1398,
    "talent": 4.8,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "unlv",
@@ -38994,7 +38994,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
    "elo": 1280,
    "talent": 4.1,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "boise-state",
@@ -41590,7 +41590,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
    "elo": 1358,
    "talent": 4.6,
-   "record": "1-4"
+   "record": "2-4"
   },
   {
    "id": "washington-state",
@@ -41988,7 +41988,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
    "elo": 1480,
    "talent": 5.4,
-   "record": "1-4"
+   "record": "1-5"
   },
   {
    "id": "alabama",

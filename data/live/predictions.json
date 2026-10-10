@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T02:15:25.556Z",
+ "generatedAt": "2026-10-10T08:41:39.458Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -8291,9 +8291,21 @@
    "marketTotal": 59.5,
    "predictedAt": "2026-10-09T18:25:10.222Z",
    "updates": 33,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-09T23:00Z",
-   "result": null
+   "result": {
+    "homeScore": 44,
+    "awayScore": 20,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "home",
+    "ats": "win",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": 17,
+    "totalError": 0.7,
+    "brier": 0.1289
+   }
   },
   {
    "id": "401858487",
@@ -8314,9 +8326,21 @@
    "marketTotal": 40.5,
    "predictedAt": "2026-10-10T00:58:59.077Z",
    "updates": 34,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-10T01:00Z",
-   "result": null
+   "result": {
+    "homeScore": 24,
+    "awayScore": 41,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": -23.5,
+    "totalError": 11.5,
+    "brier": 0.4032
+   }
   },
   {
    "id": "401860922",
@@ -8337,9 +8361,21 @@
    "marketTotal": 43.5,
    "predictedAt": "2026-10-10T00:58:59.077Z",
    "updates": 34,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-10T01:00Z",
-   "result": null
+   "result": {
+    "homeScore": 17,
+    "awayScore": 16,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "home",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": -6,
+    "totalError": -17.2,
+    "brier": 0.1274
+   }
   },
   {
    "id": "401864519",
@@ -8360,9 +8396,21 @@
    "marketTotal": 42.5,
    "predictedAt": "2026-10-10T00:58:59.077Z",
    "updates": 34,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-10T01:00Z",
-   "result": null
+   "result": {
+    "homeScore": 13,
+    "awayScore": 16,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": -10.5,
+    "totalError": -24.3,
+    "brier": 0.4356
+   }
   },
   {
    "id": "401856826",
@@ -8383,9 +8431,21 @@
    "marketTotal": 46.5,
    "predictedAt": "2026-10-10T00:58:59.077Z",
    "updates": 34,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-10T02:15Z",
-   "result": null
+   "result": {
+    "homeScore": 24,
+    "awayScore": 10,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "away",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": 8.5,
+    "totalError": -23.7,
+    "brier": 0.149
+   }
   },
   {
    "id": "401856716",
