@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-10T21:52:00.477Z",
+ "generatedAt": "2026-10-11T01:06:45.350Z",
  "season": 2026,
  "week": 6,
  "phase": "regular",
@@ -714,7 +714,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
    "elo": 1335,
    "talent": 4.4,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "clemson",
@@ -1516,7 +1516,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1667,
    "talent": 6.6,
-   "record": "4-0"
+   "record": "4-1"
   },
   {
    "id": "florida-state",
@@ -2295,7 +2295,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
    "elo": 1493,
    "talent": 5.5,
-   "record": "1-3"
+   "record": "2-3"
   },
   {
    "id": "louisville",
@@ -5015,7 +5015,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
    "elo": 1188,
    "talent": 3.5,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "syracuse",
@@ -6188,7 +6188,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
    "elo": 1501,
    "talent": 5.5,
-   "record": "4-1"
+   "record": "4-2"
   },
   {
    "id": "wake-forest",
@@ -7338,7 +7338,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
    "elo": 1022,
    "talent": 2.4,
-   "record": "0-5"
+   "record": "0-6"
   },
   {
    "id": "east-carolina",
@@ -8903,7 +8903,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
    "elo": 1498,
    "talent": 5.5,
-   "record": "1-3"
+   "record": "2-3"
   },
   {
    "id": "north-texas",
@@ -9302,7 +9302,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
    "elo": 1629,
    "talent": 6.3,
-   "record": "3-2"
+   "record": "4-2"
   },
   {
    "id": "rice",
@@ -10497,7 +10497,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
    "elo": 1365,
    "talent": 4.6,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "tulane",
@@ -11291,7 +11291,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
    "elo": 1238,
    "talent": 3.8,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "uab",
@@ -14828,7 +14828,7 @@
    "elo": 1550,
    "talent": 5.8,
    "rank": 22,
-   "record": "4-1"
+   "record": "5-1"
   },
   {
    "id": "iowa-state",
@@ -16032,7 +16032,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
    "elo": 1679,
    "talent": 6.7,
-   "record": "3-1"
+   "record": "3-2"
   },
   {
    "id": "oklahoma-state",
@@ -18747,7 +18747,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
    "elo": 1539,
    "talent": 5.8,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "indiana",
@@ -19880,7 +19880,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
    "elo": 1297,
    "talent": 4.2,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "michigan",
@@ -20683,7 +20683,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
    "elo": 1449,
    "talent": 5.2,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "minnesota",
@@ -22238,7 +22238,7 @@
    "elo": 2064,
    "talent": 9.2,
    "rank": 5,
-   "record": "4-1"
+   "record": "5-1"
   },
   {
    "id": "oregon",
@@ -22614,7 +22614,7 @@
    "elo": 1844,
    "talent": 7.7,
    "rank": 13,
-   "record": "3-1"
+   "record": "3-2"
   },
   {
    "id": "penn-state",
@@ -24141,7 +24141,7 @@
    "elo": 1660,
    "talent": 6.5,
    "rank": 21,
-   "record": "4-0"
+   "record": "5-0"
   },
   {
    "id": "usc",
@@ -29644,7 +29644,7 @@
    "elo": 2054,
    "talent": 9.1,
    "rank": 3,
-   "record": "5-0"
+   "record": "6-0"
   },
   {
    "id": "uconn",
@@ -30017,7 +30017,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
    "elo": 1460,
    "talent": 5.3,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "akron",
@@ -30417,7 +30417,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
    "elo": 862,
    "talent": 1.4,
-   "record": "1-4"
+   "record": "1-5"
   },
   {
    "id": "ball-state",
@@ -31586,7 +31586,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
    "elo": 1294,
    "talent": 4.2,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "central-michigan",
@@ -31963,7 +31963,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
    "elo": 1248,
    "talent": 3.9,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "eastern-michigan",
@@ -32339,7 +32339,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
    "elo": 1252,
    "talent": 3.9,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "kent-state",
@@ -32725,7 +32725,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
    "elo": 1050,
    "talent": 2.6,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "massachusetts",
@@ -33894,7 +33894,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
    "elo": 1307,
    "talent": 4.3,
-   "record": "3-2"
+   "record": "4-2"
   },
   {
    "id": "sacramento-state",
@@ -34688,7 +34688,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
    "elo": 1598,
    "talent": 6.1,
-   "record": "4-1"
+   "record": "4-2"
   },
   {
    "id": "western-michigan",
@@ -35086,7 +35086,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
    "elo": 1457,
    "talent": 5.2,
-   "record": "3-2"
+   "record": "4-2"
   },
   {
    "id": "air-force",
@@ -42747,7 +42747,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
    "elo": 1472,
    "talent": 5.3,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "auburn",
@@ -45923,7 +45923,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
    "elo": 1731,
    "talent": 7,
-   "record": "2-2"
+   "record": "3-2"
   },
   {
    "id": "ole-miss",
@@ -46327,7 +46327,7 @@
    "elo": 1792,
    "talent": 7.4,
    "rank": 9,
-   "record": "3-1"
+   "record": "4-1"
   },
   {
    "id": "south-carolina",
@@ -47087,7 +47087,7 @@
    "elo": 1786,
    "talent": 7.4,
    "rank": 15,
-   "record": "4-1"
+   "record": "5-1"
   },
   {
    "id": "texas",
@@ -47469,7 +47469,7 @@
    "elo": 1930,
    "talent": 8.3,
    "rank": 1,
-   "record": "4-0"
+   "record": "4-1"
   },
   {
    "id": "texas-am",
@@ -48269,7 +48269,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
    "elo": 1702,
    "talent": 6.8,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "app-state",
