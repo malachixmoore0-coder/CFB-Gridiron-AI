@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T05:59:30.228Z",
+ "generatedAt": "2026-10-11T07:07:33.513Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -10006,9 +10006,21 @@
    "marketTotal": 51.5,
    "predictedAt": "2026-10-10T21:52:00.477Z",
    "updates": 33,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-11T02:30Z",
-   "result": null
+   "result": {
+    "homeScore": 30,
+    "awayScore": 12,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "away",
+    "ats": "win",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": 15,
+    "totalError": -15.4,
+    "brier": 0.1892
+   }
   },
   {
    "id": "401860901",
@@ -10029,9 +10041,21 @@
    "marketTotal": 48.5,
    "predictedAt": "2026-10-10T21:52:00.477Z",
    "updates": 33,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-11T02:30Z",
-   "result": null
+   "result": {
+    "homeScore": 31,
+    "awayScore": 38,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "win",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": -9.5,
+    "totalError": 14.3,
+    "brier": 0.3003
+   }
   },
   {
    "id": "401871067",

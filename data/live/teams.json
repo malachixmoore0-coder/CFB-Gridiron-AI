@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T05:59:30.228Z",
+ "generatedAt": "2026-10-11T07:07:33.513Z",
  "season": 2026,
  "week": 6,
  "phase": "regular",
@@ -12874,7 +12874,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
    "elo": 1429,
    "talent": 5.1,
-   "record": "2-2"
+   "record": "3-2"
   },
   {
    "id": "baylor",
@@ -35841,7 +35841,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
    "elo": 1373,
    "talent": 4.7,
-   "record": "1-4"
+   "record": "1-5"
   },
   {
    "id": "nevada",
@@ -39378,7 +39378,7 @@
    "elo": 1681,
    "talent": 6.7,
    "rank": 23,
-   "record": "4-1"
+   "record": "5-1"
   },
   {
    "id": "colorado-state",
@@ -40128,7 +40128,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
    "elo": 1645,
    "talent": 6.4,
-   "record": "4-1"
+   "record": "4-2"
   },
   {
    "id": "oregon-state",
