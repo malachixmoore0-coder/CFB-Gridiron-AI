@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T21:48:26.222Z",
+ "generatedAt": "2026-10-15T04:25:08.888Z",
  "season": 2026,
  "week": 7,
  "phase": "regular",
@@ -26882,7 +26882,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
    "elo": 1290,
    "talent": 4.2,
-   "record": "1-4"
+   "record": "1-5"
   },
   {
    "id": "liberty",
@@ -28074,7 +28074,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
    "elo": 1231,
    "talent": 3.8,
-   "record": "1-4"
+   "record": "2-4"
   },
   {
    "id": "new-mexico-state",
@@ -28872,7 +28872,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
    "elo": 1121,
    "talent": 3.1,
-   "record": "1-4"
+   "record": "1-5"
   },
   {
    "id": "western-kentucky",
@@ -29245,7 +29245,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
    "elo": 1252,
    "talent": 3.9,
-   "record": "2-4"
+   "record": "3-4"
   },
   {
    "id": "notre-dame",
