@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-15T21:31:29.276Z",
+ "generatedAt": "2026-10-16T04:20:39.340Z",
  "season": 2026,
  "week": 7,
  "phase": "regular",
@@ -7717,7 +7717,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
    "elo": 1466,
    "talent": 5.3,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "florida-atlantic",
@@ -11680,7 +11680,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
    "elo": 1362,
    "talent": 4.6,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "utsa",
@@ -39755,7 +39755,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
    "elo": 1233,
    "talent": 3.8,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "fresno-state",
@@ -41240,7 +41240,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
    "elo": 1489,
    "talent": 5.4,
-   "record": "2-3"
+   "record": "3-3"
   },
   {
    "id": "utah-state",
@@ -49814,7 +49814,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
    "elo": 1370,
    "talent": 4.7,
-   "record": "2-4"
+   "record": "3-4"
   },
   {
    "id": "georgia-state",
@@ -52183,7 +52183,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
    "elo": 1220,
    "talent": 3.7,
-   "record": "2-4"
+   "record": "2-5"
   },
   {
    "id": "south-alabama",
