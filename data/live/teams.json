@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-17T23:12:37.042Z",
+ "generatedAt": "2026-10-17T23:29:16.448Z",
  "season": 2026,
  "week": 7,
  "phase": "regular",
@@ -1517,7 +1517,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1653,
    "talent": 6.5,
-   "record": "4-1"
+   "record": "4-2"
   },
   {
    "id": "florida-state",
@@ -3842,7 +3842,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
    "elo": 1449,
    "talent": 5.2,
-   "record": "3-2"
+   "record": "4-2"
   },
   {
    "id": "pittsburgh",
@@ -42391,7 +42391,7 @@
    "elo": 1987,
    "talent": 8.6,
    "rank": 6,
-   "record": "5-1"
+   "record": "5-2"
   },
   {
    "id": "arkansas",
@@ -47110,7 +47110,7 @@
    "elo": 1776,
    "talent": 7.3,
    "rank": 14,
-   "record": "5-1"
+   "record": "6-1"
   },
   {
    "id": "texas",
