@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-17T17:21:45.862Z",
+ "generatedAt": "2026-10-17T19:33:04.853Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -10426,9 +10426,21 @@
    "marketTotal": 55.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-17T16:00Z",
-   "result": null
+   "result": {
+    "homeScore": 31,
+    "awayScore": 0,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "away",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": 19.5,
+    "totalError": -27.2,
+    "brier": 0.0692
+   }
   },
   {
    "id": "401856724",
@@ -10449,9 +10461,21 @@
    "marketTotal": 51.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-17T16:00Z",
-   "result": null
+   "result": {
+    "homeScore": 24,
+    "awayScore": 27,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "away",
+    "ats": "win",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": -10,
+    "totalError": -6.4,
+    "brier": 0.407
+   }
   },
   {
    "id": "401856829",
@@ -10541,9 +10565,21 @@
    "marketTotal": 51.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-17T16:00Z",
-   "result": null
+   "result": {
+    "homeScore": 23,
+    "awayScore": 13,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "away",
+    "ats": "push",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": 2,
+    "totalError": -23.3,
+    "brier": 0.119
+   }
   },
   {
    "id": "401858488",
@@ -10587,9 +10623,21 @@
    "marketTotal": 50.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-17T16:00Z",
-   "result": null
+   "result": {
+    "homeScore": 21,
+    "awayScore": 24,
+    "winner": "away",
+    "suCorrect": true,
+    "atsPick": "away",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "loss",
+    "spreadError": 5,
+    "totalError": -12.1,
+    "brier": 0.1109
+   }
   },
   {
    "id": "401862802",
@@ -10610,9 +10658,21 @@
    "marketTotal": 55.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-17T16:00Z",
-   "result": null
+   "result": {
+    "homeScore": 56,
+    "awayScore": 24,
+    "winner": "home",
+    "suCorrect": true,
+    "atsPick": "home",
+    "ats": "win",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": 23.5,
+    "totalError": 13,
+    "brier": 0.1076
+   }
   },
   {
    "id": "401866441",
@@ -10633,9 +10693,21 @@
    "marketTotal": 46.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-17T16:00Z",
-   "result": null
+   "result": {
+    "homeScore": 31,
+    "awayScore": 32,
+    "winner": "away",
+    "suCorrect": false,
+    "atsPick": "home",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": -7.5,
+    "totalError": 12.4,
+    "brier": 0.3969
+   }
   },
   {
    "id": "401869957",
@@ -10748,8 +10820,8 @@
    "marketTotal": 42.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T17:30Z",
    "result": null
   },
   {
@@ -10771,8 +10843,8 @@
    "marketTotal": 49.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10794,8 +10866,8 @@
    "marketTotal": 58.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10817,8 +10889,8 @@
    "marketTotal": 50.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10840,8 +10912,8 @@
    "marketTotal": 49.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10863,8 +10935,8 @@
    "marketTotal": 56.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10886,8 +10958,8 @@
    "marketTotal": 46.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10909,8 +10981,8 @@
    "marketTotal": 42.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 39,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10932,8 +11004,8 @@
    "marketTotal": 42.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10955,8 +11027,8 @@
    "marketTotal": 47.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -10978,8 +11050,8 @@
    "marketTotal": 52.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
@@ -11001,8 +11073,8 @@
    "marketTotal": 46.5,
    "predictedAt": "2026-10-17T15:43:10.825Z",
    "updates": 37,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-10-17T19:30Z",
    "result": null
   },
   {
