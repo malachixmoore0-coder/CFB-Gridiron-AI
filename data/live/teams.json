@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-17T23:29:16.448Z",
+ "generatedAt": "2026-10-18T01:33:13.486Z",
  "season": 2026,
  "week": 7,
  "phase": "regular",
@@ -9707,7 +9707,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
    "elo": 1174,
    "talent": 3.4,
-   "record": "1-5"
+   "record": "1-6"
   },
   {
    "id": "south-florida",
@@ -11299,7 +11299,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
    "elo": 1241,
    "talent": 3.9,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "uab",
@@ -51024,7 +51024,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
    "elo": 1439,
    "talent": 5.1,
-   "record": "4-2"
+   "record": "5-2"
   },
   {
    "id": "louisiana-tech",
@@ -53389,7 +53389,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
    "elo": 1428,
    "talent": 5.1,
-   "record": "3-2"
+   "record": "3-3"
   },
   {
    "id": "ul-monroe",
