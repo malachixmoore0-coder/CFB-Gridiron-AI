@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-18T04:44:51.405Z",
+ "generatedAt": "2026-10-18T06:37:00.456Z",
  "season": 2026,
  "week": 7,
  "phase": "regular",
@@ -715,7 +715,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
    "elo": 1347,
    "talent": 4.5,
-   "record": "3-3"
+   "record": "3-4"
   },
   {
    "id": "clemson",
@@ -6571,7 +6571,7 @@
    "elo": 1728,
    "talent": 7,
    "rank": 21,
-   "record": "5-1"
+   "record": "6-1"
   },
   {
    "id": "army",
@@ -14463,7 +14463,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
    "elo": 1325,
    "talent": 4.4,
-   "record": "2-3"
+   "record": "2-4"
   },
   {
    "id": "houston",
@@ -17982,7 +17982,7 @@
    "elo": 1929,
    "talent": 8.2,
    "rank": 11,
-   "record": "5-0"
+   "record": "6-0"
   },
   {
    "id": "west-virginia",
@@ -33916,7 +33916,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
    "elo": 1339,
    "talent": 4.5,
-   "record": "4-2"
+   "record": "5-2"
   },
   {
    "id": "sacramento-state",
@@ -34312,7 +34312,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
    "elo": 1110,
    "talent": 3,
-   "record": "1-5"
+   "record": "1-6"
   },
   {
    "id": "toledo",
@@ -35858,7 +35858,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
    "elo": 1338,
    "talent": 4.5,
-   "record": "1-5"
+   "record": "1-6"
   },
   {
    "id": "nevada",
@@ -36634,7 +36634,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1683,
    "talent": 6.7,
-   "record": "4-1"
+   "record": "5-1"
   },
   {
    "id": "north-dakota-state",
@@ -40146,7 +40146,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
    "elo": 1635,
    "talent": 6.4,
-   "record": "4-2"
+   "record": "4-3"
   },
   {
    "id": "oregon-state",
@@ -40880,7 +40880,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
    "elo": 1254,
    "talent": 3.9,
-   "record": "2-4"
+   "record": "3-4"
   },
   {
    "id": "texas-state",
