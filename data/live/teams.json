@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T23:57:39.965Z",
+ "generatedAt": "2026-10-21T05:00:08.049Z",
  "season": 2026,
  "week": 8,
  "phase": "regular",
@@ -25744,7 +25744,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
    "elo": 1325,
    "talent": 4.4,
-   "record": "2-4"
+   "record": "3-4"
   },
   {
    "id": "florida-international",
@@ -26120,7 +26120,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
    "elo": 1424,
    "talent": 5,
-   "record": "3-3"
+   "record": "3-4"
   },
   {
    "id": "jacksonville-state",
@@ -27691,7 +27691,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
    "elo": 1149,
    "talent": 3.3,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "missouri-state",
@@ -28087,7 +28087,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
    "elo": 1233,
    "talent": 3.8,
-   "record": "2-4"
+   "record": "2-5"
   },
   {
    "id": "new-mexico-state",
@@ -51807,7 +51807,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
    "elo": 1344,
    "talent": 4.5,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "old-dominion",
@@ -52605,7 +52605,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
    "elo": 1365,
    "talent": 4.7,
-   "record": "4-2"
+   "record": "4-3"
   },
   {
    "id": "southern-miss",
