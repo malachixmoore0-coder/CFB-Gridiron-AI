@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T21:44:54.537Z",
+ "generatedAt": "2026-10-23T05:02:40.699Z",
  "season": 2026,
  "week": 8,
  "phase": "regular",
@@ -7723,7 +7723,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
    "elo": 1432,
    "talent": 5.1,
-   "record": "3-3"
+   "record": "3-4"
   },
   {
    "id": "florida-atlantic",
@@ -8510,7 +8510,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
    "elo": 1623,
    "talent": 6.3,
-   "record": "5-2"
+   "record": "6-2"
   },
   {
    "id": "navy",
@@ -26895,7 +26895,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
    "elo": 1288,
    "talent": 4.2,
-   "record": "1-5"
+   "record": "1-6"
   },
   {
    "id": "liberty",
@@ -27293,7 +27293,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
    "elo": 1746,
    "talent": 7.1,
-   "record": "5-1"
+   "record": "6-1"
   },
   {
    "id": "middle-tennessee",
@@ -48679,7 +48679,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
    "elo": 1301,
    "talent": 4.2,
-   "record": "4-2"
+   "record": "5-2"
   },
   {
    "id": "arkansas-state",
@@ -50635,7 +50635,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
    "elo": 1826,
    "talent": 7.6,
-   "record": "7-0"
+   "record": "7-1"
   },
   {
    "id": "louisiana",
