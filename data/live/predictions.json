@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T04:47:22.762Z",
+ "generatedAt": "2026-10-24T09:48:13.218Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -12526,9 +12526,21 @@
    "marketTotal": 55.5,
    "predictedAt": "2026-10-23T21:30:45.263Z",
    "updates": 43,
-   "status": "locked",
+   "status": "final",
    "lockedAt": "2026-10-24T02:30Z",
-   "result": null
+   "result": {
+    "homeScore": 31,
+    "awayScore": 28,
+    "winner": "home",
+    "suCorrect": false,
+    "atsPick": "away",
+    "ats": "loss",
+    "ouPick": "over",
+    "ou": "win",
+    "spreadError": 17,
+    "totalError": -0.6,
+    "brier": 0.5914
+   }
   },
   {
    "id": "401856728",
