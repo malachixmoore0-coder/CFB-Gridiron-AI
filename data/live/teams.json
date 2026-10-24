@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-23T21:30:45.263Z",
+ "generatedAt": "2026-10-24T04:47:22.762Z",
  "season": 2026,
  "week": 8,
  "phase": "regular",
@@ -1518,7 +1518,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1632,
    "talent": 6.3,
-   "record": "4-2"
+   "record": "5-2"
   },
   {
    "id": "florida-state",
@@ -5793,7 +5793,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
    "elo": 1582,
    "talent": 6,
-   "record": "4-3"
+   "record": "4-4"
   },
   {
    "id": "virginia-tech",
@@ -6971,7 +6971,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
    "elo": 1583,
    "talent": 6,
-   "record": "4-2"
+   "record": "5-2"
   },
   {
    "id": "charlotte",
@@ -11301,7 +11301,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
    "elo": 1287,
    "talent": 4.2,
-   "record": "4-3"
+   "record": "4-4"
   },
   {
    "id": "uab",
@@ -30037,7 +30037,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
    "elo": 1483,
    "talent": 5.4,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "akron",
@@ -33143,7 +33143,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
    "elo": 1132,
    "talent": 3.2,
-   "record": "4-3"
+   "record": "4-4"
   },
   {
    "id": "miami-oh",
@@ -35486,7 +35486,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
    "elo": 1484,
    "talent": 5.4,
-   "record": "5-1"
+   "record": "5-2"
   },
   {
    "id": "hawaii",
@@ -39023,7 +39023,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
    "elo": 1320,
    "talent": 4.4,
-   "record": "4-3"
+   "record": "5-3"
   },
   {
    "id": "boise-state",
