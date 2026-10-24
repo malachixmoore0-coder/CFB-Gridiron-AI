@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T16:04:03.156Z",
+ "generatedAt": "2026-10-24T19:35:32.538Z",
  "season": 2026,
  "week": 8,
  "phase": "regular",
@@ -16824,7 +16824,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
    "elo": 1628,
    "talent": 6.3,
-   "record": "3-3"
+   "record": "3-4"
   },
   {
    "id": "texas-tech",
@@ -18385,7 +18385,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
    "elo": 1341,
    "talent": 4.5,
-   "record": "4-3"
+   "record": "5-3"
   },
   {
    "id": "illinois",
@@ -19140,7 +19140,7 @@
    "elo": 2089,
    "talent": 9.3,
    "rank": 6,
-   "record": "6-1"
+   "record": "7-1"
   },
   {
    "id": "iowa",
@@ -20297,7 +20297,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
    "elo": 1721,
    "talent": 6.9,
-   "record": "4-2"
+   "record": "4-3"
   },
   {
    "id": "michigan-state",
@@ -21854,7 +21854,7 @@
    "elo": 1720,
    "talent": 6.9,
    "rank": 24,
-   "record": "5-1"
+   "record": "6-1"
   },
   {
    "id": "ohio-state",
@@ -23781,7 +23781,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
    "elo": 1390,
    "talent": 4.8,
-   "record": "2-4"
+   "record": "2-5"
   },
   {
    "id": "ucla",
