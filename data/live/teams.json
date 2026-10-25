@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-25T04:55:22.277Z",
+ "generatedAt": "2026-10-25T09:44:21.786Z",
  "season": 2026,
  "week": 8,
  "phase": "regular",
@@ -14840,7 +14840,7 @@
    "elo": 1610,
    "talent": 6.2,
    "rank": 14,
-   "record": "6-1"
+   "record": "6-2"
   },
   {
    "id": "iowa-state",
@@ -17982,7 +17982,7 @@
    "elo": 1901,
    "talent": 8,
    "rank": 10,
-   "record": "6-0"
+   "record": "7-0"
   },
   {
    "id": "west-virginia",
@@ -36636,7 +36636,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1677,
    "talent": 6.6,
-   "record": "5-1"
+   "record": "6-1"
   },
   {
    "id": "north-dakota-state",
@@ -37034,7 +37034,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
    "elo": 1634,
    "talent": 6.3,
-   "record": "6-1"
+   "record": "6-2"
   },
   {
    "id": "northern-illinois",
