@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T23:22:13.580Z",
+ "generatedAt": "2026-10-25T00:14:25.521Z",
  "season": 2026,
  "week": 8,
  "phase": "regular",
@@ -12884,7 +12884,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
    "elo": 1435,
    "talent": 5.1,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "baylor",
@@ -13686,7 +13686,7 @@
    "elo": 1740,
    "talent": 7,
    "rank": 2,
-   "record": "6-0"
+   "record": "6-1"
   },
   {
    "id": "cincinnati",
@@ -16046,7 +16046,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
    "elo": 1637,
    "talent": 6.4,
-   "record": "4-2"
+   "record": "4-3"
   },
   {
    "id": "oklahoma-state",
@@ -17577,7 +17577,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
    "elo": 1445,
    "talent": 5.2,
-   "record": "3-3"
+   "record": "4-3"
   },
   {
    "id": "utah",
@@ -32362,7 +32362,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
    "elo": 1216,
    "talent": 3.7,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "kent-state",
@@ -33918,7 +33918,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
    "elo": 1430,
    "talent": 5.1,
-   "record": "5-2"
+   "record": "6-2"
   },
   {
    "id": "sacramento-state",
@@ -51409,7 +51409,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
    "elo": 1405,
    "talent": 4.9,
-   "record": "4-2"
+   "record": "5-2"
   },
   {
    "id": "marshall",
@@ -52206,7 +52206,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
    "elo": 1216,
    "talent": 3.7,
-   "record": "2-5"
+   "record": "2-6"
   },
   {
    "id": "south-alabama",
@@ -53401,7 +53401,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
    "elo": 1359,
    "talent": 4.6,
-   "record": "3-3"
+   "record": "3-4"
   },
   {
    "id": "ul-monroe",
@@ -53798,7 +53798,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
    "elo": 991,
    "talent": 2.3,
-   "record": "0-6"
+   "record": "1-6"
   }
  ]
 }
