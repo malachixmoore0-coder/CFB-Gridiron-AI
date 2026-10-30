@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T01:08:03.535Z",
+ "generatedAt": "2026-10-30T08:30:46.824Z",
  "season": 2026,
  "week": 9,
  "phase": "regular",
@@ -8115,7 +8115,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
    "elo": 1239,
    "talent": 3.9,
-   "record": "5-2"
+   "record": "5-3"
   },
   {
    "id": "memphis",
@@ -9315,7 +9315,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
    "elo": 1675,
    "talent": 6.6,
-   "record": "5-2"
+   "record": "6-2"
   },
   {
    "id": "rice",
@@ -50660,7 +50660,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
    "elo": 1817,
    "talent": 7.5,
-   "record": "7-1"
+   "record": "7-2"
   },
   {
    "id": "louisiana",
@@ -53429,7 +53429,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
    "elo": 1314,
    "talent": 4.3,
-   "record": "3-4"
+   "record": "4-4"
   },
   {
    "id": "ul-monroe",
