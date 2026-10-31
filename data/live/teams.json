@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-31T12:46:50.143Z",
+ "generatedAt": "2026-10-31T19:22:16.617Z",
  "season": 2026,
  "week": 9,
  "phase": "regular",
@@ -8916,7 +8916,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
    "elo": 1487,
    "talent": 5.4,
-   "record": "2-5"
+   "record": "2-6"
   },
   {
    "id": "north-texas",
@@ -18772,7 +18772,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
    "elo": 1580,
    "talent": 6,
-   "record": "4-3"
+   "record": "5-3"
   },
   {
    "id": "indiana",
@@ -19528,7 +19528,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
    "elo": 1846,
    "talent": 7.7,
-   "record": "5-2"
+   "record": "6-2"
   },
   {
    "id": "maryland",
@@ -19905,7 +19905,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
    "elo": 1294,
    "talent": 4.2,
-   "record": "2-5"
+   "record": "2-6"
   },
   {
    "id": "michigan",
@@ -25358,7 +25358,7 @@
    "elo": 1708,
    "talent": 6.8,
    "rank": 25,
-   "record": "5-2"
+   "record": "5-3"
   },
   {
    "id": "delaware",
@@ -29679,7 +29679,7 @@
    "elo": 2082,
    "talent": 9.2,
    "rank": 5,
-   "record": "6-1"
+   "record": "7-1"
   },
   {
    "id": "uconn",
@@ -31228,7 +31228,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
    "elo": 1231,
    "talent": 3.8,
-   "record": "2-6"
+   "record": "2-7"
   },
   {
    "id": "buffalo",
@@ -35134,7 +35134,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
    "elo": 1480,
    "talent": 5.4,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "air-force",
