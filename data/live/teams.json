@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T22:28:29.220Z",
+ "generatedAt": "2026-10-31T05:55:48.524Z",
  "season": 2026,
  "week": 9,
  "phase": "regular",
@@ -7350,7 +7350,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
    "elo": 1026,
    "talent": 2.5,
-   "record": "1-6"
+   "record": "1-7"
   },
   {
    "id": "east-carolina",
@@ -10911,7 +10911,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
    "elo": 1493,
    "talent": 5.5,
-   "record": "3-4"
+   "record": "4-4"
   },
   {
    "id": "tulsa",
@@ -13291,7 +13291,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
    "elo": 1614,
    "talent": 6.2,
-   "record": "4-3"
+   "record": "5-3"
   },
   {
    "id": "byu",
@@ -17586,7 +17586,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
    "elo": 1477,
    "talent": 5.4,
-   "record": "4-3"
+   "record": "4-4"
   },
   {
    "id": "utah",
