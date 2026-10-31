@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-31T19:22:16.617Z",
+ "generatedAt": "2026-10-31T19:23:42.917Z",
  "season": 2026,
  "week": 9,
  "phase": "regular",
@@ -715,7 +715,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
    "elo": 1236,
    "talent": 3.8,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "clemson",
@@ -3467,7 +3467,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
    "elo": 1465,
    "talent": 5.3,
-   "record": "3-4"
+   "record": "4-4"
   },
   {
    "id": "north-carolina",
