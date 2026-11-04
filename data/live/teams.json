@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T23:29:42.106Z",
+ "generatedAt": "2026-11-04T06:40:22.553Z",
  "season": 2026,
  "week": 10,
  "phase": "regular",
@@ -30462,7 +30462,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
    "elo": 849,
    "talent": 1.5,
-   "record": "1-7"
+   "record": "1-8"
   },
   {
    "id": "ball-state",
@@ -31635,7 +31635,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
    "elo": 1363,
    "talent": 4.7,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "central-michigan",
@@ -33547,7 +33547,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
    "elo": 1258,
    "talent": 4,
-   "record": "5-3"
+   "record": "5-4"
   },
   {
    "id": "ohio",
@@ -33946,7 +33946,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
    "elo": 1427,
    "talent": 5.1,
-   "record": "6-2"
+   "record": "7-2"
   },
   {
    "id": "sacramento-state",
