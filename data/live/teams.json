@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T23:46:10.922Z",
+ "generatedAt": "2026-11-05T06:29:35.998Z",
  "season": 2026,
  "week": 10,
  "phase": "regular",
@@ -30837,7 +30837,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
    "elo": 1098,
    "talent": 3,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "bowling-green",
@@ -32012,7 +32012,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
    "elo": 1224,
    "talent": 3.8,
-   "record": "3-5"
+   "record": "4-5"
   },
   {
    "id": "eastern-michigan",
@@ -32388,7 +32388,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
    "elo": 1219,
    "talent": 3.8,
-   "record": "4-5"
+   "record": "4-6"
   },
   {
    "id": "kent-state",
@@ -33170,7 +33170,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
    "elo": 1122,
    "talent": 3.2,
-   "record": "4-4"
+   "record": "5-4"
   },
   {
    "id": "miami-oh",
@@ -34342,7 +34342,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
    "elo": 1040,
    "talent": 2.6,
-   "record": "2-7"
+   "record": "2-8"
   },
   {
    "id": "toledo",
@@ -34742,7 +34742,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
    "elo": 1554,
    "talent": 5.8,
-   "record": "6-2"
+   "record": "7-2"
   },
   {
    "id": "western-michigan",
