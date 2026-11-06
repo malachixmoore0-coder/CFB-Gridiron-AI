@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-05T23:42:31.946Z",
+ "generatedAt": "2026-11-06T06:59:00.843Z",
  "season": 2026,
  "week": 10,
  "phase": "regular",
@@ -8118,7 +8118,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
    "elo": 1252,
    "talent": 4,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "memphis",
@@ -12097,7 +12097,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
    "elo": 1588,
    "talent": 6.1,
-   "record": "7-1"
+   "record": "7-2"
   },
   {
    "id": "arizona",
@@ -50678,7 +50678,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
    "elo": 1777,
    "talent": 7.2,
-   "record": "7-2"
+   "record": "8-2"
   },
   {
    "id": "louisiana",
@@ -53053,7 +53053,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
    "elo": 1214,
    "talent": 3.7,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "troy",
