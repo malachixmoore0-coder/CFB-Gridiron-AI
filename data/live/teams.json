@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T23:16:34.959Z",
+ "generatedAt": "2026-11-07T06:12:19.862Z",
  "season": 2026,
  "week": 10,
  "phase": "regular",
@@ -4625,7 +4625,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
    "elo": 1752,
    "talent": 7.1,
-   "record": "6-2"
+   "record": "7-2"
   },
   {
    "id": "stanford",
@@ -6200,7 +6200,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
    "elo": 1516,
    "talent": 5.6,
-   "record": "6-2"
+   "record": "6-3"
   },
   {
    "id": "wake-forest",
@@ -7731,7 +7731,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
    "elo": 1437,
    "talent": 5.1,
-   "record": "4-4"
+   "record": "5-4"
   },
   {
    "id": "florida-atlantic",
@@ -10119,7 +10119,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
    "elo": 1638,
    "talent": 6.4,
-   "record": "6-2"
+   "record": "6-3"
   },
   {
    "id": "temple",
@@ -18777,7 +18777,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
    "elo": 1568,
    "talent": 5.9,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "indiana",
@@ -21496,7 +21496,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
    "elo": 1749,
    "talent": 7.1,
-   "record": "5-3"
+   "record": "5-4"
   },
   {
    "id": "northwestern",
@@ -36267,7 +36267,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
    "elo": 1408,
    "talent": 4.9,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "new-mexico",
@@ -36668,7 +36668,7 @@
    "elo": 1667,
    "talent": 6.5,
    "rank": 22,
-   "record": "7-1"
+   "record": "8-1"
   },
   {
    "id": "north-dakota-state",
