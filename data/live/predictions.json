@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T23:16:34.959Z",
+ "generatedAt": "2026-11-07T01:15:00.793Z",
  "season": 2026,
  "model": {
   "weights": {
@@ -16306,8 +16306,8 @@
    "marketTotal": 56.5,
    "predictedAt": "2026-11-06T23:16:34.959Z",
    "updates": 32,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-11-07T00:00Z",
    "result": null
   },
   {
@@ -16329,8 +16329,8 @@
    "marketTotal": 39.5,
    "predictedAt": "2026-11-06T23:16:34.959Z",
    "updates": 32,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-11-07T00:30Z",
    "result": null
   },
   {
@@ -16352,8 +16352,8 @@
    "marketTotal": 51.5,
    "predictedAt": "2026-11-06T23:16:34.959Z",
    "updates": 32,
-   "status": "open",
-   "lockedAt": null,
+   "status": "locked",
+   "lockedAt": "2026-11-07T01:00Z",
    "result": null
   },
   {
