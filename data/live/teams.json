@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-07T19:29:07.058Z",
+ "generatedAt": "2026-11-07T22:39:25.695Z",
  "season": 2026,
  "week": 10,
  "phase": "regular",
@@ -378,7 +378,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
    "elo": 1357,
    "talent": 4.6,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "california",
@@ -1118,7 +1118,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
    "elo": 1566,
    "talent": 5.9,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "duke",
@@ -1519,7 +1519,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1744,
    "talent": 7,
-   "record": "6-2"
+   "record": "7-2"
   },
   {
    "id": "florida-state",
@@ -1897,7 +1897,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
    "elo": 1575,
    "talent": 6,
-   "record": "3-5"
+   "record": "4-5"
   },
   {
    "id": "georgia-tech",
@@ -3468,7 +3468,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
    "elo": 1492,
    "talent": 5.5,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "north-carolina",
@@ -3845,7 +3845,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
    "elo": 1486,
    "talent": 5.4,
-   "record": "4-4"
+   "record": "5-4"
   },
   {
    "id": "pittsburgh",
@@ -5399,7 +5399,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
    "elo": 1335,
    "talent": 4.5,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "virginia",
@@ -10917,7 +10917,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
    "elo": 1473,
    "talent": 5.3,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "tulsa",
@@ -11314,7 +11314,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
    "elo": 1299,
    "talent": 4.3,
-   "record": "4-4"
+   "record": "5-4"
   },
   {
    "id": "uab",
@@ -13297,7 +13297,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
    "elo": 1687,
    "talent": 6.7,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "byu",
@@ -13700,7 +13700,7 @@
    "elo": 1705,
    "talent": 6.8,
    "rank": 7,
-   "record": "7-1"
+   "record": "7-2"
   },
   {
    "id": "cincinnati",
@@ -15256,7 +15256,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
    "elo": 1550,
    "talent": 5.8,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "kansas",
@@ -16060,7 +16060,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
    "elo": 1595,
    "talent": 6.1,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "oklahoma-state",
@@ -16461,7 +16461,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
    "elo": 1464,
    "talent": 5.3,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "tcu",
@@ -17998,7 +17998,7 @@
    "elo": 1919,
    "talent": 8.1,
    "rank": 3,
-   "record": "8-0"
+   "record": "9-0"
   },
   {
    "id": "west-virginia",
@@ -19911,7 +19911,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
    "elo": 1306,
    "talent": 4.3,
-   "record": "2-6"
+   "record": "3-6"
   },
   {
    "id": "michigan",
@@ -21093,7 +21093,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
    "elo": 1456,
    "talent": 5.2,
-   "record": "5-3"
+   "record": "5-4"
   },
   {
    "id": "nebraska",
@@ -23420,7 +23420,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
    "elo": 1425,
    "talent": 5,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "rutgers",
@@ -24174,7 +24174,7 @@
    "elo": 1749,
    "talent": 7.1,
    "rank": 5,
-   "record": "8-0"
+   "record": "9-0"
   },
   {
    "id": "usc",
@@ -30061,7 +30061,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
    "elo": 1475,
    "talent": 5.4,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "akron",
@@ -42814,7 +42814,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
    "elo": 1478,
    "talent": 5.4,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "auburn",
@@ -43216,7 +43216,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
    "elo": 1609,
    "talent": 6.2,
-   "record": "4-4"
+   "record": "5-4"
   },
   {
    "id": "florida",
@@ -45616,7 +45616,7 @@
    "elo": 1784,
    "talent": 7.3,
    "rank": 19,
-   "record": "6-2"
+   "record": "6-3"
   },
   {
    "id": "oklahoma",
@@ -47541,7 +47541,7 @@
    "elo": 1936,
    "talent": 8.2,
    "rank": 10,
-   "record": "6-2"
+   "record": "7-2"
   },
   {
    "id": "texas-am",
@@ -49515,7 +49515,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
    "elo": 1309,
    "talent": 4.3,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "georgia-southern",
@@ -52253,7 +52253,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
    "elo": 1159,
    "talent": 3.4,
-   "record": "2-7"
+   "record": "3-7"
   },
   {
    "id": "south-alabama",
