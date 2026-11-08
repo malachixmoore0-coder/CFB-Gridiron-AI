@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T00:45:50.969Z",
+ "generatedAt": "2026-11-08T01:51:19.064Z",
  "season": 2026,
  "week": 10,
  "phase": "regular",
@@ -26139,7 +26139,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
    "elo": 1337,
    "talent": 4.5,
-   "record": "3-5"
+   "record": "4-5"
   },
   {
    "id": "jacksonville-state",
@@ -28108,7 +28108,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
    "elo": 1228,
    "talent": 3.8,
-   "record": "3-5"
+   "record": "3-6"
   },
   {
    "id": "new-mexico-state",
@@ -51078,7 +51078,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
    "elo": 1494,
    "talent": 5.5,
-   "record": "5-3"
+   "record": "6-3"
   },
   {
    "id": "louisiana-tech",
@@ -52652,7 +52652,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
    "elo": 1329,
    "talent": 4.5,
-   "record": "4-4"
+   "record": "4-5"
   },
   {
    "id": "southern-miss",
