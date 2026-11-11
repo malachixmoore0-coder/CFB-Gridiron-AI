@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T01:18:24.347Z",
+ "generatedAt": "2026-11-11T11:12:01.495Z",
  "season": 2026,
  "week": 11,
  "phase": "regular",
@@ -30471,7 +30471,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
    "elo": 875,
    "talent": 1.6,
-   "record": "1-8"
+   "record": "1-9"
   },
   {
    "id": "ball-state",
@@ -31245,7 +31245,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
    "elo": 1225,
    "talent": 3.8,
-   "record": "2-7"
+   "record": "3-7"
   },
   {
    "id": "buffalo",
@@ -32783,7 +32783,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
    "elo": 972,
    "talent": 2.2,
-   "record": "3-6"
+   "record": "3-7"
   },
   {
    "id": "massachusetts",
@@ -33556,7 +33556,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
    "elo": 1260,
    "talent": 4,
-   "record": "5-4"
+   "record": "6-4"
   },
   {
    "id": "ohio",
@@ -33955,7 +33955,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
    "elo": 1401,
    "talent": 4.9,
-   "record": "7-2"
+   "record": "7-3"
   },
   {
    "id": "sacramento-state",
@@ -35154,7 +35154,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
    "elo": 1486,
    "talent": 5.4,
-   "record": "6-3"
+   "record": "7-3"
   },
   {
    "id": "air-force",
