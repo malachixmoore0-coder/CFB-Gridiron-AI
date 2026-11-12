@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-12T02:18:14.854Z",
+ "generatedAt": "2026-11-12T06:59:34.162Z",
  "season": 2026,
  "week": 11,
  "phase": "regular",
@@ -30846,7 +30846,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
    "elo": 1098,
    "talent": 3,
-   "record": "3-6"
+   "record": "3-7"
   },
   {
    "id": "bowling-green",
@@ -31644,7 +31644,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
    "elo": 1361,
    "talent": 4.6,
-   "record": "6-3"
+   "record": "7-3"
   },
   {
    "id": "central-michigan",
@@ -32021,7 +32021,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
    "elo": 1292,
    "talent": 4.2,
-   "record": "4-5"
+   "record": "5-5"
   },
   {
    "id": "eastern-michigan",
@@ -33179,7 +33179,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
    "elo": 1122,
    "talent": 3.2,
-   "record": "5-4"
+   "record": "5-5"
   },
   {
    "id": "miami-oh",
@@ -34352,7 +34352,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
    "elo": 1063,
    "talent": 2.8,
-   "record": "2-8"
+   "record": "2-9"
   },
   {
    "id": "toledo",
@@ -34753,7 +34753,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
    "elo": 1531,
    "talent": 5.7,
-   "record": "7-2"
+   "record": "8-2"
   },
   {
    "id": "western-michigan",
