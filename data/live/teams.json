@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T01:56:16.081Z",
+ "generatedAt": "2026-11-13T10:01:34.227Z",
  "season": 2026,
  "week": 11,
  "phase": "regular",
@@ -8517,7 +8517,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
    "elo": 1686,
    "talent": 6.7,
-   "record": "7-2"
+   "record": "8-2"
   },
   {
    "id": "navy",
@@ -10118,7 +10118,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
    "elo": 1634,
    "talent": 6.3,
-   "record": "6-3"
+   "record": "6-4"
   },
   {
    "id": "temple",
@@ -51095,7 +51095,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
    "elo": 1492,
    "talent": 5.5,
-   "record": "6-3"
+   "record": "7-3"
   },
   {
    "id": "louisiana-tech",
@@ -53867,7 +53867,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
    "elo": 1040,
    "talent": 2.7,
-   "record": "2-7"
+   "record": "2-8"
   }
  ]
 }
