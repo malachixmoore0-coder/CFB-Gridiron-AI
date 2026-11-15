@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-11-15T16:27:12.702Z",
+ "generatedAt": "2026-11-15T22:57:57.577Z",
  "season": 2026,
- "week": 11,
+ "week": 12,
  "phase": "regular",
  "teams": [
   {
@@ -1519,6 +1519,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1811,
    "talent": 7.4,
+   "rank": 24,
    "record": "7-3"
   },
   {
@@ -2689,6 +2690,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
    "elo": 1754,
    "talent": 7,
+   "rank": 22,
    "record": "7-3"
   },
   {
@@ -3067,7 +3069,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
    "elo": 1999,
    "talent": 8.5,
-   "rank": 5,
+   "rank": 6,
    "record": "9-1"
   },
   {
@@ -4624,7 +4626,6 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
    "elo": 1657,
    "talent": 6.4,
-   "rank": 25,
    "record": "7-3"
   },
   {
@@ -6577,7 +6578,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
    "elo": 1997,
    "talent": 8.5,
-   "rank": 11,
+   "rank": 10,
    "record": "9-1"
   },
   {
@@ -12496,7 +12497,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
    "elo": 1797,
    "talent": 7.3,
-   "rank": 22,
+   "rank": 20,
    "record": "7-3"
   },
   {
@@ -14853,7 +14854,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
    "elo": 1590,
    "talent": 6,
-   "rank": 14,
+   "rank": 21,
    "record": "7-3"
   },
   {
@@ -17216,7 +17217,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
    "elo": 1882,
    "talent": 7.8,
-   "rank": 10,
+   "rank": 11,
    "record": "9-1"
   },
   {
@@ -19156,7 +19157,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
    "elo": 2069,
    "talent": 8.9,
-   "rank": 6,
+   "rank": 5,
    "record": "9-1"
   },
   {
@@ -19536,7 +19537,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
    "elo": 1946,
    "talent": 8.2,
-   "rank": 16,
+   "rank": 13,
    "record": "8-2"
   },
   {
@@ -22275,7 +22276,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
    "elo": 1971,
    "talent": 8.3,
-   "rank": 21,
+   "rank": 17,
    "record": "7-3"
   },
   {
@@ -22652,7 +22653,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
    "elo": 1895,
    "talent": 7.9,
-   "rank": 18,
+   "rank": 14,
    "record": "7-3"
   },
   {
@@ -24584,7 +24585,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
    "elo": 1787,
    "talent": 7.2,
-   "rank": 15,
+   "rank": 19,
    "record": "7-3"
   },
   {
@@ -36689,7 +36690,6 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1695,
    "talent": 6.7,
-   "rank": 23,
    "record": "8-2"
   },
   {
@@ -39460,7 +39460,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
    "elo": 1720,
    "talent": 6.8,
-   "rank": 17,
+   "rank": 15,
    "record": "9-1"
   },
   {
@@ -43649,6 +43649,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
    "elo": 1611,
    "talent": 6.2,
+   "rank": 25,
    "record": "6-4"
   },
   {
@@ -44439,7 +44440,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
    "elo": 1569,
    "talent": 5.9,
-   "rank": 13,
+   "rank": 18,
    "record": "7-3"
   },
   {
@@ -44846,7 +44847,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
    "elo": 1898,
    "talent": 7.9,
-   "rank": 24,
+   "rank": 23,
    "record": "6-4"
   },
   {
@@ -46023,7 +46024,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
    "elo": 1709,
    "talent": 6.8,
-   "record": "5-4"
+   "record": "6-4"
   },
   {
    "id": "ole-miss",
@@ -46426,8 +46427,8 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
    "elo": 1871,
    "talent": 7.7,
-   "rank": 19,
-   "record": "6-3"
+   "rank": 16,
+   "record": "6-4"
   },
   {
    "id": "south-carolina",
@@ -46805,7 +46806,6 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
    "elo": 1669,
    "talent": 6.5,
-   "rank": 20,
    "record": "6-4"
   },
   {
