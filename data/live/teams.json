@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-19T02:39:18.138Z",
+ "generatedAt": "2026-11-19T07:10:55.397Z",
  "season": 2026,
  "week": 12,
  "phase": "regular",
@@ -30480,7 +30480,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
    "elo": 866,
    "talent": 1.7,
-   "record": "1-9"
+   "record": "2-9"
   },
   {
    "id": "ball-state",
@@ -31655,7 +31655,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
    "elo": 1386,
    "talent": 4.8,
-   "record": "7-3"
+   "record": "8-3"
   },
   {
    "id": "central-michigan",
@@ -32032,7 +32032,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
    "elo": 1319,
    "talent": 4.4,
-   "record": "5-5"
+   "record": "5-6"
   },
   {
    "id": "eastern-michigan",
@@ -33192,7 +33192,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
    "elo": 1105,
    "talent": 3.1,
-   "record": "5-5"
+   "record": "5-6"
   },
   {
    "id": "miami-oh",
