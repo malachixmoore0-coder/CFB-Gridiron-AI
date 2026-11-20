@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T02:24:06.114Z",
+ "generatedAt": "2026-11-20T04:04:20.534Z",
  "season": 2026,
  "week": 12,
  "phase": "regular",
@@ -9719,7 +9719,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
    "elo": 1117,
    "talent": 3.2,
-   "record": "1-9"
+   "record": "2-9"
   },
   {
    "id": "south-florida",
@@ -10517,7 +10517,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
    "elo": 1234,
    "talent": 3.9,
-   "record": "2-8"
+   "record": "2-9"
   },
   {
    "id": "tulane",
