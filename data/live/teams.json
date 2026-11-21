@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T02:29:08.922Z",
+ "generatedAt": "2026-11-21T09:37:22.804Z",
  "season": 2026,
  "week": 12,
  "phase": "regular",
@@ -1118,7 +1118,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
    "elo": 1504,
    "talent": 5.5,
-   "record": "6-4"
+   "record": "7-4"
   },
   {
    "id": "duke",
@@ -1519,7 +1519,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
    "elo": 1814,
    "talent": 7.4,
-   "record": "7-3"
+   "record": "7-4"
   },
   {
    "id": "florida-state",
@@ -15258,7 +15258,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
    "elo": 1609,
    "talent": 6.2,
-   "record": "5-5"
+   "record": "5-6"
   },
   {
    "id": "kansas",
@@ -17596,7 +17596,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
    "elo": 1392,
    "talent": 4.8,
-   "record": "5-5"
+   "record": "6-5"
   },
   {
    "id": "utah",
@@ -20720,7 +20720,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
    "elo": 1491,
    "talent": 5.5,
-   "record": "3-7"
+   "record": "3-8"
   },
   {
    "id": "minnesota",
@@ -22655,7 +22655,7 @@
    "elo": 1890,
    "talent": 7.9,
    "rank": 14,
-   "record": "7-3"
+   "record": "8-3"
   },
   {
    "id": "penn-state",
@@ -31256,7 +31256,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
    "elo": 1220,
    "talent": 3.8,
-   "record": "3-7"
+   "record": "3-8"
   },
   {
    "id": "buffalo",
@@ -34767,7 +34767,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
    "elo": 1548,
    "talent": 5.8,
-   "record": "8-2"
+   "record": "9-2"
   },
   {
    "id": "western-michigan",
@@ -35542,7 +35542,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
    "elo": 1505,
    "talent": 5.5,
-   "record": "8-2"
+   "record": "9-2"
   },
   {
    "id": "hawaii",
@@ -36692,7 +36692,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1688,
    "talent": 6.6,
-   "record": "8-2"
+   "record": "9-2"
   },
   {
    "id": "north-dakota-state",
@@ -38685,7 +38685,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
    "elo": 1020,
    "talent": 2.6,
-   "record": "1-9"
+   "record": "1-10"
   },
   {
    "id": "wyoming",
@@ -39086,7 +39086,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
    "elo": 1377,
    "talent": 4.8,
-   "record": "7-3"
+   "record": "7-4"
   },
   {
    "id": "boise-state",
