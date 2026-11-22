@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T01:25:14.565Z",
+ "generatedAt": "2026-11-22T02:23:39.540Z",
  "season": 2026,
  "week": 12,
  "phase": "regular",
@@ -8119,7 +8119,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
    "elo": 1356,
    "talent": 4.7,
-   "record": "6-4"
+   "record": "7-4"
   },
   {
    "id": "memphis",
@@ -10122,7 +10122,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
    "elo": 1615,
    "talent": 6.2,
-   "record": "6-4"
+   "record": "6-5"
   },
   {
    "id": "temple",
@@ -41334,7 +41334,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
    "elo": 1625,
    "talent": 6.2,
-   "record": "6-4"
+   "record": "7-4"
   },
   {
    "id": "utah-state",
@@ -42098,7 +42098,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
    "elo": 1577,
    "talent": 6,
-   "record": "2-8"
+   "record": "2-9"
   },
   {
    "id": "alabama",
