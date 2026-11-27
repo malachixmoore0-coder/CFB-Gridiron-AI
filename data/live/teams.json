@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T12:44:48.610Z",
+ "generatedAt": "2026-11-27T23:32:46.214Z",
  "season": 2026,
  "week": 13,
  "phase": "regular",
@@ -11326,7 +11326,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
    "elo": 1539,
    "talent": 5.7,
-   "record": "7-4"
+   "record": "7-5"
   },
   {
    "id": "uab",
@@ -12110,7 +12110,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
    "elo": 1523,
    "talent": 5.6,
-   "record": "9-2"
+   "record": "10-2"
   },
   {
    "id": "arizona",
@@ -19557,7 +19557,7 @@
    "elo": 1935,
    "talent": 8.1,
    "rank": 13,
-   "record": "9-2"
+   "record": "10-2"
   },
   {
    "id": "maryland",
@@ -21521,7 +21521,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
    "elo": 1761,
    "talent": 7.1,
-   "record": "7-4"
+   "record": "7-5"
   },
   {
    "id": "northwestern",
@@ -30514,7 +30514,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
    "elo": 880,
    "talent": 1.8,
-   "record": "2-9"
+   "record": "2-10"
   },
   {
    "id": "ball-state",
@@ -31690,7 +31690,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
    "elo": 1423,
    "talent": 5,
-   "record": "8-3"
+   "record": "9-3"
   },
   {
    "id": "central-michigan",
@@ -34005,7 +34005,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
    "elo": 1345,
    "talent": 4.6,
-   "record": "8-3"
+   "record": "8-4"
   },
   {
    "id": "sacramento-state",
@@ -34804,7 +34804,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
    "elo": 1560,
    "talent": 5.9,
-   "record": "9-2"
+   "record": "10-2"
   },
   {
    "id": "western-michigan",
@@ -45296,7 +45296,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
    "elo": 1430,
    "talent": 5.1,
-   "record": "5-6"
+   "record": "5-7"
   },
   {
    "id": "missouri",
@@ -46482,7 +46482,7 @@
    "elo": 1866,
    "talent": 7.7,
    "rank": 23,
-   "record": "7-4"
+   "record": "8-4"
   },
   {
    "id": "south-carolina",
@@ -48803,7 +48803,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
    "elo": 1251,
    "talent": 4,
-   "record": "7-4"
+   "record": "7-5"
   },
   {
    "id": "arkansas-state",
@@ -52748,7 +52748,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
    "elo": 1349,
    "talent": 4.6,
-   "record": "6-5"
+   "record": "7-5"
   },
   {
    "id": "southern-miss",
