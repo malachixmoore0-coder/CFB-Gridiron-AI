@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T23:32:46.214Z",
+ "generatedAt": "2026-11-28T02:11:44.317Z",
  "season": 2026,
  "week": 13,
  "phase": "regular",
@@ -1900,7 +1900,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
    "elo": 1522,
    "talent": 5.6,
-   "record": "5-6"
+   "record": "5-7"
   },
   {
    "id": "georgia-tech",
@@ -8525,7 +8525,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
    "elo": 1695,
    "talent": 6.7,
-   "record": "8-3"
+   "record": "8-4"
   },
   {
    "id": "navy",
@@ -10526,7 +10526,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
    "elo": 1220,
    "talent": 3.8,
-   "record": "2-9"
+   "record": "3-9"
   },
   {
    "id": "tulane",
@@ -35579,7 +35579,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
    "elo": 1587,
    "talent": 6,
-   "record": "9-2"
+   "record": "9-3"
   },
   {
    "id": "hawaii",
@@ -36732,7 +36732,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
    "elo": 1679,
    "talent": 6.6,
-   "record": "9-2"
+   "record": "10-2"
   },
   {
    "id": "north-dakota-state",
@@ -37132,7 +37132,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
    "elo": 1608,
    "talent": 6.2,
-   "record": "9-2"
+   "record": "10-2"
   },
   {
    "id": "northern-illinois",
@@ -37929,7 +37929,7 @@
    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
    "elo": 1331,
    "talent": 4.5,
-   "record": "5-7"
+   "record": "5-8"
   },
   {
    "id": "unlv",
@@ -43699,7 +43699,7 @@
    "elo": 1614,
    "talent": 6.2,
    "rank": 20,
-   "record": "7-4"
+   "record": "8-4"
   },
   {
    "id": "georgia",
